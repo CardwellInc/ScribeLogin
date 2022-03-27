@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scribe</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/6f0b084da2.js" crossorigin="anonymous"></script>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+div {
+    border: 2px solid black;
+    color: black;
+    
+}
+
+html {
+  background-color: rgba(0, 0, 0, 0.2);
+  font:normal  19px/1 "Fira Sans", sans-serif;
+  height: auto;
+
+}
+
+p {
+  border: 1px solid green;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-weight: 650;
+  font-family: Manaco, sans-serif;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+h3 {
+  margin-left: 10px;
+  background: rgba(71, 71, 71, 0.8);
+  color: whitesmoke;
+  padding: 5px;
+  width: 90%;
+}
+
+h2 {
+  margin-left: 20%;
+  color: red;
+  padding: 5px;
+  width: 60%;
+}
+
+h1{
+  position: static;
+  padding-left: 10px;
+  background: rgba(71, 71, 71, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 1260px;
+}
+
+div.spacer{
+  margin-top: 45px;
+  height: 0 !important;
+}
+
+* {
+  list-style: none;
+}
+
+
+
+#petpassedselect{
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+div.Filloutform{
+  padding: 15px;
+  width: 40%;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  margin-left: 25px;
+  margin-right: 10px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  align-content: space-between;
+}
+
+.WROptions {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.WRPFDate {
+  font-weight: 600;
+}
+
+.WRPFSubmit {
+  margin-left: 50px;
+}
+
+#CMWC{
+  padding: 15px;
+  margin-top: 15px;
+  border: inset black;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+ul {
+  margin-left: 0px;
+  padding-inline-start: 0px;
+}
+
+li li {
+  padding-inline-start: 20px;
+}
+
+nav {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  background-position-x: center;
+  background-position: -50px;
+  top: 0;
+}
+
+.tabcontent {
+    right: 0;
+    padding-right: 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    width: 100% !important;
+    
+  }
+
+
+
+
+
+.sidebar{
+  position:relative;
+  height: 100%;
+  width: 195px;
+  left: 0;
+}
+
+.sidebar .text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+nav ul li{
+  line-height: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.404);
+  top: 0;
+  
+}
+
+nav ul li:last-child{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  
+}
+
+nav ul li button {
+  position: relative;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: bold;
+  padding-left: 20px;
+  left: 0px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+  
+}
+
+nav ul li button:hover {
+  color: cyan;
+  background: #1e1e1e;
+  border-left-color: cyan;
+}
+
+
+nav ul li button:active {
+  background: rgba(0, 0, 0, 1);
+}
+
+nav ul li.active button {
+  color: cyan;
+  border-left-color: cyan;
+  background-color: rgba(71, 71, 71, 0.8);
+}
+
+nav ul ul {
+  position: static;
+  display: none;
+  
+}
+
+nav ul {
+  display: block;
+  top: 0;
+  margin-top: 0;
+}
+
+nav ul .wp-show.show {
+  display: block;
+}
+
+nav ul .bill-show.show1 {
+  display: block;
+}
+
+nav ul .greeting-show.show2 {
+  display: block;
+}
+
+nav ul .cxl-show.show3 {
+  display: block;
+}
+
+nav ul .Web-show.show4 {
+  display: block;
+}
+
+nav ul .App-show.show5 {
+  display: block;
+}
+
+nav ul ul li button {
+  font-size: 18px;
+  color: whitesmoke;
+  padding-left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-left: -15px;
+  width: 110%;
+}
+
+nav ul li:active a {
+  color: cyan;
+  border-left-color: cyan;
+}
+
+nav ul li.active ul li button {
+  color: #e6e6e6;
+  background: rgba(0, 0, 0, 0.75);
+  border-left-color: transparent;
+  margin-left: 0px;
+  width: 100%;
+}
+
+nav ul li.hover ul li button {
+  color: cyan;
+  background: rgba(0, 0, 0, 0.5);
+  border-left-color: transparent;
+}
+
+nav ul li.active ul li a{
+  color: #e6e6e6;
+  background: #1e1e1e;
+  border-left-color: transparent;
+}
+
+nav ul ul li a:hover{
+  color: cyan!important;
+  background: #e6e6e6!important;
+}
+
+nav ul li ul li button:hover {
+  color: cyan;
+  background: #1b1b1b;
+  border-left-color: cyan;
+}
+
+nav ul li button span {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+nav ul li button:hover span {
+  color: cyan;
+  transition: transform 0.3s;
+}
+
+nav ul li button span.rotate {
+  transform: translateY(-50%) rotate(90deg);
+  color: cyan;
+}
+
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+  transition: transform 0.3s;
+}
+
+nav ul ul li:active {
+  line-height: 42px;
+  border-bottom: none;
+  transition: transform 0.3s;
+}
+
+div div button i{
+  padding: 10px;
+  padding-right: 20px;
+}
+
+
+
+
+
+.container {  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1.3fr 2.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  align-content: space-around;
+  width: auto !important;
+  max-width: 1500px;
+  height: 1200px;
+  align-content: center;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.Bottom {  display: grid;
+  grid-template-columns: 0.4fr 1.6fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Nav QR QR"
+    "Nav QR QR"
+    "Nav QR QR";
+  grid-area: 2 / 1 / 3 / 3;
+  width: 100%;
+  background-image: url(css/img/Pawbackground.png);
+}
+
+.Nav { grid-area: Nav; }
+
+.QR {  
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.7fr 0.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: QR;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+  width: 99.5%;
+  height: 800px;
+}
+
+.TopLeft { grid-area: 1 / 1 / 2 / 2; 
+  background-image: url(css/img/rightest.png);
+  background-position: right;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.AllPets { grid-area: 1 / 2 / 2 / 3; }
+
+.TopRight {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Pet1 Pet1 Pet1"
+    "Pet2 Pet2 Pet2"
+    "Pet3 Pet3 Pet3"
+    "Pet4 Pet4 Pet4"
+    "Pet5 Pet5 Pet5"
+    "Pet6 Pet6 Pet6"
+    ". QRKing .";
+  grid-area: 1 / 2 / 2 / 3;
+  background-image: url(css/img/testright.png);
+  background-position: left;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.Pet1 {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". PetOne ."
+    ". . .";
+  grid-area: Pet1;
+  border: none;
+}
+
+.PetOne { grid-area: PetOne; }
+
+.Pet2 {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". PetTwo ."
+    ". . .";
+  grid-area: Pet2;
+  border: none;
+}
+
+.PetTwo { grid-area: PetTwo; }
+
+.Pet3 {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". PetThree ."
+    ". . .";
+  grid-area: Pet3;
+  border: none;
+}
+
+
+
+.PetThree { grid-area: PetThree; }
+
+.Pet4 {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". PetFour ."
+    ". . .";
+  grid-area: Pet4;
+  border: none;
+}
+
+.PetFour { grid-area: PetFour; }
+
+.Pet5 {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". PetFive ."
+    ". . .";
+  grid-area: Pet5;
+  border: none;
+}
+
+.PetFive { grid-area: PetFive; }
+
+.Pet6 {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". PetSix ."
+    ". . .";
+  grid-area: Pet6;
+  border: none;
+}
+
+.PetSix { grid-area: PetSix; }
+
+.QRKing {  display: grid;
+  grid-template-columns: .25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". QRKingbtn ."
+    ". . .";
+  grid-area: QRKing;
+  border: none;
+}
+
+.QRKingbtn { grid-area: QRKingbtn; 
+  border: none;
+  text-align: center;
+}
+
+.Client-Info {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.9fr 1.4fr 0.5fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Entry Entry Entry"
+    "Notebox Notebox Notebox"
+    "Dispo Dispo Dispo"
+    "CopyBox Start-Button Restart";
+  grid-area: 1 / 1 / 2 / 2;
+  height: 100%;
+}
+
+.Entry {  display: grid;
+  grid-template-columns: 1fr 0.1fr 2fr 1.9fr 0.1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Type Type Namebox Namebox Num Num"
+    "Type Type Namebox Namebox Num Num"
+    "Type Type Namebox Namebox Num Num";
+  grid-area: Entry;
+}
+
+.Type {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". TypeField ."
+    ". . .";
+  grid-area: Type;
+}
+
+.TypeField { grid-area: TypeField; }
+
+.Namebox {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". NameField ."
+    ". . .";
+  grid-area: Namebox;
+}
+
+.NameField { grid-area: NameField; }
+
+.Num {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". NumField ."
+    ". . .";
+  grid-area: Num;
+}
+
+.NumField { grid-area: NumField; }
+
+.Dispo {  display: grid;
+  grid-template-columns: .1fr 1fr .1fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". DispoField ."
+    ". . .";
+  grid-area: Dispo;
+}
+
+.DispoField { grid-area: DispoField; }
+
+.Notebox {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". Noteout .";
+  grid-area: Notebox;
+}
+
+.Noteout { grid-area: Noteout; }
+
+.CopyBox {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". TCopyBtn ."
+    ". . .";
+  grid-area: CopyBox;
+}
+
+.TCopyBtn { grid-area: TCopyBtn; 
+border: none;}
+
+.Restart {  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". RestartBtn ."
+    ". . .";
+  grid-area: Restart;
+}
+
+.RestartBtn { grid-area: RestartBtn; 
+  border: none;
+  text-align: center;}
+
+.Start-Button {  display: grid;
+  grid-template-columns: .25fr 1fr .25fr;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". Strt-btn ."
+    ". . .";
+  grid-area: Start-Button;
+}
+
+.Strt-btn { grid-area: Strt-btn; 
+  border: none;
+  text-align: center;
+}
+
+#NoteOutput {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+input {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+select {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+button.startnotes{
+  background:#38ca1a;
+  color: black;
+  border:none;
+  position:relative;
+  border-radius:40px;
+  height:30px;
+  width: 150px !important;
+  font-size:0.7em;
+  font-weight: 700;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button.startnotes:hover{
+  background: orangered;
+  color:black;
+}
+button.startnotes:before,button.startnotes:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:5px;
+  width:0;
+  background: black;
+  transition:400ms ease all;
+}
+button.startnotes:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button.startnotes:hover:before,button.startnotes:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+button.resetbutton{
+  background:red;
+  color: black;
+  border:none;
+  position:relative;
+  border-radius:40px;
+  height:30px;
+  width: 10em !important;
+  font-size:0.7em;
+  font-weight: 700;
+  padding:0 1em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button.resetbutton:hover{
+  background: orangered;
+  color:black;
+}
+button.resetbutton:before,button.resetbutton:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:5px;
+  width:0;
+  background: black;
+  transition:400ms ease all;
+}
+button.resetbutton:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button.resetbutton:hover:before,button.resetbutton:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+button.FormSubmitbtn{
+  background:white;
+  color: black;
+  border:none;
+  position:relative;
+  border-radius:40px;
+  height:30px;
+  width: 10em !important;
+  font-size:0.7em;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-left: 20%;
+  padding:0 1em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button.FormSubmitbtn:hover{
+  background: black;
+  color:white;
+}
+button.FormSubmitbtn:before,button.FormSubmitbtn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:5px;
+  width:0;
+  background: orangered;
+  transition:400ms ease all;
+}
+button.FormSubmitbtn:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button.FormSubmitbtn:hover:before,button.FormSubmitbtn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+
+button.copy-btn1{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  border-radius:40px;
+  height:60px;
+  font-size:0.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button.copy-btn1:hover{
+  background: orangered;
+  color:black;
+}
+button.copy-btn1:before,button.copy-btn1:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button.copy-btn1:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button.copy-btn1:hover:before,button.copy-btn1:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+button.copy-btn{
+  background:black;
+  color: gray;
+  border:none;
+  position:relative;
+  border-radius:40px;
+  height:30px;
+  width: 10em !important;
+  font-size:0.7em;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  padding:0 1em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button.copy-btn:hover{
+  background: black;
+  color:white;
+}
+button.copy-btn:before,button.copy-btn:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:3px;
+  width:0;
+  background: orangered;
+  transition:400ms ease all;
+}
+button.copy-btn:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button.copy-btn:hover:before,button.copy-btn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+.qrblock {
+  background-color: rgba(128, 128, 128, 0.8);
+}
+
+.amtinput {
+  width: 20%;
+}
+
+
+
+.petcxl{
+  background: whitesmoke;
+}
+
+#pet0{
+  background: whitesmoke;
+  border: 5px, red;
+}
+
+#pet1{
+  background: whitesmoke;
+  border: 5px, red;
+}
+
+#pet2{
+  background: whitesmoke;
+  border: 5px, red;
+}
+
+#pet3{
+  background: whitesmoke;
+  border: 5px, red;
+}
+
+#pet4{
+  background: whitesmoke;
+  border: 5px, red;
+}
+
+#pet5{
+  background: whitesmoke;
+  border: 5px, red;
+}
+
+
+
+button.copy-btn2{
+  background:#ca1ac1;
+  color: black;
+  border:none;
+  position:relative;
+  border-radius:40px;
+  height:30px;
+  width: 35% !important;
+  font-size:0.7em;
+  font-weight: 700;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button.copy-btn2:hover{
+  background: orangered;
+  color:black;
+}
+button.copy-btn2:before,button.copy-btn2:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:5px;
+  width:0;
+  background: black;
+  transition:400ms ease all;
+}
+button.copy-btn2:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button.copy-btn2:hover:before,button.copy-btn2:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+
+
+
+
+
+
+
+
+button.MEEPBTNSUBMIT{
+  background:#42c9e0;
+  color:black;
+  border:none;
+  position:relative;
+  border-radius:40px;
+  height:40px;
+  width: 150px;
+  font-size:1em;
+  font-weight: 700;
+  padding:0 2em;
+  margin-left: 12em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button.MEEPBTNSUBMIT:hover{
+  background:orangered;
+  color:black;
+}
+button.MEEPBTNSUBMIT:before,button.MEEPBTNSUBMIT:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: black;
+  transition:400ms ease all;
+}
+button.MEEPBTNSUBMIT:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+  border: none;
+}
+button.MEEPBTNSUBMIT:hover:before,button.MEEPBTNSUBMIT:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+#Meeppetname {
+  width: 90%;
+}
+
+
+
+	</style>
+	
+</head>

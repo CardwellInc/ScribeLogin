@@ -1,0 +1,1255 @@
+<%- include('partials/header'); -%>
+<body>
+    
+    <h1>Welcome <%= name %> - Logout is at the bottom</h1>
+<div id="Contents"></div>
+
+    <div class="container">
+        <div class="Bottom">
+          <div class="Nav">
+            <nav class="sidebar">
+                <ul>
+                    <li><button class="greeting-btn"> Greetings
+                        <span class="fas fa-angle-right third"></span>
+                    </button>
+                    <ul class="greeting-show">
+                    <li><button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">General</button></li>
+                    <li><button class="tablinks" onclick="openCity(event, 'txt')" id="defaultOpen">Text</button></li>
+                    <li><button class="tablinks" onclick="openCity(event, 'ppassed')" id="defaultOpen">Pet Passed</button></li>
+                    <li><button class="tablinks" onclick="openCity(event, 'UpDateInfo')" id="defaultOpen">Update Info</button></li>
+                </ul>
+                </li>
+                    <li>
+                        <button class="wp-btn"> Wellness Plan
+                            <span class="fas fa-angle-right first"></span>
+                        </button>
+                        <ul class="wp-show">
+                            <li><button class="tablinks" onclick="openCity(event, 'wp-gen')">General</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'DogPlan')">Dog Plans</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'CatPlan')">Cat Plans</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'pupPlan')">Puppy Plans</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'kitPlan')">Kitten Plans</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'wp-ugdg')">UG/DG</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'AddOns')">Add-Ons</button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="bill-btn"> Billing
+                            <span class="fas fa-angle-right second"></span>
+                        </button>
+                        <ul class="bill-show">
+                            <li><button class="tablinks" onclick="openCity(event, 'B-Gen')">General</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'Curr')">Current/Upcoming</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'PD')">Past Due</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'waived')">Waive/Refund</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'UPCC')">Update Cards</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'B-Invoice')">Invoice</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'EscalatedBilling')">Escalated</button></li>
+                        </ul>
+                        </li>
+                    <li>
+                        <button class="cxl-btn"> Cancellation
+                            <span class="fas fa-angle-right fourth"></span>
+                        </button>
+                        <ul class="cxl-show">
+                            <li><button class="tablinks" onclick="openCity(event, 'CxlQR')">General</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'One-Pet')">MEEP</button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="Web-btn"> Web Portal
+                            <span class="fas fa-angle-right fifth"></span>
+                        </button>
+                        <ul class="Web-show">
+                            <li><button class="tablinks" onclick="openCity(event, 'WebGen')">General</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'WebUpD')">Update</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'WebMed')">Online Shop</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'WebDoc')">Documents</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'WebSupp')">Web Suppot</button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="App-btn"> App
+                            <span class="fas fa-angle-right sixth"></span>
+                        </button>
+                        <ul class="App-show">
+                            <li><button class="tablinks" onclick="openCity(event, 'AppGen')">General</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'AppUpD')">Update Info</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'AppDoc')">Documents</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'AppSupp')">App Support</button></li>
+                        </ul>
+                    </li>
+                    <li><button class="tablinks" onclick="openCity(event, 'Text')">Text</button></li>
+                    <li><button class="tablinks" onclick="openCity(event, 'Escalation')">Escalation</button></li>    
+                        <li><button>Resources</button></li>
+                        <li><button>Contact Info</button></li>
+                </ul>
+            </nav>
+          </div>
+          <div class="QR">
+                <div id="London" class="tabcontent">
+                    <h1>Greetings</h1>
+                    
+                    <div class="qrblock">
+                    <h3>Standard Greeting:</h3>
+                    <p id="g1">Thank you for reaching out, I can help look into this, One moment while I review your account.</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#g1')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                    <h3>Cancellation Greeting:</h3>
+                    <p id="g-c1">Thank you for reaching out, <br>I can help look at the cancellation options, <br>While I gather this information, <br>may I ask why we are looking to cancel today?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#g-c1')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Unable to Locate</h3>
+                        <p id="UTLStarter">Hello! I was not able to locate your account with the phone number provided, May I please have the  phone number associated with your Wellness Plan?</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#UTLStarter')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Typing Too Long</h3>
+                        <p id="TTLmessage">Hello? Are you still needing assistance? Please respond to ensure this conversation can stay open if additional assistance is needed.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#TTLmessage')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Any Other Questions?</h3>
+                        <p id="AOQStuff">With the information listed above, do you have any other questions for me?</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#AOQStuff')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                </div>
+                <div id="txt" class="tabcontent">
+                    <h1>Greetings</h1>
+                    
+                    <div class="qrblock">
+                    <h3>Text Greeting:</h3>
+                    <p id="g-t1">Thank you for reaching out. I can help you look into this. Could we have your first and last name, phone number, and pet's name?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#g-t1')"><i class="fas fa-clipboard"></i>Copy</button></div>
+                    <br>
+                    <div class="qrblock">
+                    <h3>Text Greeting (Pet already said)</h3>
+                    <p id="g-t2">Thank you for reaching out. I can help you look into this. Could we have your first and last name, and phone number?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#g-t2')"><i class="fas fa-clipboard"></i>Copy</button></div>
+                    <br>
+                    <div class="qrblock">
+                    <h3>Text Greeting (Passed Away):</h3>
+                    <p id="g-t3">Thank you for reaching out. I am so sorry to hear that, I can help you look into this. Could we have your first and last name, phone number, and pet's name?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#g-t3')"><i class="fas fa-clipboard"></i>Copy</button></div>
+                    <br>
+                    <div class="qrblock">
+                    <h3>Text Greeting: (Pet already said - Passed Away)</h3>
+                    <p id="g-t4">Thank you for reaching out. I am so sorry to hear that, I can help you look into this. Could we have your first and last name, and phone number?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#g-t4')"><i class="fas fa-clipboard"></i>Copy</button></div>
+                    <br>
+                </div>
+                <div id="UpDateInfo" class="tabcontent">
+                    <h1>Update</h1>
+                    
+                    <div class="qrblock">
+                    <h3>Update Pet Info</h3>
+                    <p id="UPITab">Thank you for reaching out today. I apologize, through chat or online we don't have the ability to update medical information, such as name, weight, breed, age, and so on. That can be done with the hospital directly during your next visit if needed.</p>
+                    <button class="copy-btn" id="PetInfoBtn" onclick="copyToClipboard('#UPITab')"><i class="fas fa-clipboard"></i>Copy</button></div>
+                    <br>
+                    <div class="qrblock">
+                    <h3>Update Personal Info</h3>
+                    <p id="UPerITab">Thank you for reaching out today. I apologize, through chat or online we don't have the ability to correct the spelling of the name. You can update this at the hospital directly with a piece of valid ID during your next visit.</p>
+                    <button class="copy-btn" id="PersonalInfoBtn" onclick="copyToClipboard('#UPerITab')"><i class="fas fa-clipboard"></i>Copy</button></div>
+                    <br>
+                    <div class="qrblock">
+                    <h3>Update Billing Information</h3>
+                    <p id="UBITab">Thank you for reaching out, I can help get us in the right direction to update the card information for the wellness plan installments.<br>Here are the instructions to manage your pet's Wellness Plan payment information into your name online: <br>1. Select "Manage your account" at the top left of the main dashboard <br>2. Navigate to and expand the pet whose information you want to update <br>3. Locate OWP Payment Method, then "Use a different OWP Card" <br>4. You will be redirected to another system to collect card details (Click Continue to Secure Payment Site) <br>5. Enter card details &amp; click "Pay with your credit card" ( You will not be charged) <br>6. You will then be redirected back to the "My account" page</p>
+                    <button class="copy-btn" id="BillingInfobtn" onclick="copyparaToClipboard('#UBITab')"><i class="fas fa-clipboard"></i>Copy</button></div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Medical Summary/Invoices</h3>
+                        <p id="Invoicebill2">Thank you for reaching out, I can help get us in the right direction. Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Invoicebill2')" id="Invoicebill2btn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Vaccine Records</h3>
+                        <p id="Vax1">Thank you for reaching out, I can help get us in the right direction. Here are the instructions to view hospital invoices and medical documents online: <br>1. From the main dashboard, select the pet you'd like to view records for <br>2. Select "SEE DETAILS" under the Vaccines section <br>3. You'll be taken to your pet's profile, with the Vaccines section expanded, listing dates and recommended vaccines <br>To get a shareable PDF copy of your pet’s complete vaccine history, scroll down to “PDFs FOR GROOMERS” and select which you'd like a document for. Then choose "DOWNLOAD PDF".</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Vax1')" id="Vax1btn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Wisdom Panel/DNA Results</h3>
+                        <p id="DNAWisdomPanel">Thank you for reaching out, I can help get us in the right direction. To view the Wisdom Panel on banfield.com: <br>1. Select the pet in question on your main dashboard <br>2. Select "See Full Profile" <br>3. Scroll to the bottom and select "View Your Pet's DNA Profile" <br>It will be right below the "Need Help?" live chat option</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#DNAWisdomPanel')" id="DNAWisdom2btn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                </div>
+                <div id="ppassed" class="tabcontent">
+                    <h1>Greetings</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Pet Passed</h3>
+                    <div id="petpassedselect">
+                    Please Select Pet's Name:  <select style="width: 100px; margin: 5px;" id="passedpetdd">
+                        <option value="pet"></option>
+                    </select></div></div>
+                    <br>
+                    <div class="qrblock">
+                    <h3>Pet Passed Intro</h3>
+                    <p id="ppassed-chatp"></p>
+                        <button class="copy-btn" onclick="copyToClipboard('#ppassed-chatp')" id="PPassedbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                        <div class="qrblock">
+                            <h3>Ending</h3>
+                            <p id="EndingPassedNote"> It is my pleasure to assist you, Again, we are sorry for your loss, Please have a better day, Thank you for contacting Banfield Pet Hospital</p>
+                            <button class="copy-btn" onclick="copyToClipboard('#EndingPassedNote')"><i class="fas fa-clipboard"></i>Copy</button>
+                        </div>
+                        <br>
+                </div>
+                <div id="wp-gen" class="tabcontent">
+                    <h1>Wellness Plan</h1>
+                    
+                    <div class="qrblock">
+                        <h3>OWP Not Insurance</h3>
+                        <p id="notinsur">Unlike insurance, Optimum Wellness Plans are affordable packages of recommended preventive care that can save you money and deliver care to your pet. The services can be used anytime during your plan year and the cost of the package is split into twelve monthly installments.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#notinsur')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Price Increase</h3>
+                        <p id="priceinc">In January of 2022, there was a National price increase within the practice. Therefore, when the plan renewed, it renewed on the current plan pricing with the increase in effect. We try to minimize cost increases to keep veterinary care affordable for you and your pet. We do recommend utilizing the features available within your wellness plan such as, Nutritional Specialists available to schedule at the hospital, as well as the enhanced 24/7 Vet Chat accessable online or on the app to help with quick medical questions or seeing if an accident needs an appointment or an over the counter home remedy. </p>
+                            <button class="copy-btn" id="OctPrice" onclick="copyparaToClipboard('#priceinc')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>OWP's</h3>
+                        <p id="owps">To view and compare the wellness plans online please follow this link https://www.banfield.com/products/optimum-wellness-plan</p>
+                            <button class="copy-btn" id="GenPlanlinkbtn" onclick="copyToClipboard('#owps')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="DogPlan" class="tabcontent">
+                    <h1>Adult Dog Plans</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Banfield Link</h3>
+                        <p id="DAClink">You can review and compare the different Dog Packages we offer with the link below: <br>https://www.banfield.com/products/optimum-wellness-plan/Dog-plans</p>
+                        <button class="copy-btn" id="DAClinkbtn" onclick="copyparaToClipboard('#DAClink')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Dog Active Care</h3>
+                        <p id="DAC">Your plan includes: <br> 2x comprehensive physical exams, routinely recommended vaccinations, diagnostic testing (bloodwork, heartworm/lyme/ehrlichia/anaplasma), <br> 2x fecal exams, 2x deworming, office visit fees, plus 10% of services not included in your plan.</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#DAC')" id="DACbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Dog Active Care Plus</h3>
+                        <p id="DACP">Your plan includes: <br>2x comprehensive physical exams, routinely recommended vaccinations, diagnostic testing (bloodwork, heartworm/lyme/ehrlichia/anaplasma), 2x fecal exams, 2x deworming, office visit fees, Dental Cleaning (pre-anesthetic blood testing/monitoring throughout), <br> urine testing, plus 15% of services not included in your plan.</p>
+                        <button class="copy-btn" id="DACPbtn" onclick="copyparaToClipboard('#DACP')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Dog Special Care</h3>
+                        <p id="DSC">Your plan includes: <br>2x comprehensive physical exams, routinely recommended vaccinations, diagnostic testing (bloodwork, heartworm/lyme/ehrlichia/anaplasma), 2x fecal exams, 2x deworming, office visit fees, Dental Cleaning (pre-anesthetic blood testing/monitoring throughout),<br> 2x urine testing, 3 views of preventative x-rays, 2x eye pressure tests, 2x electrocardiogram, plus 20% of services not included in your plan.</p>
+                        <button class="copy-btn" id="DSCbtn" onclick="copyparaToClipboard('#DSC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="CatPlan" class="tabcontent">
+                    <h1>Adult Cat Plans</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Banfield Link</h3>
+                        <p id="CAClink">You can review and compare the different Dog Packages we offer with the link below: <br> https://www.banfield.com/products/optimum-wellness-plan/Cat-plans </p>
+                        <button class="copy-btn" id="CAClinkbtn" onclick="copyToClipboard('#CAClink')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cat Active Care</h3>
+                        <p id="CAC">Your plan includes: <br>2x comprehensive physical exams, routinely recommended vaccinations, testing including ear swab, bloodwork, feline leukemia/feline immunodeficiency virus test,<br> 2x fecal exams, 2x deworming, office visit fees, plus 10% of services not included in your plan.</p>
+                        <button class="copy-btn" id="CACbtn" onclick="copyToClipboard('#CAC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cat Active Care Plus</h3>
+                        <p id="CACP">Your plan includes: <br>2x comprehensive physical exams, routinely recommended vaccinations, testing including ear swab, bloodwork, feline leukemia/feline immunodeficiency virus test, 2x fecal exams, 2x deworming,<br> Dental Cleaning (pre-anesthetic blood testing/monitoring throughout), urine testing, office visit fees, plus 15% of services not included in your plan.</p>
+                        <button class="copy-btn" id="CACPbtn" onclick="copyToClipboard('#CACP')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cat Special Care</h3>
+                        <p id="CSC">Your plan includes: <br>2x comprehensive physical exams, routinely recommended vaccinations, testing including ear swab, bloodwork, feline leukemia/feline immunodeficiency virus test, 2x fecal exams, 2x deworming, Dental Cleaning (pre-anesthetic blood testing/monitoring throughout),<br> 2x urine testing, heartworm and thyroid screening, preventative x-rays, office visit fees, plus 20% of services not included in your plan.</p>
+                        <button class="copy-btn" id="CSCbtn" onclick="copyToClipboard('#CSC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="pupPlan" class="tabcontent">
+                    <h1>Puppy Plans</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Banfield Link</h3>
+                        <p id="PEClink">You can review and compare the different Dog Packages we offer with the link below: <br>https://www.banfield.com/products/optimum-wellness-plan/Puppy-plans</p>
+                        <button class="copy-btn" id="PEClinkbtn" onclick="copyToClipboard('#PEClink')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Puppy Early Care</h3>
+                        <p id="PEC">Your plan includes: <br>Introductory comprehensive physical exam, Graduation comprehensive physical exam, Routinely recommended vaccinations, Diagnostic testing including ear swab and heartworm/lyme/ehrlichia/anaplasma, <br>WISDOM PANEL™ Health DNA test, that screens for over 150 genetic disease mutations and over 350 breeds, Fecal exam (3x) and routine deworming (4x), office visit fees, plus 5% off services not included in the plan.</p>
+                        <button class="copy-btn" id="PECbtn" onclick="copyToClipboard('#PEC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Puppy Early Care Plus</h3>
+                        <p id="PECP">Your plan includes: <br>Introductory comprehensive physical exam, Graduation comprehensive physical exam, Routinely recommended vaccinations, Diagnostic testing including ear swab and heartworm/lyme/ehrlichia/anaplasma,<br> WISDOM PANEL™ Health DNA test, that screens for over 150 genetic disease mutations and over 350 breeds, Fecal exam (3x) and routine deworming (4x), Spay or neuter surgery (including pre-anesthetic blood testing, monitoring throughout), office visit fees, plus 10% off services not included in the plan.</p>
+                        <button class="copy-btn" id="PECPbtn" onclick="copyToClipboard('#PECP')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="kitPlan" class="tabcontent">
+                    <h1>Kitten Plans</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Banfield Link</h3>
+                        <p id="KEClink">You can review and compare the different Dog Packages we offer with the link below: <br>https://www.banfield.com/products/optimum-wellness-plan/Kitten-plans</p>
+                        <button class="copy-btn" id="KEClinkbtn" onclick="copyToClipboard('#KEClink')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Kitten Early Care</h3>
+                        <p id="KEC">Your Plan includes: <br>Introductory comprehensive physical exam, Graduation comprehensive physical exam, Routinely recommended vaccinations, Diagnostic testing including ear swab, bloodwork, feline leukemia/feline immunodeficiency virus test, Fecal exam (3x) and routine deworming (4x), office visit fees, plus 5% off services not included in the plan.</p>
+                        <button class="copy-btn" id="KECbtn" onclick="copyToClipboard('#KEC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Kitten Early Care Plus</h3>
+                        <p id="KECP">Your Plan includes: <br>Introductory comprehensive physical exam, Graduation comprehensive physical exam, Routinely recommended vaccinations, Diagnostic testing including ear swab, bloodwork, feline leukemia/feline immunodeficiency virus test, Fecal exam (3x) and routine deworming (4x), office visit fees, <br>plus 5% off services not included in the plan. Spay or neuter surgery (including pre-anesthetic blood testing, monitoring throughout), office visit fees, plus 10% off services not included in the plan.</p>
+                        <button class="copy-btn" id="KECPbtn" onclick="copyToClipboard('#KECP')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="wp-ugdg" class="tabcontent">
+                    <h1>Upgrade/Downgrade</h1>
+                    
+                    <div id="UGDGquestionare" class="qrblock">
+                        <div class="Filloutform">
+                            Please Select Pet's Name:  <select id="UGDGpets" style="width: 100px;"></select><br>
+                            Upgrade or Downgrade? <select id="UGDGoptions">
+                                <option value="Upgrade">Upgrade</option>
+                                <option value="Downgrade">Downgrade</option>
+                            </select>  <br>
+                            Balance Owed?  <select id="ugdgbalowedquestion" onchange="">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>  
+                            <div id="ugdgbalowedinput" style="display: none;">
+                                <input type="text" id="ugdgbalowed" placeholder="Balance Owed?">
+                            </div>
+                            <div id="ugdgenddateinput" style="display: none;">
+                                <input type="text" id="ugdgenddate" placeholder="Renewal Date">
+                            </div><br>
+                            <button id="SubmitUGDGbtn">Submit</button>
+                        </div>
+                    <br>
+                    <p id="uddgresultsbody"></p>
+                    <button class="copy-btn" id="UGDGCopyBtnNote" onclick="copyToClipboard('#uddgresultsbody')"><i class="fas fa-clipboard"></i>Copy</button>
+                </div>
+                    <br>
+                    <div id="UGDGparttwo" class="qrblock" style="display: none;">
+                        <h3>Change at Hospital</h3>
+                        <p id="UGDGbottompart">Perfect! You can ask at the front desk when you check in for your next visit and they will be able to complete this process with you</p>
+                        <button class="copy-btn" id="UGDGhspt" onclick="copyToClipboard('#UGDGbottompart')"><i class="fas fa-clipboard"></i>Copy</button><br>
+                        <h3>We Change It</h3>
+                        <p id="UGDGDOB"> I'm happy to put that request in for you. So we can confirm the agreement holder is 18+ our software requires the agreement holders date of birth. Will you please provide your date of birth so we can complete your request.</p>
+                        <button class="copy-btn" id="UGDGus" onclick="copyToClipboard('#UGDGDOB')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="AddOns" class="tabcontent">
+                    <h1>General</h1>
+                    
+                    <div class="qrblock">
+                        <h3>How to Add-On</h3>
+                        <p id="AddMedAO">Medication can be added onto the plan at the hospital where they can go over which medications would be best based on their medical needs and answer any questions regarding cost.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#AddMedAO')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cost of Medication</h3>
+                        <p id="COMAO">As the cost can vary based on a number of different factors, I would recommend speaking to your local Banfield hospital to get specific pricing information</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#COMAO')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Unable to Remove Medication - Already Provided</h3>
+                        <p id="UnableRemove">I apologize, I'm showing the medication has already been provided so we are unable to remove the monthly installments until the medication has been paid off at the end of the plan year.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#UnableRemove')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Removing Medication</h3>
+                        <div class="Filloutform">
+                            Select Pet Name:<select id="RMNames"></select><br>
+                            Select Medication: <select id="MedList"> 
+                                <option value="ProHeart">ProHeart</option>
+                                <option value="Revolution">Revolution</option>
+                                <option value="RevolutionPlus">Revolution Plus</option>
+                                <option value="Simparica">Simparica</option>
+                                <option value="SimparicaTrio">Simparica Trio</option>
+                                <option value="TriFexis">Tri-Fexis</option>
+                                <option value="TriHeartPlus">Tri-Heart Plus</option>
+                                <option value="Comfortis">Comfortis</option>
+                            </select><br>
+                            New Monthly Rate: $<input type="number" id="NMRRMQR"><br>
+                            Balance Owed?<select id="BODDRMQR"> 
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select><br>
+                            <input type="number" placeholder="Amount Owed?" id="AMTOWEDRM" style="display: none;"><br>
+                            <button class="FormSubmitbtn" id="RMsubmitbtn">Submit</button>
+                            </div>
+                    </div>
+                    <br>
+                    <div class="qrblock" id="HideMedBlock" style="display: none;">
+                        <h3>To the Client:</h3>
+                        <p id="RMNC"></p>
+                        <button class="copy-btn" onclick="copyToClipboard('#RMNC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                </div>
+                <div id="B-Gen" class="tabcontent">
+                    <h1>General</h1>
+                    
+                    <div class="qrblock">
+                    <h3>Cost</h3>
+                    <p id="Costexpl">As the cost can vary based on a number of different factors, I would recommend speaking to your local Banfield hospital to get specific pricing information</p>
+                        <button class="copy-btn" id="costex" onclick="copyToClipboard('#Costexpl')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cost</h3>
+                        <div class="Filloutform">
+                            Select Pet Name:<select id="BillExplainDD"></select><br>
+                            Installment Amount: $<input id="bgenamtinput" class="amtinput"></input><br>
+                            Banking Day:  
+                            <select id="BGenBKdate" style="width: 100px;">
+                                <option value=""></option>
+                                <option value="5">5</option>
+                                <option value="12">12</option>
+                                <option value="19">19</option>
+                                <option value="26">26</option>
+                            </select>
+                            <button id="submitbgenbtn" class="FormSubmitbtn">Submit</button>
+                        </div>
+                        <p id="BillPlanExplain"></p>
+                            <button class="copy-btn" id="BillPlanExplainbtn" onclick="copyToClipboard('#BillPlanExplain')"><i class="fas fa-clipboard"></i>Copy</button></div>  
+                </div>
+                <div id="Curr" class="tabcontent">
+                    <h1>Current/Upcoming</h1>
+                    
+                    <div class="qrblock">
+                    <h3>Reschedule</h3>
+                    <div class="Filloutform">
+                        Please Select Banking Day:  
+                        <select id="BKdate" style="width: 100px;">
+                            <option value=""></option>
+                            <option value="5">5</option>
+                            <option value="12">12</option>
+                            <option value="19">19</option>
+                            <option value="26">26</option>
+                        </select>
+                    </div>
+                    <p id="RSnote"></p> 
+                        <button class="copy-btn" id="RSbtn" onclick="copyToClipboard('#RSnote')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>  
+                    <div class="qrblock">
+                        <h3>Make Payment Online</h3>
+                        <p id="MakePymt">Here are the instructions to manage your pet's Wellness Plan payment information online: <br>1. Select "Manage your account" (On the dashboard, abovepets photo) <br>2. Navigate to and expand the pet whose installment you want to pay. <br>3. Once expanded, locate the "Pay now" button. <br>You will then see your installments and can select one to pay</p>                    
+                        <button class="copy-btn" id="manualPymt" onclick="copyparaToClipboard('#MakePymt')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div> 
+                </div>
+                <div id="PD" class="tabcontent">
+                    <h1>Past Due Balance</h1>
+                    
+                    <div class="qrblock">
+                        <div class="Filloutform">
+                        Select Pet Name:<select id="PDBnames"></select><br>
+                        Amount of PDB? $<input type="text" id="PDBamt"><br>
+                        Date of Missed Installment: <input type="date" id="PDBdate"><br>
+                        On Hold?<select id="OHdate"> 
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select><br>
+                        <button id="PDBsubmitbtn" class="FormSubmitbtn">Submit</button>
+                        </div>
+                    <p id="PDBnote"></p>
+                    <button class="copy-btn" onclick="copyToClipboard('#PDBnote')" id="PDBbtn"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                </div>
+                <div id="UPCC" class="tabcontent">
+                    <h1>Cards</h1>
+                    
+                    <div class="qrblock">
+                    <h3>Updating CC</h3>
+                    <p id="updateCC">Here are the instructions to manage your pet's Wellness Plan payment information into your name online: <br>1. Select "Manage your account" at the top left of the main dashboard <br>2. Navigate to and expand the pet whose information you want to update <br>3. Locate OWP Payment Method, then "Use a different OWP Card" <br>4. You will be redirected to another system to collect card details (Click Continue to Secure Payment Site) <br>5. Enter card details and click "Pay with your credit card" ( You will not be charged) <br>6. You will then be redirected back to the "My account" page</p>
+                        <button class="copy-btn" id="test" onclick="copyparaToClipboard('#updateCC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>   
+                        <br>
+                        <div class="qrblock">
+                            <h3>Update WPCC, Not COF</h3>
+                            <p id="updateCOFCC">Thank you, I can see that was added for One Time Payments at the Hospital but not for the Wellness Plan installments, please follow the steps below to update the card for the wellness plan:<br> 1. Select "Manage your account" at the top left of the main dashboard <br>2. Navigate to and expand the pet whose information you want to update <br>3. Locate OWP Payment Method, then "Use a different OWP Card" <br>4. You will be redirected to another system to collect card details ( Click Continue to Secure Payment Site) <br>5. Enter card details & click "Pay with your credit card" ( You will not be charged) <br>6. You will then be redirected back to the "My account" page <br>Please be sure to expand the pet's profile in step 2 before selecting Use a different OWP card in step 3.</p>
+                            <button class="copy-btn"id="COFWP"onclick="copyparaToClipboard('#updateCOFCC')"><iclass="fas fa-clipboard"></i>Copy</button> 
+                        </div>    
+                        <br>
+                        <div class="qrblock">
+                        <h3>Update Checking Account</h3>
+                        <p id="Checking">To add your checking account information directly, you will need to speak with a member of our Client support team directly, you can reach them at 866-894-7927, Once connected on the line, you will need to select option 1 for billing, and then option 4 to speak with an agent directly.</p>
+                        <button class="copy-btn"id="Checkingnote" onclick="copyparaToClipboard('#Checking')"><iclass="fas fa-clipboard"></i>Copy</button>
+                        </div>     
+                                <br>
+                        <div class="qrblock">
+                                <h3>Update COF</h3>
+                                <p id="COF">Here are the directions to update your card on file information to be used for hospital payments:<br>1. From the MyBanfield Dashboard select "Mange your account"<br>2. On the My account page, scroll down past the pet’s list to Saved payment methods, select "+ Add a payment method<br>3. You will be redirected to another system to collect card details<br>4. Select Continue to Secure Payment Site<br>5. Enter your card information and click Pay with your credit card (you will not be charged for anything)<br>6. The website will redirect you back to the My account page. The card may take a few minutes to be listed on your account.</p>
+                                <button class="copy-btn"id="COFCC"onclick="copyparaToClipboard('#COF')"><iclass="fas fa-clipboard"></i>Copy</button>    
+                        </div> 
+                        <br>
+                </div>
+                <div id="B-Invoice" class="tabcontent">
+                    <h1>Billing Documents</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Payment History</h3>
+                        <p id="BillInvoice">Here are the instructions to view your payment history online: <br>1. Select "Manage your account" (On dashboard, Above pets photo) <br>2. Navigate to and expand the pet who's installment you want to pay. <br>3. Once expanded, Locate the "See your complete payment history" button <br>You will then see your installments paid and the dates.</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#BillInvoice')" id="BillInvoicebtn"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Invoices</h3>
+                        <p id="Invoicebill">Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Invoicebill')" id="Invoicebillbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Review Services Used</h3>
+                        <div class="Filloutform">
+                        Start Date: <input type="date" name="reviewinv" id="reviewinv"><button type="submit" id="RSUbtnclick"> Add to QR </button></div>
+                        <p id="RSUtest">The services that added to your balance can be broken down on the invoices, available in your pets medical history. <br> Any invoice from STARTDATE to present would show you usage for the plan year. There are two pricing columns to review. “Regular Fee” reflects the actual cost of the services.“Your fee” is what you paid out of that portion. The difference between those two totals would apply to the services balance.</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#RSUtest')" id="RSUtestbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                </div>
+                <div id="waived" class="tabcontent">
+                    <h1>Waiving & Refunds</h1>
+                    
+                    <div class="qrblock">
+                    <h3>Unable to Waive/Refund</h3>
+                    <div class="Filloutform">
+                        Waive or Refund:<select id="WROptions" class="WROptions">
+                            <option value="Waive" id="Waive">Waive</option>
+                            <option value="Refund" id="Refund">Refund</option>
+                        </select><br>
+                        Date of First Waive: <input type="date" id="WRPFDate" class="WRPFDate"><br>
+                        <button id="WRPFSubmit" class="FormSubmitbtn">Submit</button>
+                        </div>
+                        <p id="UnableWRPF">Apologies. At this time I am unable to WAIVE/REFUND the current $20.00 reprocessing charge as it appears that courtesy was already extended to you on DATE. We are only able to use one courtesy per account as we understand life can happen unexpectedly.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#UnableWRPF')" id="UnableWRPFbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Waive/Refund RPF</h3>
+                        <div class="Filloutform">
+                            Waive or Refund:<select id="WROptions1" onchange="WaiveRPF2()" class="WROptions">
+                                <option value="SELECTABOVE" id="--">--</option>
+                                <option value="Waive" id="Waive">Waive</option>
+                                <option value="Refund" id="Refund">Refund</option>
+                            </select>
+                            </div>
+                        <p id="WRRPF">I can help WAIVE/REFUND the Reprocessing Charge as a one time courtesy as we understand life can happen unexpectedly, this does mean any other Reprocessing Charges that may be added in the future will require payment, is that ok?</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#WRRPF')" id="WRRPFbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Waive/Refund RPF</h3>
+                        <div class="Filloutform">
+                            Amount: $ <input type="text" id="AmtNoteRPF"><br>
+                            Last 4 of CC:<input type="text" id="Last4"><br>
+                            <button id="WFFSubmit" class="FormSubmitbtn">Submit</button>
+                            </div>
+                        <p id="PymtRequired">I'd be happy to waive the Reprocessing Charge as a one time courtesy after the remaining Past Due Balance is processed. Did you want to process the $AMT on the card ending in </p>
+                        <button class="copy-btn" id="Pymttest" onclick="copyToClipboard('#PymtRequired')"><i class="fas fa-clipboard"></i>Copy</button>
+                        <br>
+                        <h3>Payment Successful</h3>
+                        <p id="PymtSuccessful">Thank you, I have processed the payment and waived the installment. Were there any other questions I can help with today?</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#PymtSuccessful')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                </div>
+                <div id="EscalatedBilling" class="tabcontent">
+                    <h1>Escalated - Billing</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Why Noone Called</h3>
+                        <p id="WNC">I understand being surprised by the past due balance,<br> we don't start reaching out until the plan and benefits are placed on Hold<br> for Non-Payment as we want to respect each persons own way of maintaining their finances.<br> Anytime you feel a payment will not be able to process, please reach out prior and we can help reschedule a payment out for you. <br>This way we can avoid this fee in the future.</p>
+                    <button class="copy-btn" id="WNCbtn" onclick="copyToClipboard('#WNC')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Unable to Remove WP CC</h3>
+                        <p id="RemoveCCArgue">As per agreement, The Optimum Wellness Plan must have an account on file for the auto-draft. If you do not want the payment to come out automatically, you may make the payments online, over the phone, or in person at your local hospital. The payment must be received 3 business days prior to your draft date to avoid the auto-draft.</p>
+                        <button class="copy-btn" id="RemoveCCArguebtn" onclick="copyToClipboard('#RemoveCCArgue')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Renewal Argued</h3>
+                        <p id="RenewalArgue">I apologize for any misunderstanding, per the agreement, Plans will automatically renew on the anniversary date in each year for one year until the client or provider cancels this agreement. I can have a copy of the agreement sent to the email on file, If you would like. Once you receive that, The auto renewal information would be on Section 3 for you to view.</p>
+                        <button class="copy-btn" id="RenewalArguebtn" onclick="copyToClipboard('#RenewalArgue')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="CxlQR" class="tabcontent">
+                    <h1>Cancel QR's</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Cancel with BCT Feedback</h3>
+                        <p id="CxlBlockOne">I'm so sorry to hear that, I can help with the cancellation and We appreciate you taking the time to share your feedback. Because of the nature of your concern we recommend you contact our Banfield Cares Team and one of our specialists can assist you with your hospital related experience. You can reach them at banfieldcares@banfield.com. Have you gone over the cancellation process before?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#CxlBlockOne')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cancel at No cost</h3>
+                        <p id="CxlBlockTwo">Thank you, your wellness plan has been cancelled and no further payments will be withdrawn from the account on file. Is there anything else I can do to help today?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#CxlBlockTwo')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Balance Owed - Pet Passed</h3>
+                        <p id="CxlBlockThree"> I understand not expecting to have a balance and thinking about this after losing your pet can be difficult. The balance that remains is to finish paying the hospital for the care that was provided. We try to do everything we can to help clients keep the cost of care affordable by allowing services to be paid slowly through interest-free installments. At this time the balance of $AMT that remains is just to ensure the hospital is reimbursed for the $AMT of services they have already provided. Please keep in mind the cost to close is not for any unused services nor future services.</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#CxlBlockThree')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cancel - No Refund</h3>
+                        <p id="CxlBlockFour"> I am not able to retroactively cancel a plan and provide a refund for previous months payments that have become due under the wellness plan agreement. However, I can assure you the plan has been canceled effective immediately and no further payments will process, as there is currently no balance due to the hospital. Did you have any other questions today?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#CxlBlockFour')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Arguing Balance Owed</h3>
+                        <p id="Arged">I apologize. Through this chat, I can only close the plan for the balance listed by the Hospital. I can not make any changes to this balance as it all reflects from what the Hospital has provided me for the services used. Due to this, I can not change, reduce, or close the Wellness Plan without the payment. I can just set them to automatically cancel and not renew.</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#Arged')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                </div>
+                <div id="One-Pet" class="tabcontent">
+                    <h1>Multipet Easy Exit Program</h1>
+                    
+                    <div class="qrblock">
+                        <div class="Filloutform">
+                    How Many Cancels
+                    <select name="petnum" id="petnum" style="width: 100px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select></div>
+                    <div class="Filloutform">
+                    <h3 id="Meeppetname">First Pet </h3>
+                    <form class="MEEP" id="Resets">
+                    Please Select Pet Name:<select id="MEEPpet1">
+                        <option></option>
+                    </select>
+                    <li>Banking Day: <select id = "BK">
+                        <option value="5"> 5 </option>
+                        <option value="12"> 12 </option>
+                        <option value="19"> 19 </option>
+                        <option value="26"> 26 </option>
+                        </select><br>
+                    RPF Charges: <select id = "RPF">
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        </select></li>
+                    <li>Services Used: <input id="Used" type="number" placeholder="Used Services" required></li>
+                    <li>Full Plan Costs: <input id="Plan" type="number" placeholder="Full WP Cost" required></li>
+                    <li>Installments Paid: <input id="Paid" type="number" placeholder="Installments Paid" required></li>
+                    <li>End Date: <input id="EndDate" type="datetime" placeholder="End Date" required></li>
+                    <input id="Close" type="number" placeholder="Cost to Close" hidden>
+                </form>
+                <div id="Two-Pet" class="tabcontent" style="display: none;">
+                    <h3 id="Meeppetname">Second Pet</h3>
+                    <form class="MEEP2" id="Resets">
+                    Please Select Pet Name:<select id="MEEPpet2">
+                        <option></option>
+                    </select>
+                    <li>Banking Day: <select id = "BK2">
+                        <option value="5"> 5 </option>
+                        <option value="12"> 12 </option>
+                        <option value="19"> 19 </option>
+                        <option value="26"> 26 </option>
+                        </select><br>
+                    RPF Charges: <select id = "RPF2">
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        </select></li>
+                    <li>Services Used: <input id="Used2" type="number" placeholder="Used Services" required></li>
+                    <li>Full Plan Costs: <input id="Plan2" type="number" placeholder="Full WP Cost" required></li>
+                    <li>Installments Paid: <input id="Paid2" type="number" placeholder="Installments Paid" required></li>
+                    <li>End Date: <input id="EndDate2" type="datetime" placeholder="End Date" required></li>
+                    <input id="Close2" type="number" placeholder="Cost to Close" hidden>
+                </form>
+                     
+                </div>
+                <div id="Three-Pet" class="tabcontent" style="display: none;">
+                    <h3 id="Meeppetname"> Third Pet </h3>
+                    <form class="MEEP3" id="Resets">
+                    Please Select Pet Name:<select id="MEEPpet3">
+                        <option></option>
+                    </select>
+                    <li>Banking Day: <select id = "BK3">
+                        <option value="5"> 5 </option>
+                        <option value="12"> 12 </option>
+                        <option value="19"> 19 </option>
+                        <option value="26"> 26 </option>
+                        </select><br>
+                    RPF Charges: <select id = "RPF3">
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        </select></li>
+                    <li>Services Used: <input id="Used3" type="number" placeholder="Used Services" required></li>
+                    <li>Full Plan Costs: <input id="Plan3" type="number" placeholder="Full WP Cost" required></li>
+                    <li>Installments Paid: <input id="Paid3" type="number" placeholder="Installments Paid" required></li>
+                    <li>End Date: <input id="EndDate3" type="datetime" placeholder="End Date" required></li>
+                    <input id="Close3" type="number" placeholder="Cost to Close" hidden>
+                </form>
+                     
+                </div>
+                <div id="Four-Pet" class="tabcontent" style="display: none;">
+                    <h3 id="Meeppetname">Forth Pet</h3>
+                    <form class="MEEP4" id="Resets">
+                    Please Select Pet Name:<select id="MEEPpet4">
+                        <option></option>
+                    </select>
+                    <li>Banking Day: <select id = "BK4">
+                        <option value="5"> 5 </option>
+                        <option value="12"> 12 </option>
+                        <option value="19"> 19 </option>
+                        <option value="26"> 26 </option>
+                        </select><br>
+                    RPF Charges: <select id = "RPF4">
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        </select></li>
+                    <li>Services Used: <input id="Used4" type="number" placeholder="Used Services" required></li>
+                    <li>Full Plan Costs: <input id="Plan4" type="number" placeholder="Full WP Cost" required></li>
+                    <li>Installments Paid: <input id="Paid4" type="number" placeholder="Installments Paid" required></li>
+                    <li>End Date: <input id="EndDate4" type="datetime" placeholder="End Date" required></li>
+                    <input id="Close4" type="number" placeholder="Cost to Close" hidden>
+                </form>
+                     
+                </div>
+                <div id="Five-Pet" class="tabcontent" style="display: none;">
+                    <h3 id="Meeppetname">Fifth Pet</h3>
+                    <form class="MEEP2" id="Resets">
+                    Please Select Pet Name:<select id="MEEPpet5">
+                        <option></option>
+                    </select>
+                    <li>Banking Day: <select id = "BK5">
+                        <option value="5"> 5 </option>
+                        <option value="12"> 12 </option>
+                        <option value="19"> 19 </option>
+                        <option value="26"> 26 </option>
+                        </select><br>
+                    RPF Charges: <select id = "RPF5">
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        </select></li>
+                    <li>Services Used: <input id="Used5" type="number" placeholder="Used Services" required></li>
+                    <li>Full Plan Costs: <input id="Plan5" type="number" placeholder="Full WP Cost" required></li>
+                    <li>Installments Paid: <input id="Paid5" type="number" placeholder="Installments Paid" required></li>
+                    <li>End Date: <input id="EndDate5" type="datetime" placeholder="End Date" required></li>
+                    <input id="Close" type="number5" placeholder="Cost to Close" hidden>
+                </form>
+                     
+                </div>
+                <div id="Six-Pet" class="tabcontent" style="display: none;">
+                    <h3 id="Meeppetname">Sixth Pet</h3>
+                    <form class="MEEP2" id="Resets">
+                    Please Select Pet Name:<select id="MEEPpet6">
+                        <option></option>
+                    </select>
+                    <li>Banking Day: <select id = "BK6">
+                        <option value="5"> 5 </option>
+                        <option value="12"> 12 </option>
+                        <option value="19"> 19 </option>
+                        <option value="26"> 26 </option>
+                        </select><br>
+                    RPF Charges: <select id = "RPF6">
+                        <option value="0"> 0 </option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        </select></li>
+                    <li>Services Used: <input id="Used6" type="number" placeholder="Used Services" required></li>
+                    <li>Full Plan Costs: <input id="Plan6" type="number" placeholder="Full WP Cost" required></li>
+                    <li>Installments Paid: <input id="Paid6" type="number" placeholder="Installments Paid" required></li>
+                    <li>End Date: <input id="EndDate6" type="datetime" placeholder="End Date" required></li>
+                    <input id="Close6" type="number" placeholder="Cost to Close" hidden>
+                </form>
+                </div>
+                <br>
+                <button id="submit-button" class="MEEPBTNSUBMIT">Submit</button>
+            </div>
+            <div class="Filloutform3" id="MEEPBottompart" style="display: none;">
+                <h3>To the Client:</h3>
+                <div id="CMWC"></div>
+                <button class="copy-btn"  id="MEEPbtn1" onclick="copyparaToClipboard('#CMWC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    <br>
+                    <div id="CMWC2">
+                    <p id="Ending" class="petcxl"></p>
+                </div>
+                </div>
+            </div>
+                </div>
+                <div id="WebGen" class="tabcontent">
+                    <h1>Web Portal</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Hide Pet Profile</h3>
+                        <p id="HiddenPet">Here are the instructions to hide a pet from your Dashboard: <br>1. Select "Manage your account" at the top left of the main dashboard <br>2. Click on the + sign next to your pets name <br>3. Change the "Show on Dashboard" Option to gray.</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#HiddenPet')" id="HiddenPetbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Unhide Pet Profile</h3>
+                        <p id="ShowPets">Here are the instructions to unhide a pet from your Dashboard: <br>1. Select "Manage your account" at the top left of the main dashboard <br>2. Click on the + sign next to your pets name <br>3. Change the "Show on Dashboard" Option to blue.</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#ShowPets')" id="ShowPetsbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Enroll in OWP</h3>
+                        <p id="Enrolling">Please follow these steps in order to enroll your pet for an Optimum Wellness Plan: <br>1. From the Banfield home page select Enroll in OWP and choose the option that says "Yes, I have" <br>2. Select the pet that you would like to enroll<br>3. Select the Hospital where you will be receiving care <br>4. Review and select the plan you wish to enroll in <br>5. Add any additional options that you would like to have on the plan or if you are unsure you can speak to the care team to have these options added at your first visit before the plan is finalized <br>6. Review the plan and apply any applicable promo codes then select next <br>7. Enter your contact information and click next <br>8. Review the "Things to know" popup and click next <br>9. Enter credit card information, then Register enrollment <br>10. Schedule an appointment to finalize the plan</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Enrolling')" id="Enrollingbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Schedule Appointment</h3>
+                        <p id="Schedulingappt">You can use the online scheduler to schedule appointments for your pets by following these steps <br>1. At the top of the screen select Schedule <br>2. Choose the pet you wish to schedule an appointment for <br>3. Select the reason for your visit, and any applicable symptoms <br>4. Add any notes for the vet (optional) and click Next <br>5. Drop-off and pickup will be defaulted to Yes, but can be changed to No for all appointment types except Comprehensive Exams, then select Next <br>6. Select the Date for your appointment, this can be done up to 2 months in advance <br>7. Choose the Hospital <br>8. Select the time for your appointment along with the desired <br>Doctor <br>Review all appointment information, select Make your appointment.</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Schedulingappt')" id="Schedulingapptbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Reschedule/Cancel Appointment</h3>
+                        <p id="Reschcxlappt">Here are the instructions to cancel or reschedule an appointment online: <br>1. Locate the "Upcoming appointment" bar on the top of your dashboard <br>2. Select the "See details" button to the left <br>3. Scroll down and you will see "reschedule appointment" and "cancel appointment"</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Reschcxlappt')" id="Reschcxlapptbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="WebUpD" class="tabcontent">
+                    <h1>Web Portal</h1>
+                
+                    <div class="qrblock">
+                        <h3>Personal Information</h3>
+                        <p id="PersInfo">We can update your contact information under the "manage my account" link on the top of your dashboard. <br>Here are the instructions to update your information online: <br>1. Select "Manage your account" (On dashboard, Above pets photo) <br>2. Navigate to the "Your Information" section and select "Update your information" <br>3. Edit the information you want to and click "Save Changes" to update.</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#PersInfo')" id="PersInfobtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div><br>
+                    <div class="qrblock">
+                        <h3>Updating CC</h3>
+                        <p id="updateCC">Here are the instructions to manage your pet's Wellness Plan payment information into your name online: <br>1. Select "Manage your account" at the top left of the main dashboard <br>2. Navigate to and expand the pet whose information you want to update <br>3. Locate OWP Payment Method, then "Use a different OWP Card" <br>4. You will be redirected to another system to collect card details (Click Continue to Secure Payment Site) <br>5. Enter card details & click "Pay with your credit card" ( You will not be charged) <br>6. You will then be redirected back to the "My account" page</p>
+                        <button class="copy-btn" id="WPCCU" onclick="copyparaToClipboard('#updateCC')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Update Microchip Information</h3>
+                        <p id="Microchipinfo">The Microchip information can be changed or updated by contacting HomeAgain at (888)466-3242</p>
+                        <button class="copy-btn" id="Microchipinfobtn" onclick="copyparaToClipboard('#Microchipinfo')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Set to DNR</h3>
+                        <p id="SettoDNR">If you would like to set a pet's plan to not renew, please follow these steps: <br>1. Select "Manage your account" <br>2. Expand the pet you are wanting to make changes for <br>3. Select "Manage plan" <br>4. Expand the drop-down menu and select the reason for cancelling the plan, then Continue Click "Save"</p>
+                        <button class="copy-btn" id="SettoDNRbtn" onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="WebMed" class="tabcontent">
+                    <h1>Web Portal</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Manage Prescription - New Order</h3>
+                        <p id="NewOrder">I'm happy to get you to the right place for your prescriptions. Prescriptions cannot be managed through chat but you can order prescriptions through the Banfield Shop or by contacting your local Banfield for prescription management. <br>Here are the instructions to order prescriptions online: <br>1. From your MyBanfield dashboard, click "Banfield Shop" at the top of the page and select "SHOP NOW" <br>2. From there you can use the search bar at the top of the page to find products. <br>3. Click on the item, select the quantity, and add it to your cart. <br>4. Click on the cart icon in the top right to proceed to checkout and choose your shipping options.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#NewOrder')" id="NewOrderbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                    <h3>Manage Prescription - Exsisting Order</h3>
+                    <p id="OldOrder">Thank you for reaching out, I am happy to assist you with getting that information. Through this chat we do not actually handle or have the ability to view orders, This would be handled by our Banfield Shop team directly. You can reach them at 888-626-3992 to go over your order and its status.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#OldOrder')" id="OldOrderbtn"><i class="fas fa-clipboard"></i>Copy</button></div>
+                </div>
+                <div id="WebDoc" class="tabcontent">
+                    <h1>Documents</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Medical Summary/Invoices</h3>
+                        <p id="Invoicebill1">Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Invoicebill1')" id="Invoicebill1btn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Vaccine Records</h3>
+                        <p id="Vax">I can help get us in the right direction. Here are the instructions to view hospital invoices and medical documents online: <br>1. From the main dashboard, select the pet you'd like to view records for <br>2. Select "SEE DETAILS" under the Vaccines section <br>3. You'll be taken to your pet's profile, with the Vaccines section expanded, listing dates and recommended vaccines <br>To get a shareable PDF copy of your pet’s complete vaccine history, scroll down to “PDFs FOR GROOMERS” and select which you'd like a document for. Then choose "DOWNLOAD PDF".</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Vax')" id="Vaxbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Wisdom Panel/DNA Results</h3>
+                        <p id="DNAWisdom">To view the Wisdom Panel on banfield.com: <br>1. Select the pet in question on your main dashboard <br>2. Select "See Full Profile" <br>3. Scroll to the bottom and select "View Your Pet's DNA Profile" <br>It will be right below the "Need Help?" live chat option</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#DNAWisdom')" id="DNAWisdombtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Rabies/Neuter/Spay Certificate</h3>
+                            <p id="RNSCert">I can help get this document, there are two different ways to get a copy. You can either request a copy from your local hospital to print out instantly or I can request a copy to be sent to your email adress which will take about 3-5 business days. Which option works best?</p>
+                            <button class="copy-btn" id="RNSCertbtn" onclick="copyToClipboard('#RNSCert')"><i class="fas fa-clipboard"></i>Copy</button>
+                        </div>
+                        <br>
+                        <div class="qrblock">
+                            <h3>Request Email</h3>
+                                <p id="EmailReq">I understand, What is the email on file to request a copy sent to?</p>
+                                <button class="copy-btn" id="EmailReqbtn" onclick="copyToClipboard('#EmailReq')"><i class="fas fa-clipboard"></i>Copy</button>
+                            </div>
+                            <br>
+                </div>
+                <div id="WebSupp" class="tabcontent">
+                    <h1>Web Support</h1>
+                    
+                    <div class="qrblock">
+                        <h2>-Do Not Send To Client-</h2>
+                        <h3>Troubleshooting Website</h3>
+                        <p>1) Have the client try Chrome (If Chrome isn't working/unable to use Chrome) <br>2) Clear the Cache and Cookie files <br>3) Restart Browser (shut all windows and reopen) <br>4) Try again <br>5) Still not working? "Send In Screenshot"(QR Above)</p>
+                        <h3>Troubleshooting App</h3>
+                        <p>1) Uninstall App <br>2) ReInstall App</p>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Register Online</h3>
+                        <p id="RegOnline">To Register please follow the steps below: <br><br>1) Go to Banfield.com <br>2) Select Sign-In in the top right corner <br>3) Select "Create your account" under Log in and Need Help <br>4) Enter your Client ID <br>5) Verify information and follow the prompts</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#RegOnline')" id="RegOnlinebtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Password Reset - Currently Logged In</h3>
+                        <p id="PWReset">To reset your password, please follow the steps below: <br>1. Select the three lines in the upper right-hand corner <br>2. Select MyBanfield and then My Account <br>3. Select Update your Password <br>4. Enter your current password and then a new password twice <br>Passwords must contain 9-64 characters, 1 uppercase, 1 lowercase, 1 digit and 1 of the following special characters: !@#$%^</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#PWReset')" id="PWResetbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Password Reset - Can't Login</h3>
+                        <p id="PWResetW">I can help you with your password. To reset your password so you can log into your account, please follow these steps: <br>1. From the main Banfield.com website, click on "Sign-In" at the top right <br>2. Click "Need Help?" Just below the login button <br>3. Enter in the email address associated with your online Banfiel account <br>4. Click "send my reset link" <br>Check your personal email address for the reset link and follow steps in the email <br>Passwords must contain 9-64 characters, 1 uppercase, 1 lowercase, 1 digit and 1 of the following special characters: !@#$%^</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#PWResetW')" id="PWResetWbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Send in Screenshot</h3>
+                        <p id="Scrshot">To ensure we can correct this can you take a screenshot of where the missing information is and E-mail it to: BanfieldWebsupport@Banfield.com With your name, number, account number, pets name, and any additional details about this error</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#Scrshot')" id="Scrshotbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="AppGen" class="tabcontent">
+                    <h1>General - App</h1>
+                    
+                    <div class="qrblock">
+                        <h3>One-Time Payment</h3>
+                        <p id="APPOTP"> To make a payment through the app simply click on the pets profile, Scroll down to the "Optimum Wellness plan" box and click "Payment Details". This will take you directly to a new browser and our payment section.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPOTP')" id="APPOTPbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>Schedule Appointment</h3>
+                        <p id="APPSCH">You can use the scheduler in the Banfield app to schedule appointments for your pets by following these steps: <br>1. Select the calendar icon at the bottom of the app (2nd from the left) <br>2. Click the  "Make Appointment" button and choose the pet you'd like to schedule <br>3. Select the reason for your visit, and any applicable symptoms <br>4. Add any notes for the vet (optional) and click Next <br>5. Drop-off will be defaulted to Yes, but can be changed to No for all appointment types except Comprehensive Exams <br>6. Select the Date for your appointment, this can be done up to 2 months in advance <br>7. Choose the Hospital <br>8. Select the time for your appointment along with the desired Doctor <br>Review all appointment information, select Make your appointment</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPSCH')" id="APPSCHbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cancel/Reschedule Appointment</h3>
+                        <p id="APPCXLAPPT">Here are the instructions to cancel or reschedule an appointment via the Banfield App: <br>1. Select the calendar icon at the bottom of the app (2nd from the left) <br>2. Displayed are all upcoming appointments and for which pet, choose the appointment you'd like to alter <br>3. Select either "reschedule appointment" and "cancel appointment" depending on which you'd like to do</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPCXLAPPT')" id="APPCXLAPPTbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>Vet Chat</h3>
+                        <p id="APPVETCHAT">Hello! I would love to be able to help you with that however, within this chat I am not medically trained. This chat is primarily used for Wellness Plan questions. Due to the nature of your concern, I would recommend connecting with a vet on the VetChat feature. To access this feature, please select the Textbox Icon on the bottom of the Banfield app (2nd from the right) and select the "Chat with a vet" button</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPVETCHAT')" id="APPVETCHATbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                </div>
+                <div id="AppUpD" class="tabcontent">
+                    <h1>Updating Info - App</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Update Pet Picture</h3>
+                        <p id="APPPic">To update your pet's picture on the app, follow these instructions: <br>1. Under the "pawprint" tab, select the pet whose photo you would like to add/update <br>2. In the top right, there is a camera icon, please press that <br>3. You will then be prompted to add/change your pet's photo <br>4. You can take a photo with your phone's camera or choose one from your camera roll <br>Once you've selected the pet photo you'd like to choose, press done</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPPic')" id="APPPicbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>OWP Banking Information</h3>
+                        <p id="AppBkinfo">I'm happy to guide you on how to update your saved payment methods for the hospital and your Wellness Plan. Though you are unable to do so in the app, you can log into your banfield.com account via a web browser to update these cards. Once there, select "Manage Your Account". Scroll to the pet whose Wellness Plan payment method you want to update and expand their profile before selecting "Update OWP Card".</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#AppBkinfo')" id="AppBkinfobtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>COF Banking Information</h3>
+                        <p id="APPCOFinfo">I'm happy to guide you on how to update your saved payment methods for the hospital and your Wellness Plan. Though you are unable to do so in the app, you can log into your banfield.com account via a web browser to update these cards. Once there, select "Manage Your Account". Scroll to the pet whose Wellness Plan payment method you want to update or scroll to the very bottom and update the hospital card by choosing "Saved Payment Methods" and "Add New Card".</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPCOFinfo')" id="APPCOFinfobtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="AppDoc" class="tabcontent">
+                    <h1>Documents - App</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Payment History</h3>
+                        <p id="APPPymHsty">To make a payment through the app simply click on the pets profile, Scroll down to the "Optimum Wellness plan" box and click "Payment Details". This will take you directly to a new browser and our payment section.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPPymHsty')" id="APPPymHstybtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Invoice</h3>
+                        <p id="APPInvoice">To obtain copies your invoices within the app, please follow these steps: <br>1. Select the Pawprint icon on the bottom left of the Banfield app <br>2. Select the pet you would like invoices for <br>3. Choose the "Timeline" option (just below your pet's photo) <br>4. Navigate to the date you would like the invoice for and select the "clock" icon <br>5. Scroll down to documents and select "Invoice" <br>6. If you would like to email or text a copy, choose "Share PDF" at the top</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPInvoice')" id="APPInvoicebtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Vaccines</h3>
+                        <p id="APPVax">To obtain copies your pets medical records within the app, that are shareable to Groomers and Boarders, please follow these steps: <br>1. Select the Pawprint icon on the bottom left of the Banfield app <br>2. Select the pet you would like records for <br>3. Scroll down to and expand the "Shareable Records" menu, then choose which you need records for<br> Select "Share PDF" which will prompt your device to email or text the PDF copy</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPVax')" id="APPVaxbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Rabies & Microchip Information</h3>
+                        <p id="APPMicro">To obtain your Rabies Number within the app, please follow these steps: <br>1. Select the Pawprint icon on the bottom left of the Banfield app <br>2. Select the pet you would like records for <br>3. Scroll down to and expand the "Pet Profile" <br>4. Scroll to the bottom and you'll see Rabies Tag and Microchip information</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#APPMicro')" id="APPMicrobtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                </div>
+                <div id="AppSupp" class="tabcontent">
+                    <h1>Support - App</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Show/Hide Pets</h3>
+                        <p id="AppPetHide">Here are the steps to show a pet that is hidden from the app: <br>1. Select the Person icon in the bottom right <br>2. Select "My pets" <br>Change the setting next to the pet that you are trying to show or hide.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#AppPetHide')" id="AppPetHidebtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="Text" class="tabcontent">
+                    <h1>Text Chat</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Text Intro</h3>
+                        <p id="TextIntro">Thank you for reaching out. I can help you look into this. I was not able to locate your file. Could we have your first and last name, phone number, and pet's name?</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#TextIntro')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Chat Time Out - 2 Minutes</h3>
+                        <p id="TxtTO2">Hello! We understand life can be busy and may pull you away. Are you still requiring assistance at this time? we'd love to help! Please respond in the next minute so we can continue assisting you with your pet's wellness plan.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#TxtTO2')" id="TxtTO2btn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Chat Time Out - 3 Minutes</h3>
+                        <p id="TxtTO3">Our apologies. Due to the inactivity at this time we are ending contact with this current associate. If you are still needing assistance, just begin a new conversation with us again and you will be directed to the next available associate. We apologize for any inconvenience this may cause. Thank you for contacting Banfield Pet Hospital!</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#TxtTO3')" id="TxtTO3btn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Opt-Out -- SEND RD EMAIL</h3>
+                        <p id="OptOutOption">You replied "OPT OUT" which blocks all automated texts and phone calls from Banfield. To OPT IN, log in to your account at banfield.com and update your contact preferences.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#OptOutOption')" id="OptOutOptionbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Ending</h3>
+                        <p id="TextEndingQR">Thank you for contacting Banfield Pet Hospital. Have a great day! If you still need assistance, just send us a new message and we'll connect you with the first available associate. (Please be aware that any response to this message will generate a new chat with an associate.)</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#TextEndingQR')" id="TextEndingQRbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Wants Phone Call</h3>
+                        <p id="TextCallIn">Apologies, within this chat we are unable to place or request a call but you can reach out to our Wellness Plan Team Monday through Friday 6AM to 5PM PST toll free at (888)649-2716. Please keep in mind we will need to end this conversation for you to call in to wait for the next available representative. Did you want to call in or continue this conversation over text?</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#TextCallIn')" id="TextCallInbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="Escalation" class="tabcontent">
+                    <h1>Escalation</h1>
+                    
+                    <div class="qrblock">
+                        <h3>Force Quit</h3>
+                        <p id="Forceclose">Due to the inability to move forward and resolve your concern at this time, this chat will be disconnecting, as we have provided the information that we have available to assist you today. When you are ready to proceed with an option provided, please chat or call back in at your soonest availability and we'll be happy to assist you</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#Forceclose')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <div class="TopLeft">
+            <div class="Client-Info">
+                <div class="Entry">
+                  <div class="Type">
+                    <div class="TypeField">
+                      <select name="chattext" id="chattext" style="height: 100%; width: 100%;">
+                          <option value="CHAT">Chat</option>
+                          <option value="TEXT">Text</option>
+                      </select>
+                      </div>
+                  </div>
+                  <div class="Namebox">
+                    <div class="NameField"><input type="text" placeholder="Client's Name" id="Clientname" style="height: 100%; width: 100%;"></div>
+                  </div>
+                  <div class="Num">
+                    <div class="NumField">
+                      <select name="NumPets" id="NumPets" onchange="" style="height: 100%; width: 100%;">
+                          <option value="1" selected>1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="Dispo">
+                  <div class="DispoField" contentEditable="true" style="border: none;">
+                      <select name="DispoBox" id="DispoBox" style="height: 100%; width: 60%">
+                          <option value="">-- --</option>
+                          <option value="NoChange">No Change</option>
+                          <option value="TimedOut">Timed Out</option>
+                          <option value="TimeoutNoChange">Time out/No Change</option>
+                          <option value="TimeoutDNR">Time out/DNR</option>
+                          <option value="DNR">DNR</option>
+                          <option value="ADNR">Already DNR/No Change</option>
+                          <option value="CEC">Client Ended Chat</option>
+                          <option value="CECNCM">Client Ended Chat - No Changes Made</option>
+                          <option value="TTO">Text Time Out</option>
+                      </select>
+                      <button class="copy-btn2" id="AddDispo">Add</button>
+                  </div>
+                </div>
+                <div class="Notebox">
+                  <div class="Noteout" contenteditable="true">
+                      <div id="NoteOutput" style="width: 100%; height: 100%;"></div>
+                  </div>  
+                  </div>        
+                <div class="CopyBox">
+                  <div class="TCopyBtn">
+                      <Button style="height: 100%; width: 100%;" class="copy-btn1" onclick="copyToClipboard('#NoteOutput')">Copy Notes</Button>
+                  </div>
+                </div>
+                <div class="Start-Button">
+                  
+                </div> 
+                <div class="Restart">
+                  <div class="RestartBtn">
+                    <button style="width: 80px;" class="resetbutton" id="Reset-button">Reset</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="TopRight">
+          <div class="Pet1">
+            <div class="PetOne" id="PetOne">
+                <input type="text" placeholder="First Pet's Name" id="PetOne1" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+          <div class="Pet2">
+            <div class="PetTwo" id="PetTwo" style="display: none;">
+                <input type="text" id="PetTwo2" placeholder="Second Pet's Name" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+          <div class="Pet3">
+            <div class="PetThree" id="PetThree" style="display: none;">
+                <input type="text"id="PetThree3" placeholder="Third Pet's Name" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+          <div class="Pet4">
+            <div class="PetFour" id="PetFour" style="display: none;">
+                <input type="text" id="PetFour4" placeholder="Fourth Pet's Name" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+          <div class="Pet5">
+            <div class="PetFive" id="PetFive" style="display: none;">
+                <input type="text" id="PetFive5" placeholder="Fifth Pet's Name" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+          <div class="Pet6">
+            <div class="PetSix" id="PetSix" style="display: none;">
+                <input type="text" id="PetSix6" placeholder="Sixth Pet's Name" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+          <div class="QRKing">
+            <div class="QRKingbtn">
+                <button class="startnotes" id="QRKingbtn">Scribe</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+</body>
+</html>
+<form action="/logout?_method=DELETE" method="POST">
+    <button type="submit">Log Out</button>
+  </form>
+</body>
+<%- include('partials/footer'); -%>
+</html>
