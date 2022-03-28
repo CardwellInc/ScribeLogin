@@ -1,15 +1,21 @@
-<h1>Login</h1>
+<%- include('partials/logincss'); -%>
+
 <% if (messages.error) { %>
   <%= messages.error %>
 <% } %>
+<div class="app">
 <form action="/login" method="POST">
   <div>
+    <h1>Welcome to Scribe</h1>
+</div>
+  <div class="form-group">
     <label for="username">Username</label>
-    <input type="username" id="username" name="username" required>
+    <input type="username" id="username" name="username" placeholder="Enter Username" required>
   </div>
-  <div>
+  <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" placeholder="Enter Password" required>
   </div>
-  <button type="submit">Login</button>
+  <input type="submit" value="Login">
+</div>
 </form>
