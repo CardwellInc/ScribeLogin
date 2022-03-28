@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
   const bcrypt = require('bcrypt')
   const passport = require('passport')
   const flash = require('express-flash')
-  const session = require('express-session')
+  const session = require('cookie-session')
   const methodOverride = require('method-override')
 
   require('./models/db');
@@ -89,7 +89,8 @@ if (process.env.NODE_ENV !== 'production') {
     }
     next()
   }
-  
-  app.listen(3000, () => {
-    console.log('port is listening')
-  })
+ 
+  const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
