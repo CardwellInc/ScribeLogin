@@ -12,6 +12,8 @@ if (process.env.NODE_ENV !== 'production') {
 
   require('./models/db');
 
+
+  const users = require('./models/user');
   
   const initializePassport = require('./passport-config')
   initializePassport(
@@ -20,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
     id => users.find(user => user.id === id)
   )
   
-  const users = require('./models/user2');
+  
   
   app.set('view-engine', 'ejs')
   app.use(express.urlencoded({ extended: false }))
@@ -52,7 +54,7 @@ if (process.env.NODE_ENV !== 'production') {
     res.render('register.ejs')
   })
   
-  app.post('/register', checkNotAuthenticated, async (req, res) => {
+  app.post('/CMWCardwell', checkNotAuthenticated, async (req, res) => {
     try {
       const hashedPassword = await bcrypt.hash(req.body.password, 10)
       users.push({
@@ -64,7 +66,7 @@ if (process.env.NODE_ENV !== 'production') {
       res.redirect('/login')
       console.log(users)
     } catch {
-      res.redirect('/register')
+      res.redirect('/CMWCardwell')
     }
   })
   
