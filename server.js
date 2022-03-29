@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
     id => users.find(user => user.id === id)
   )
   
-  
+  const AddingName = require('./models/CMWC');
   
   app.set('view-engine', 'ejs')
   app.use(express.urlencoded({ extended: false }))
@@ -57,14 +57,14 @@ if (process.env.NODE_ENV !== 'production') {
   app.post('/CMWCardwell', checkNotAuthenticated, async (req, res) => {
     try {
       const hashedPassword = await bcrypt.hash(req.body.password, 10)
-      users.push({
+      AddingName.push({
         id: Date.now().toString(),
         name: req.body.name,
         username: req.body.username,
         password: hashedPassword
       })
       res.redirect('/login')
-      console.log(users)
+      console.log(AddingName)
     } catch {
       res.redirect('/CMWCardwell')
     }

@@ -1,7 +1,7 @@
 <%- include('partials/header'); -%>
 <body>
     
-    <h1>Welcome <%= name %> - Logout is at the bottom</h1>
+    <h1>Welcome <%= name %> To Scribe</h1>
 <div id="Contents"></div>
 
     <div class="container">
@@ -81,8 +81,8 @@
                     </li>
                     <li><button class="tablinks" onclick="openCity(event, 'Text')">Text</button></li>
                     <li><button class="tablinks" onclick="openCity(event, 'Escalation')">Escalation</button></li>    
-                        <li><button>Resources</button></li>
-                        <li><button>Contact Info</button></li>
+                    <li><button class="tablinks" onclick="openCity(event, 'Rescources')">Rescources</button></li>
+                    <li><button class="tablinks" onclick="openCity(event, 'ContactInfo')">Contact Info</button></li>
                 </ul>
             </nav>
           </div>
@@ -1138,6 +1138,72 @@
                         <h3>Force Quit</h3>
                         <p id="Forceclose">Due to the inability to move forward and resolve your concern at this time, this chat will be disconnecting, as we have provided the information that we have available to assist you today. When you are ready to proceed with an option provided, please chat or call back in at your soonest availability and we'll be happy to assist you</p>
                         <button class="copy-btn" onclick="copyToClipboard('#Forceclose')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="Rescources" class="tabcontent">
+                    <h1>Rescources</h1>
+                    <div class="qrblock">
+                        <h3>Force Quit</h3>
+                        <p id="Testrun">Words QR Go Here</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#Testrun')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                </div>
+                <div id="ContactInfo" class="tabcontent">
+                    <h1>Contact Info</h1>
+                    <div class="qrblock">
+                        <h3>(WPT) Wellness Plan Team - Phones</h3>
+                        <p id="WPTPhone">I would like to get you in touch with our Wellness Plan phone team. You can reach them by phone at 888-649-2716 </p>
+                        <button class="copy-btn" id="WPTPhonebtn" onclick="copyToClipboard('#WPTPhone')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>Vet Chat</h3>
+                        <p id="VetChatSteps">Due to the nature of your concern, I would recommend connecting with a vet on the Vet chat feature. To access this feature please select the "Vet Chat" link located near the bottom of your MyBanfield home page. Please keep in mind they do not have access to any medical history available on the account.</p>
+                        <button class="copy-btn" id="VetChatStepsbtn" onclick="copyToClipboard('#VetChatSteps')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>Vet Chat - Non-OWP</h3>
+                        <p id="NonOWPVet">I would love to be able to help you with that however, within this chat I am not medically trained. I would recommend contacting your local hospital to go over medical questions or schedule an appointment if needed.</p>
+                        <button class="copy-btn" id="NonOWPVetbtn" onclick="copyToClipboard('#NonOWPVet')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>(CFS) Client Finanical Services - Collections</h3>
+                        <p id="CFSPhone">I am showing the account for your pet is being handled by our Client Financial service team. You can reach out to them at 888-448-4070 to discuss the balance of your account. Were there any other questions I can help with today?</p>
+                        <button class="copy-btn" id="CFSPhonebtn" onclick="copyToClipboard('#CFSPhone')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>(CST) Client Service Team</h3>
+                        <p id="CSTPhone">Because of the nature of your concern we recommend you contact our Client Service team and speak with one of our associates. We apologize for any inconvenience this may cause. You can reach our Client Service team toll free at 866-894-7927. </p>
+                        <button class="copy-btn" id="CSTPhonebtn" onclick="copyToClipboard('#CSTPhone')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>Web Support - Phones</h3>
+                        <p id="WSPhone">Based on the issues you are experiencing with the website I would like to get you in touch with our Web Support team. You can reach them by phone at 877-656-7146</p>
+                        <button class="copy-btn" id="WSPhonebtn" onclick="copyToClipboard('#WSPhone')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>(BCT) Banfield Cares Team</h3>
+                        <p id="BCTInfo">We appreciate you taking the time to share your feedback. Because of the nature of your concern we recommend you contact our Banfield Cares Team and speak with one of our specialists who can assist you with your hospital related experience. You can reach them by email at BanfieldCares@banfield.com. This message will be going to your direct hospital leadership and field leadership. They will contact you within 3-5 business days via phone call so please include your most up-to-date contact information.</p>
+                        <button class="copy-btn" id="BCTInfobtn" onclick="copyToClipboard('#BCTInfo')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>Banfield Shop</h3>
+                        <p id="BanShop">Thank you for reaching out today; I'm happy to get you to the right place for your prescriptions. Prescriptions cannot be managed through chat but you can order prescriptions through the Banfield Shop or by contacting your local Banfield for prescription management. Banfield Shop support can be reached at (888)917-7387</p>
+                        <button class="copy-btn" id="BanShopbtn" onclick="copyToClipboard('#BanShop')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>WPT Spanish</h3>
+                        <p id="WPTSpan">Lo siento, no hablo español. Llame al 888-649-2716 para hablar con un intérprete en español. Puede comunicarse con ellos de lunes a viernes de 6 a.m. a 5 p.m., hora estándar del Pacífico.</p>
+                        <button class="copy-btn" id="WPTSpanbtn" onclick="copyToClipboard('#WPTSpan')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>CST Spanish</h3>
+                        <p id="CSTSpan"> Lo siento, no hablo español. Llame al 866-894-7927 para hablar con un intérprete en español. Puede comunicarse con ellos de lunes a viernes de 6 a.m. a 5 p.m., hora estándar del Pacífico.</p>
+                        <button class="copy-btn" id="CSTSpanbtn" onclick="copyToClipboard('#CSTSpan')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <div class="qrblock">
+                        <h3>Wisdom Panel Contact Info</h3>
+                        <p id="WisdomPan">For questions about the WISDOM PANEL™ Health, please contact Wisdom Health:<br>Email: info@wisdomhealth.com<br>Phone: (855) 619-1884<br>Monday – Friday, 7:00 a.m. – 4:00 p.m. PST</p>
+                        <button class="copy-btn" id="WisdomPanbtn" onclick="copyparaToClipboard('#WisdomPan')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                 </div>
           </div>

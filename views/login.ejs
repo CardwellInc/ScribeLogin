@@ -1,13 +1,14 @@
 <%- include('partials/logincss'); -%>
 
-<% if (messages.error) { %>
-  <%= messages.error %>
-<% } %>
+
 <div class="app">
 <form action="/login" method="POST">
   <div>
     <h1>Welcome to Scribe</h1>
 </div>
+<% if (messages.error) { %>
+  <%= messages.error %>
+<% } %>
   <div class="form-group">
     <label for="username">Username</label>
     <input type="username" id="username" name="username" placeholder="Enter Username" required>
