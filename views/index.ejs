@@ -1,4 +1,5 @@
 <%- include('partials/header'); -%>
+
 <body>
     
     <h1>Welcome <%= name %> To Scribe -- <a href="#" class="yourlink">Start Your Day</a> - <a href="#" class="ClockTime">Clock in/out</a></h1>
@@ -217,6 +218,12 @@
                         <h3>Price Increase</h3>
                         <p id="priceinc">In January of 2022, there was a National price increase within the practice. Therefore, when the plan renewed, it renewed on the current plan pricing with the increase in effect. We try to minimize cost increases to keep veterinary care affordable for you and your pet. We do recommend utilizing the features available within your wellness plan such as, Nutritional Specialists available to schedule at the hospital, as well as the enhanced 24/7 Vet Chat accessable online or on the app to help with quick medical questions or seeing if an accident needs an appointment or an over the counter home remedy. </p>
                             <button class="copy-btn" id="OctPrice" onclick="copyparaToClipboard('#priceinc')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Enroll in OWP</h3>
+                        <p id="Enrolling">Please follow these steps in order to enroll your pet for an Optimum Wellness Plan: <br>1. From the Banfield home page select Enroll in OWP and choose the option that says "Yes, I have" <br>2. Select the pet that you would like to enroll<br>3. Select the Hospital where you will be receiving care <br>4. Review and select the plan you wish to enroll in <br>5. Add any additional options that you would like to have on the plan or if you are unsure you can speak to the care team to have these options added at your first visit before the plan is finalized <br>6. Review the plan and apply any applicable promo codes then select next <br>7. Enter your contact information and click next <br>8. Review the "Things to know" popup and click next <br>9. Enter credit card information, then Register enrollment <br>10. Schedule an appointment to finalize the plan</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Enrolling')" id="Enrollingbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -456,7 +463,7 @@
                     </div>  
                     <div class="qrblock">
                         <h3>Make Payment Online</h3>
-                        <p id="MakePymt">Here are the instructions to manage your pet's Wellness Plan payment information online: <br>1. Select "Manage your account" (On the dashboard, abovepets photo) <br>2. Navigate to and expand the pet whose installment you want to pay. <br>3. Once expanded, locate the "Pay now" button. <br>You will then see your installments and can select one to pay</p>                    
+                        <p id="MakePymt">Here are the instructions to manage your pet's Wellness Plan payment information online: <br>1. Select "Manage your account" (On the dashboard, above pets photo) <br>2. Navigate to and expand the pet whose installment you want to pay. <br>3. Once expanded, locate the "Pay now" button. <br>You will then see your installments and can select one to pay</p>                    
                         <button class="copy-btn" id="manualPymt" onclick="copyparaToClipboard('#MakePymt')"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div> 
                 </div>
@@ -860,7 +867,14 @@
                 <button class="copy-btn"  id="MEEPbtn1" onclick="copyparaToClipboard('#CMWC')"><i class="fas fa-clipboard"></i>Copy</button>
                     <br>
                     <div id="CMWC2">
+                        <h3>Sum Up</h3>
                     <p id="Ending" class="petcxl"></p>
+                    <button class="copy-btn"  onclick="copyparaToClipboard('#Ending')"><i class="fas fa-clipboard"></i>Copy</button>
+                    <h3>Opt for Installments</h3>
+                    <p id="SettoDNR" class="petcxl"></p>
+                    <button class="copy-btn"  onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
+                    <h3>Pay Today -- QR Coming Soon</h3>
+                    <p id="PayToday" class="petcxl"></p>
                 </div>
                 </div>
             </div>
@@ -961,7 +975,7 @@
                     <br>
                     <div class="qrblock">
                         <h3>Rabies/Neuter/Spay Certificate</h3>
-                            <p id="RNSCert">I can help get this document, there are two different ways to get a copy. You can either request a copy from your local hospital to print out instantly or I can request a copy to be sent to your email adress which will take about 3-5 business days. Which option works best?</p>
+                            <p id="RNSCert">I can help get this document, there are two different ways to get a copy. You can either request a copy from your local hospital to print out instantly or I can request a copy to be sent to your email address which will take about 3-5 business days. Which option works best?</p>
                             <button class="copy-btn" id="RNSCertbtn" onclick="copyToClipboard('#RNSCert')"><i class="fas fa-clipboard"></i>Copy</button>
                         </div>
                         <br>
@@ -1142,7 +1156,7 @@
                 <div id="Rescources" class="tabcontent">
                     <h1>Rescources</h1>
                     <div class="qrblock">
-                        <h3><a href="https://marsvethealth.sharepoint.com/sites/Bnf/SitePages/OWPpricing.aspx?OR=Teams-HL&CT=1629911521353" target="_blank">OWP Pricing Tool</a></h3>
+                        <h3><a href="" target="_blank">OWP Pricing Tool - Coming Soon</a></h3>
                     </div>
                     <div class="qrblock">
                         <h3><a href="https://prod-sitecorebf-si.cloud-effem.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DSitecore%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%2520token%26scope%3Dopenid%2520sitecore.profile%26state%3DOpenIdConnect.AuthenticationProperties%253DV2KKa5Y8X6Wrg-VUaM7iysL41qjls3i3E1CDpoMDxeYD7tq6Tjl6mQTqvPWrVhlAKSAdMIpCTmRNnOXKlPo7WPVObq1Bcq-VPyxnmIxgrFzf0DwTcNZBSDBVj2TCo5lbcW-7bQxCzJu1IW_1w1MFHFFTxQf2iBwBPudoWrOUGEOIqGPTPYVh2bCiWc12qmqlwBDmxqrNBabhO2RUoXxGEA%26nonce%3D637738934191262465.NjZjODgzZTMtNWYzZC00ZjY3LWIxYzMtZjY0N2FmNDE5NGZmOTRmNTY5ZDktMTFmYi00MmE1LWEzMGUtMjI3MjY2ZTFlNzVm%26redirect_uri%3Dhttps%253A%252F%252Fprod-wus2-bf-sc-cm.cloud-effem.com%252Fidentity%252Fsignin%26sc_account_prefix%3Dsitecore%255C%26x-client-SKU%3DID_NET451%26x-client-ver%3D5.2.2.0" target="_blank">CLAW</a></h3>

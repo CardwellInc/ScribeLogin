@@ -595,13 +595,13 @@ function openCity(evt, cityName) {
   const TxtTO2btn = document.querySelector('#TxtTO2btn');
   TxtTO2btn.addEventListener('click', () => {
     const TxtTO2btnn = document.querySelector('#NoteOutput');
-    TxtTO2btnn.insertAdjacentHTML("beforeend" , '- sent 2-miunte TO Warning ');
+    TxtTO2btnn.insertAdjacentHTML("beforeend" , '- sent 2-minute TO Warning ');
   });
 
   const TxtTO3btn = document.querySelector('#TxtTO3btn');
   TxtTO3btn.addEventListener('click', () => {
     const TxtTO3btnn = document.querySelector('#NoteOutput');
-    TxtTO3btnn.insertAdjacentHTML("beforeend" , '- sent 3-miunte TO Ending ');
+    TxtTO3btnn.insertAdjacentHTML("beforeend" , '- sent 3-minute TO Ending ');
   });
 
   const OptOutOptionbtn = document.querySelector('#OptOutOptionbtn');
@@ -922,7 +922,7 @@ function PDBnotes(){
         var PDB = document.getElementById('PDBnames').value;
         var PDBamt = document.getElementById('PDBamt').value;
           const PDBbtnn = document.querySelector('#NoteOutput');
-          PDBbtnn.insertAdjacentHTML("beforeend" , '- adv '+PDB+' plan is on Hold for PDB $'+PDBamt+' for missed installment on '+todaypdb+' ');
+          PDBbtnn.insertAdjacentHTML("beforeend" , '- adv '+PDB+' plan is on Hold for PDB $'+PDBamt+' for missed installment on '+todaypdb+' - edu 120 days from Hold to Collections ');
       });
   } else {
     var PDB = document.getElementById('PDBnames').value;
@@ -1768,8 +1768,12 @@ if (MEEPcmwc.length == 6) {
   var P = "";
 }
 
+var SetDNR = "I understand, I can set the plan to automatically end and expire at the end of the play year. Were there any other questions or changes I can help with in the meantime?" 
+
 
 document.getElementById("Ending").innerHTML = Ending;
+
+document.getElementById("SettoDNR").innerHTML = SetDNR;
 
 const MEEPone = document.querySelector('#MEEPbtn1');
 MEEPone.addEventListener('click', () => {
