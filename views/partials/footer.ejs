@@ -676,6 +676,12 @@ function openCity(evt, cityName) {
     PersonalInfoBtnn.insertAdjacentHTML("beforeend" , '- edu how to update name at hspt with Valid ID ');
   });
 
+  const MPDbtn = document.querySelector('#MPDbtn');
+  MPDbtn.addEventListener('click', () => {
+    const MPDbtnn = document.querySelector('#NoteOutput');
+    MPDbtnn.insertAdjacentHTML("beforeend" , '- edu how to update name at hspt with Valid ID ');
+  });
+
   const BillingInfobtn = document.querySelector('#BillingInfobtn');
   BillingInfobtn.addEventListener('click', () => {
     const BillingInfobtnn = document.querySelector('#NoteOutput');
@@ -1429,7 +1435,7 @@ function buildServ() {
   var EndDate6 = document.getElementById("EndDate6").value;
   var BK6 = document.getElementById("BK6").value;
 
-    let result = "That's ok, I can help guide us through this today. Canceling a Wellness Plan is all based on usage. We figure in how much the hospitals have provided in services and how many payments you have made, and then we come to a final balance based on whichever costs less: the remaining balance of future Plan payments, or the remaining costs of service after deducting past payments. This means you will either pay for the services you have used, Or the remaining 12 month plan balance, whichever is the lesser of the two.";
+    let result = "I can help guide us through the cancellation process today. Canceling a Wellness Plan is all based on usage. We figure in how much the hospitals have provided in services and how many payments you have made, and then we come to a final balance based on whichever costs less: the remaining balance of future Plan payments, or the remaining costs of service after deducting past payments. This means you will either pay for the services you have used, Or the remaining 12 month plan balance, whichever is the lesser of the two.";
 
     
     
@@ -1813,15 +1819,19 @@ if (MEEPcmwc.length == 6) {
 
 document.getElementById("Ending").innerHTML = Ending;
 
-var SetDNR = "I understand, I have set the plan to automatically end and expire at the end of the plan year. Were there any other questions or changes I can help with in the meantime?" 
+var SetDNR = "I have set the plan to automatically end and expire at the end of the plan year. Were there any other questions or changes I can help with in the meantime?" 
 
 document.getElementById("SettoDNR").innerHTML = SetDNR;
 
 
-var PayTodaycxl = "I understand, did you want to process the $AMT on the card ending in #### to close the plan today"
+var PayTodaycxl = "I understand, did you want to process the $"+scribe[0].CxlCost+" on the card ending in #### to close the plan today"
 
 
 document.getElementById("PayTodaycxl").innerHTML = PayTodaycxl;
+
+var WPBALExp = "When closing a plan we only ask that the services provided are paid for, since you have been provided more services than the cost of the plan that includes them you will need to finish paying for the plan as you have currently made 3 out of 12 payments towards the full plan.";
+
+document.getElementById("WPBALExp").innerHTML = WPBALExp;
 
   // MEEP cxl payment QR
 
