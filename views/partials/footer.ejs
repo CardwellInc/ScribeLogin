@@ -442,6 +442,18 @@ function openCity(evt, cityName) {
     OldOrdern.insertAdjacentHTML("beforeend" , '- refered to eComm for online orders ');
   });
 
+  const OFInstall = document.querySelector('#OFInstallbtn');
+  OFInstall.addEventListener('click', () => {
+    const OFInstalln = document.querySelector('#NoteOutput');
+    OFInstalln.insertAdjacentHTML("beforeend" , '- opted for installments ');
+  });
+
+  const Petpassedqr = document.querySelector('#Petpassedqrbtn');
+  Petpassedqr.addEventListener('click', () => {
+    const Petpassedqrn = document.querySelector('#NoteOutput');
+    OldOrdern.insertAdjacentHTML("beforeend" , '- refered to eComm for online orders ');
+  });
+
   const NewOrder = document.querySelector('#NewOrderbtn');
   NewOrder.addEventListener('click', () => {
     const NewOrdern = document.querySelector('#NoteOutput');
@@ -457,13 +469,13 @@ function openCity(evt, cityName) {
   const Schedulingapptbtn = document.querySelector('#Schedulingapptbtn');
   Schedulingapptbtn.addEventListener('click', () => {
     const Schedulingapptbtnn = document.querySelector('#NoteOutput');
-    Schedulingapptbtnn.insertAdjacentHTML("beforeend" , '- edu how to schedule appointment ');
+    Schedulingapptbtnn.insertAdjacentHTML("beforeend" , '- edu how to schedule appointment online ');
   });
 
   const Reschcxlapptbtn = document.querySelector('#Reschcxlapptbtn');
   Reschcxlapptbtn.addEventListener('click', () => {
     const Reschcxlapptbtnn = document.querySelector('#NoteOutput');
-    Reschcxlapptbtnn.insertAdjacentHTML("beforeend" , '- edu how to adjust a scheduled appointment online ');
+    Reschcxlapptbtnn.insertAdjacentHTML("beforeend" , '- edu how to rescheduled/cxl appointment online ');
   });
 
   const Invoicebill1btn = document.querySelector('#Invoicebill1btn');
@@ -619,7 +631,13 @@ function openCity(evt, cityName) {
   const RNSCertbtn = document.querySelector('#RNSCertbtn');
   RNSCertbtn.addEventListener('click', () => {
     const RNSCertbtnn = document.querySelector('#NoteOutput');
-    RNSCertbtnn.insertAdjacentHTML("beforeend" , '- edu on options for Certification request ');
+    RNSCertbtnn.insertAdjacentHTML("beforeend" , '- edu on options for Rabies Certification request ');
+  });
+
+  const TrdPrtybtn = document.querySelector('#TrdPrtybtn');
+  TrdPrtybtn.addEventListener('click', () => {
+    const TrdPrtybtnn = document.querySelector('#NoteOutput');
+    TrdPrtybtnn.insertAdjacentHTML("beforeend" , '- adv to have account holder reach out to make changes to the plan ');
   });
 
   const EmailReqbtn = document.querySelector('#EmailReqbtn');
@@ -751,6 +769,8 @@ function openCity(evt, cityName) {
     const WisdomPann = document.querySelector('#NoteOutput');
     WisdomPann.insertAdjacentHTML("beforeend" , '- edu how to contact Wisdom Health ');
   });
+
+
 
 
 
@@ -1259,6 +1279,29 @@ function unhide() {
   }
 }
 
+document.getElementById("BKdate").addEventListener("change", RSRes);
+
+function RSRes() {
+  // get the clock
+  var RSResvar = document.getElementById('RDResDiv');
+
+  // get the current value of the clock's display property
+  var MeepSetting = RSResvar.style.display;
+
+  // also get the clock button, so we can change what it says
+
+  // now toggle the clock and the button text, depending on current state
+  if (MeepSetting == 'none') {
+    // clock is visible. hide it
+    RSResvar.style.display = 'block';
+    // change button text
+
+  }
+  else {
+
+  }
+}
+
 const UnableWRPFbtn = document.querySelector('#UnableWRPFbtn');
 UnableWRPFbtn.addEventListener('click', () => {
   const UnableWRPFbtnn = document.querySelector('#NoteOutput');
@@ -1386,7 +1429,7 @@ function buildServ() {
   var EndDate6 = document.getElementById("EndDate6").value;
   var BK6 = document.getElementById("BK6").value;
 
-    let result = "Canceling a Wellness Plan is all based on usage. We figure in how much the hospitals have provided in services and how many payments you have made, and then we come to a final balance based on whichever costs less: the remaining balance of future Plan payments, or the remaining costs of service after deducting past payments. This means you will either pay for the services you have used, Or the remaining 12 month plan balance, whichever is the lesser of the two.";
+    let result = "That's ok, I can help guide us through this today. Canceling a Wellness Plan is all based on usage. We figure in how much the hospitals have provided in services and how many payments you have made, and then we come to a final balance based on whichever costs less: the remaining balance of future Plan payments, or the remaining costs of service after deducting past payments. This means you will either pay for the services you have used, Or the remaining 12 month plan balance, whichever is the lesser of the two.";
 
     
     
@@ -1768,12 +1811,29 @@ if (MEEPcmwc.length == 6) {
   var P = "";
 }
 
-var SetDNR = "I understand, I can set the plan to automatically end and expire at the end of the play year. Were there any other questions or changes I can help with in the meantime?" 
-
-
 document.getElementById("Ending").innerHTML = Ending;
 
+var SetDNR = "I understand, I have set the plan to automatically end and expire at the end of the plan year. Were there any other questions or changes I can help with in the meantime?" 
+
 document.getElementById("SettoDNR").innerHTML = SetDNR;
+
+
+var PayTodaycxl = "I understand, did you want to process the $AMT on the card ending in #### to close the plan today"
+
+
+document.getElementById("PayTodaycxl").innerHTML = PayTodaycxl;
+
+  // MEEP cxl payment QR
+
+  const Pymttest = document.querySelector('#Pymttest');
+Pymttest.addEventListener('click', () => {
+  const Pymttestn = document.querySelector('#NoteOutput');
+
+  let AmtAmt = document.getElementById("AmtNoteRPF").value;
+  let Secret = document.getElementById("Last4").value;
+  
+  Pymttestn.insertAdjacentHTML("beforeend" , '- processed $'+AmtAmt+' on CC ending in '+Secret+' ');
+});
 
 const MEEPone = document.querySelector('#MEEPbtn1');
 MEEPone.addEventListener('click', () => {
@@ -1839,6 +1899,7 @@ $('a.yourlink').click(function(e) {
     e.preventDefault();
     window.open('https://home-c14.incontact.com/inContact/Default.aspx');
     window.open('https://wfm4596685-nicewfm.niceincontact.com/wfm/login');
+    window.open('https://vdi.banfield.com/portal/nativeclient');
 });
 
 $('a.ClockTime').click(function(e) {

@@ -103,15 +103,21 @@
                     </div>
                     <br>
                     <div class="qrblock">
+                        <h3>Typing Too Long</h3>
+                        <p id="TTLmessage">Hello? Are you still needing assistance? Please respond to ensure this conversation can stay open if additional assistance is needed.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#TTLmessage')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
                         <h3>Unable to Locate</h3>
                         <p id="UTLStarter">Hello! I was not able to locate your account with the phone number provided, May I please have the  phone number associated with your Wellness Plan?</p>
                         <button class="copy-btn" onclick="copyToClipboard('#UTLStarter')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
-                        <h3>Typing Too Long</h3>
-                        <p id="TTLmessage">Hello? Are you still needing assistance? Please respond to ensure this conversation can stay open if additional assistance is needed.</p>
-                        <button class="copy-btn" onclick="copyToClipboard('#TTLmessage')"><i class="fas fa-clipboard"></i>Copy</button>
+                        <h3>3rd Party</h3>
+                        <p id="TrdPrty">I apologize, as your name is not on the agreement I would be unable to access any of the account information to assist, Please have the account holder reach out to go over of their information within their account. Are there any other non-account related questions I can help with in the meantime?</p>
+                        <button class="copy-btn" id="TrdPrtybtn" onclick="copyToClipboard('#TrdPrty')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -176,11 +182,16 @@
                     </div>
                     <br>
                     <div class="qrblock">
+                        <h3>Vet Chat</h3>
+                        <p id="QuickVetChat">Thank you for reaching out, I can help get us in the right direction. To view the Wisdom Panel on banfield.com: <br>1. Select the pet in question on your main dashboard <br>2. Select "See Full Profile" <br>3. Scroll to the bottom and select "View Your Pet's DNA Profile" <br>It will be right below the "Need Help?" live chat option</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#QuickVetChat')" id="QuickVetChatbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
                         <h3>Wisdom Panel/DNA Results</h3>
                         <p id="DNAWisdomPanel">Thank you for reaching out, I can help get us in the right direction. To view the Wisdom Panel on banfield.com: <br>1. Select the pet in question on your main dashboard <br>2. Select "See Full Profile" <br>3. Scroll to the bottom and select "View Your Pet's DNA Profile" <br>It will be right below the "Need Help?" live chat option</p>
                         <button class="copy-btn" onclick="copyparaToClipboard('#DNAWisdomPanel')" id="DNAWisdom2btn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
-                    <br>
                 </div>
                 <div id="ppassed" class="tabcontent">
                     <h1>Greetings</h1>
@@ -198,12 +209,18 @@
                         <button class="copy-btn" onclick="copyToClipboard('#ppassed-chatp')" id="PPassedbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
-                        <div class="qrblock">
-                            <h3>Ending</h3>
-                            <p id="EndingPassedNote"> It is my pleasure to assist you, Again, we are sorry for your loss, Please have a better day, Thank you for contacting Banfield Pet Hospital</p>
-                            <button class="copy-btn" onclick="copyToClipboard('#EndingPassedNote')"><i class="fas fa-clipboard"></i>Copy</button>
-                        </div>
-                        <br>
+                    <div class="qrblock">
+                        <h3>Ending</h3>
+                        <p id="EndingPassedNote"> It is my pleasure to assist you, Again, we are sorry for your loss, Please have a better day, Thank you for contacting Banfield Pet Hospital</p>
+                      <button class="copy-btn" onclick="copyToClipboard('#EndingPassedNote')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                     <br>
+                     <div class="qrblock">
+                        <h3>Text Ending</h3>
+                        <p id="TxtPassingPetNote"> It is my pleasure to assist you, Again, we are sorry for your loss, Please have a better day, Thank you for contacting Banfield Pet Hospital. If you still need assistance, just send us a new message and we'll connect you with the first available associate. (Please be aware that any response to this message will generate a new chat with an associate.)</p>
+                      <button class="copy-btn" onclick="copyToClipboard('#TxtPassingPetNote')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                     <br>
                 </div>
                 <div id="wp-gen" class="tabcontent">
                     <h1>Wellness Plan</h1>
@@ -363,6 +380,10 @@
                         <p id="UGDGDOB"> I'm happy to put that request in for you. So we can confirm the agreement holder is 18+ our software requires the agreement holders date of birth. Will you please provide your date of birth so we can complete your request.</p>
                         <button class="copy-btn" id="UGDGus" onclick="copyToClipboard('#UGDGDOB')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3><a href="https://marsvethealth.sharepoint.com/teams/BNF-CallCenter/ClientRetention/Lists/OWP UpDowngrade Requests/AllItems.aspx" target="_blank">UG/DG Form</a></h3>
+                    </div>
                 </div>
                 <div id="AddOns" class="tabcontent">
                     <h1>General</h1>
@@ -461,6 +482,13 @@
                     <p id="RSnote"></p> 
                         <button class="copy-btn" id="RSbtn" onclick="copyToClipboard('#RSnote')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>  
+                    <br>
+                    <div class="qrblock" id="RDResDiv" style="display: none;">
+                        <h3>Responce after RS Form above</h3>
+                        <p id="ResRSForm">Perfect! Are there any other changes I can help with today?</p>                    
+                        <button class="copy-btn" onclick="copyparaToClipboard('#ResRSForm')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div> 
+                    <br>
                     <div class="qrblock">
                         <h3>Make Payment Online</h3>
                         <p id="MakePymt">Here are the instructions to manage your pet's Wellness Plan payment information online: <br>1. Select "Manage your account" (On the dashboard, above pets photo) <br>2. Navigate to and expand the pet whose installment you want to pay. <br>3. Once expanded, locate the "Pay now" button. <br>You will then see your installments and can select one to pay</p>                    
@@ -622,7 +650,7 @@
                     <div class="qrblock">
                         <h3>Balance Owed - Pet Passed</h3>
                         <p id="CxlBlockThree"> I understand not expecting to have a balance and thinking about this after losing your pet can be difficult. The balance that remains is to finish paying the hospital for the care that was provided. We try to do everything we can to help clients keep the cost of care affordable by allowing services to be paid slowly through interest-free installments. At this time the balance of $AMT that remains is just to ensure the hospital is reimbursed for the $AMT of services they have already provided. Please keep in mind the cost to close is not for any unused services nor future services.</p>
-                    <button class="copy-btn" onclick="copyToClipboard('#CxlBlockThree')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    <button class="copy-btn" id="Petpassedqrbtn" onclick="copyToClipboard('#CxlBlockThree')"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div>
                     <br>
                     <div class="qrblock">
@@ -636,10 +664,21 @@
                         <p id="Arged">I apologize. Through this chat, I can only close the plan for the balance listed by the Hospital. I can not make any changes to this balance as it all reflects from what the Hospital has provided me for the services used. Due to this, I can not change, reduce, or close the Wellness Plan without the payment. I can just set them to automatically cancel and not renew.</p>
                     <button class="copy-btn" onclick="copyToClipboard('#Arged')"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Unable to Change Balance to Close</h3>
+                        <p id="BalCloseOwed">I understand. Through this chat, I can only close the plan for the balance listed by the Hospital. I can not make any changes to this balance as it all reflects from what the Hospital has provided me for the services used. Due to this, I can not change, reduce, or close the Wellness Plan without the payment. I can just set them to automatically cancel and not renew.</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#BalCloseOwed')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
                 </div>
                 <div id="One-Pet" class="tabcontent">
                     <h1>Multipet Easy Exit Program</h1>
-                    
+                    <div class="qrblock">
+                        <h3>Cancel Intro</h3>
+                        <p id="CxlIntroBlock">Have you gone over the cancellation process before or is this the first time?</p>
+                    <button class="copy-btn" onclick="copyToClipboard('#CxlIntroBlock')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div>
+                    <br>
                     <div class="qrblock">
                         <div class="Filloutform">
                     How Many Cancels
@@ -872,9 +911,11 @@
                     <button class="copy-btn"  onclick="copyparaToClipboard('#Ending')"><i class="fas fa-clipboard"></i>Copy</button>
                     <h3>Opt for Installments</h3>
                     <p id="SettoDNR" class="petcxl"></p>
-                    <button class="copy-btn"  onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
+                    <button class="copy-btn" id="OFInstallbtn" onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
                     <h3>Pay Today -- QR Coming Soon</h3>
-                    <p id="PayToday" class="petcxl"></p>
+                    <input type="text" id="PTAmt" placeholder="Last 4 of Card">
+                    <p id="PayTodaycxl" class="petcxl"></p>
+                    <button class="copy-btn"  onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
                 </div>
                 </div>
             </div>
@@ -934,8 +975,8 @@
                     <br>
                     <div class="qrblock">
                         <h3>Set to DNR</h3>
-                        <p id="SettoDNR">If you would like to set a pet's plan to not renew, please follow these steps: <br>1. Select "Manage your account" <br>2. Expand the pet you are wanting to make changes for <br>3. Select "Manage plan" <br>4. Expand the drop-down menu and select the reason for cancelling the plan, then Continue Click "Save"</p>
-                        <button class="copy-btn" id="SettoDNRbtn" onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
+                        <p id="STDNR">If you would like to set a pet's plan to not renew, please follow these steps: <br>1. Select "Manage your account" <br>2. Expand the pet you are wanting to make changes for <br>3. Select "Manage plan" <br>4. Expand the drop-down menu and select the reason for cancelling the plan, then Continue Click "Save"</p>
+                        <button class="copy-btn" id="SettoDNRbtn" onclick="copyparaToClipboard('#STDNR')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                 </div>
                 <div id="WebMed" class="tabcontent">
@@ -974,7 +1015,7 @@
                     </div>
                     <br>
                     <div class="qrblock">
-                        <h3>Rabies/Neuter/Spay Certificate</h3>
+                        <h3>Rabies Certificate</h3>
                             <p id="RNSCert">I can help get this document, there are two different ways to get a copy. You can either request a copy from your local hospital to print out instantly or I can request a copy to be sent to your email address which will take about 3-5 business days. Which option works best?</p>
                             <button class="copy-btn" id="RNSCertbtn" onclick="copyToClipboard('#RNSCert')"><i class="fas fa-clipboard"></i>Copy</button>
                         </div>
@@ -1140,7 +1181,7 @@
                     <br>
                     <div class="qrblock">
                         <h3>Wants Phone Call</h3>
-                        <p id="TextCallIn">Apologies, within this chat we are unable to place or request a call but you can reach out to our Wellness Plan Team Monday through Friday 6AM to 5PM PST toll free at (888)649-2716. Please keep in mind we will need to end this conversation for you to call in to wait for the next available representative. Did you want to call in or continue this conversation over text?</p>
+                        <p id="TextCallIn">Apologies, within this chat we are unable to place or request a call but you can reach out to our Wellness Plan Team Monday through Friday 6AM to 5PM PST toll free at (888)649-2716. Please keep in mind we will need to end this conversation for you to call in to wait for the next available representative. Did you want to call in or continue this conversation over chat?</p>
                         <button class="copy-btn" onclick="copyToClipboard('#TextCallIn')" id="TextCallInbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                 </div>
@@ -1156,10 +1197,16 @@
                 <div id="Rescources" class="tabcontent">
                     <h1>Rescources</h1>
                     <div class="qrblock">
-                        <h3><a href="" target="_blank">OWP Pricing Tool - Coming Soon</a></h3>
+                        <h3><a href="https://marsvethealth.sharepoint.com/sites/Bnf/SitePages/OWPpricing.aspx?OR=Teams-HL&CT=1629911521353" target="_blank">OWP Pricing Tool</a></h3>
                     </div>
                     <div class="qrblock">
                         <h3><a href="https://prod-sitecorebf-si.cloud-effem.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DSitecore%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%2520token%26scope%3Dopenid%2520sitecore.profile%26state%3DOpenIdConnect.AuthenticationProperties%253DV2KKa5Y8X6Wrg-VUaM7iysL41qjls3i3E1CDpoMDxeYD7tq6Tjl6mQTqvPWrVhlAKSAdMIpCTmRNnOXKlPo7WPVObq1Bcq-VPyxnmIxgrFzf0DwTcNZBSDBVj2TCo5lbcW-7bQxCzJu1IW_1w1MFHFFTxQf2iBwBPudoWrOUGEOIqGPTPYVh2bCiWc12qmqlwBDmxqrNBabhO2RUoXxGEA%26nonce%3D637738934191262465.NjZjODgzZTMtNWYzZC00ZjY3LWIxYzMtZjY0N2FmNDE5NGZmOTRmNTY5ZDktMTFmYi00MmE1LWEzMGUtMjI3MjY2ZTFlNzVm%26redirect_uri%3Dhttps%253A%252F%252Fprod-wus2-bf-sc-cm.cloud-effem.com%252Fidentity%252Fsignin%26sc_account_prefix%3Dsitecore%255C%26x-client-SKU%3DID_NET451%26x-client-ver%3D5.2.2.0" target="_blank">CLAW</a></h3>
+                    </div>
+                    <div class="qrblock">
+                        <h3><a href="https://apps.powerapps.com/play/5d15b3d6-3ec4-47a0-9d8b-8524c6b39fed?tenantId=679f63d1-e185-4a47-a081-c530ccf734f8&source=portal&screenColor=rgba(0%2C 176%2C 240%2C 1)" target="_blank">Hospital List</a></h3>
+                    </div>
+                    <div class="qrblock">
+                        <h3><a href="https://marsvethealth.sharepoint.com/teams/BNF-CallCenter/ClientRetention/Lists/OWP UpDowngrade Requests/AllItems.aspx" target="_blank">UG/DG Form</a></h3>
                     </div>
                     <div class="qrblock">
                         <img src="../Capture.JPG" alt="Auth">
@@ -1169,12 +1216,12 @@
                     <h1>Contact Info</h1>
                     <div class="qrblock">
                         <h3>(WPT) Wellness Plan Team - Phones</h3>
-                        <p id="WPTPhone">I would like to get you in touch with our Wellness Plan phone team. You can reach them by phone at 888-649-2716 </p>
+                        <p id="WPTPhone">I would like to get you in touch with our Wellness Plan phone team. You can reach them by phone at 888-649-2716. They are available Monday-Friday 6am-5pm PST</p>
                         <button class="copy-btn" id="WPTPhonebtn" onclick="copyToClipboard('#WPTPhone')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <div class="qrblock">
                         <h3>Vet Chat</h3>
-                        <p id="VetChatSteps">Due to the nature of your concern, I would recommend connecting with a vet on the Vet chat feature. To access this feature please select the "Vet Chat" link located near the bottom of your MyBanfield home page. Please keep in mind they do not have access to any medical history available on the account.</p>
+                        <p id="VetChatSteps">Due to the nature of your concern, I would recommend connecting with a vet on the 24/7 Vet chat feature. To access this feature please select the "Vet Chat" link located near the bottom of your MyBanfield home page. Please keep in mind they do not have access to any medical history available on the account.</p>
                         <button class="copy-btn" id="VetChatStepsbtn" onclick="copyToClipboard('#VetChatSteps')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <div class="qrblock">
@@ -1184,17 +1231,17 @@
                     </div>
                     <div class="qrblock">
                         <h3>(CFS) Client Finanical Services - Collections</h3>
-                        <p id="CFSPhone">I am showing the account for your pet is being handled by our Client Financial service team. You can reach out to them at 888-448-4070 to discuss the balance of your account. Were there any other questions I can help with today?</p>
+                        <p id="CFSPhone">I am showing the account for your pet is being handled by our Client Financial service team. You can reach out to them at 888-448-4070 to discuss the balance of your account. They are available Monday-Friday 6am-5pm PST. Are there any other questions I can help with today?</p>
                         <button class="copy-btn" id="CFSPhonebtn" onclick="copyToClipboard('#CFSPhone')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <div class="qrblock">
-                        <h3>(CST) Client Service Team</h3>
-                        <p id="CSTPhone">Because of the nature of your concern we recommend you contact our Client Service team and speak with one of our associates. We apologize for any inconvenience this may cause. You can reach our Client Service team toll free at 866-894-7927. </p>
+                        <h3>(CST) Client Service Team - Billing</h3>
+                        <p id="CSTPhone">Because of the nature of your concern we recommend you contact our Client Service team and speak with one of our associates. We apologize for any inconvenience this may cause. You can reach our Client Service team toll free at 866-894-7927. They are available Monday-Friday 6am-6pm PST </p>
                         <button class="copy-btn" id="CSTPhonebtn" onclick="copyToClipboard('#CSTPhone')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <div class="qrblock">
                         <h3>Web Support - Phones</h3>
-                        <p id="WSPhone">Based on the issues you are experiencing with the website I would like to get you in touch with our Web Support team. You can reach them by phone at 877-656-7146</p>
+                        <p id="WSPhone">Based on the issues you are experiencing with the website I would like to get you in touch with our Web Support team. You can reach them by phone at 877-656-7146. I would like to get you in touch with our Wellness Plan phone team. You can reach them by phone at 888-649-2716. They are available Monday-Saturday 6am-7pm & Sunday 6an-6pm PST</p>
                         <button class="copy-btn" id="WSPhonebtn" onclick="copyToClipboard('#WSPhone')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <div class="qrblock">
@@ -1204,7 +1251,7 @@
                     </div>
                     <div class="qrblock">
                         <h3>Banfield Shop</h3>
-                        <p id="BanShop">Thank you for reaching out today; I'm happy to get you to the right place for your prescriptions. Prescriptions cannot be managed through chat but you can order prescriptions through the Banfield Shop or by contacting your local Banfield for prescription management. Banfield Shop support can be reached at (888)917-7387</p>
+                        <p id="BanShop">Thank you for reaching out today; I'm happy to get you to the right place for your prescriptions. Prescriptions cannot be managed through chat but you can order prescriptions through the Banfield Shop or by contacting your local Banfield for prescription management. Banfield Shop support can be reached at (888)917-7387. They are available Monday-Friday 7am-4pm PST</p>
                         <button class="copy-btn" id="BanShopbtn" onclick="copyToClipboard('#BanShop')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <div class="qrblock">
