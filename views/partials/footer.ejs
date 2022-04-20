@@ -1829,10 +1829,6 @@ var PayTodaycxl = "I understand, did you want to process the $AMT on the card en
 
 document.getElementById("PayTodaycxl").innerHTML = PayTodaycxl;
 
-var WPBALExp = "When closing a plan we only ask that the services provided are paid for, since you have been provided more services than the cost of the plan that includes them you will need to finish paying for the plan as you have currently made 3 out of 12 payments towards the full plan.";
-
-document.getElementById("WPBALExp").innerHTML = WPBALExp;
-
   // MEEP cxl payment QR
 
   const Pymttest = document.querySelector('#Pymttest');
@@ -1915,6 +1911,26 @@ $('a.yourlink').click(function(e) {
 $('a.ClockTime').click(function(e) {
     e.preventDefault();
     window.open('https://marsbanfield-sso.prd.mykronos.com/quicktimestamp ');
+});
+
+$('a.OWPPricingTool').click(function(e) {
+    e.preventDefault();
+    window.open('https://marsvethealth.sharepoint.com/sites/Bnf/SitePages/OWPpricing.aspx?OR=Teams-HL&CT=1629911521353');
+});
+
+$('a.CLAW').click(function(e) {
+    e.preventDefault();
+    window.open('https://prod-sitecorebf-si.cloud-effem.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DSitecore%26response_mode%3Dform_post%26response_type%3Dcode%2520id_token%2520token%26scope%3Dopenid%2520sitecore.profile%26state%3DOpenIdConnect.AuthenticationProperties%253DV2KKa5Y8X6Wrg-VUaM7iysL41qjls3i3E1CDpoMDxeYD7tq6Tjl6mQTqvPWrVhlAKSAdMIpCTmRNnOXKlPo7WPVObq1Bcq-VPyxnmIxgrFzf0DwTcNZBSDBVj2TCo5lbcW-7bQxCzJu1IW_1w1MFHFFTxQf2iBwBPudoWrOUGEOIqGPTPYVh2bCiWc12qmqlwBDmxqrNBabhO2RUoXxGEA%26nonce%3D637738934191262465.NjZjODgzZTMtNWYzZC00ZjY3LWIxYzMtZjY0N2FmNDE5NGZmOTRmNTY5ZDktMTFmYi00MmE1LWEzMGUtMjI3MjY2ZTFlNzVm%26redirect_uri%3Dhttps%253A%252F%252Fprod-wus2-bf-sc-cm.cloud-effem.com%252Fidentity%252Fsignin%26sc_account_prefix%3Dsitecore%255C%26x-client-SKU%3DID_NET451%26x-client-ver%3D5.2.2.0');
+});
+
+$('a.HsptList').click(function(e) {
+    e.preventDefault();
+    window.open('https://apps.powerapps.com/play/5d15b3d6-3ec4-47a0-9d8b-8524c6b39fed?tenantId=679f63d1-e185-4a47-a081-c530ccf734f8&source=portal&screenColor=rgba(0%2C 176%2C 240%2C 1)');
+});
+
+$('a.UPDGForm').click(function(e) {
+    e.preventDefault();
+    window.open('https://marsvethealth.sharepoint.com/teams/BNF-CallCenter/ClientRetention/Lists/OWP UpDowngrade Requests/AllItems.aspx');
 });
 
 </script>
