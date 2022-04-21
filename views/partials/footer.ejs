@@ -634,10 +634,16 @@ function openCity(evt, cityName) {
     RNSCertbtnn.insertAdjacentHTML("beforeend" , '- edu on options for Rabies Certification request ');
   });
 
-  const TrdPrtybtn = document.querySelector('#TrdPrtybtn');
-  TrdPrtybtn.addEventListener('click', () => {
-    const TrdPrtybtnn = document.querySelector('#NoteOutput');
-    TrdPrtybtnn.insertAdjacentHTML("beforeend" , '- adv to have account holder reach out to make changes to the plan ');
+  const tpbtn = document.querySelector('#tpbtn');
+  tpbtn.addEventListener('click', () => {
+    const tpbtnn = document.querySelector('#NoteOutput');
+    tpbtnn.insertAdjacentHTML("beforeend" , '- adv to have account holder reach out to make changes to the plan ');
+  });
+
+  const CIDSteps = document.querySelector('#CIDSteps');
+  CIDSteps.addEventListener('click', () => {
+    const CIDStepsn = document.querySelector('#NoteOutput');
+    CIDStepsn.insertAdjacentHTML("beforeend" , '- edu on finding Client ID ');
   });
 
   const EmailReqbtn = document.querySelector('#EmailReqbtn');

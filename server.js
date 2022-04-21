@@ -37,7 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(methodOverride('_method'))
   
   app.get('/', checkAuthenticated, (req, res) => {
-    res.render('index.ejs', { name: req.user.name })
+    res.render('index.ejs', { name: req.user.name, cmwcode: req.user.cmwcode })
   })
   
   app.get('/login', checkNotAuthenticated, (req, res) => {

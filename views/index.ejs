@@ -117,15 +117,20 @@
                     <div class="qrblock">
                         <h3>3rd Party</h3>
                         <p id="TrdPrty">I apologize, as your name is not on the agreement I would be unable to access any of the account information to assist, Please have the account holder reach out to go over of their information within their account. Are there any other non-account related questions I can help with in the meantime?</p>
-                        <button class="copy-btn" id="TrdPrtybtn" onclick="copyToClipboard('#TrdPrty')"><i class="fas fa-clipboard"></i>Copy</button>
+                        <button class="copy-btn" id="tpbtn" onclick="copyToClipboard('#TrdPrty')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
                         <h3>Any Other Questions?</h3>
-                        <p id="AOQStuff">With the information listed above, do you have any other questions for me?</p>
+                        <p id="AOQStuff">Are there any other questions or changes I can assist with today?</p>
                         <button class="copy-btn" onclick="copyToClipboard('#AOQStuff')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
+                    <div class="qrblock">
+                    <h3>Confirmation Code</h3>
+                    <p id="ConfirmationCode">Confirmation Code: <%= cmwcode %>, This will be linked to our conversation today, the information provided, as well as any changes made to your account.</p>
+                    <button class="copy-btn" onclick="copyparaToClipboard('#ConfirmationCode')"><i class="fas fa-clipboard"></i>Copy</button>
+                </div>
                 </div>
                 <div id="txt" class="tabcontent">
                     <h1>Greetings</h1>
@@ -311,7 +316,6 @@
                 </div>
                 <div id="pupPlan" class="tabcontent">
                     <h1>Puppy Plans</h1>
-                    
                     <div class="qrblock">
                         <h3>Banfield Link</h3>
                         <p id="PEClink">You can review and compare the different Dog Packages we offer with the link below: <br>https://www.banfield.com/products/optimum-wellness-plan/Puppy-plans</p>
@@ -520,7 +524,7 @@
                     </div>
                 </div>
                 <div id="UPCC" class="tabcontent">
-                    <h1>Cards</h1>
+                    <h1>Update Billing Information</h1>
                     
                     <div class="qrblock">
                     <h3>Updating CC</h3>
@@ -922,6 +926,7 @@
                     <input type="text" id="PTAmt" placeholder="Last 4 of Card">
                     <p id="PayTodaycxl" class="petcxl"></p>
                     <button class="copy-btn"  onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
+                    <br>
                 </div>
                 </div>
             </div>
@@ -961,12 +966,12 @@
                 </div>
                 <div id="WebUpD" class="tabcontent">
                     <h1>Web Portal</h1>
-                
                     <div class="qrblock">
                         <h3>Personal Information</h3>
                         <p id="PersInfo">We can update your contact information under the "manage my account" link on the top of your dashboard. <br>Here are the instructions to update your information online: <br>1. Select "Manage your account" (On dashboard, Above pets photo) <br>2. Navigate to the "Your Information" section and select "Update your information" <br>3. Edit the information you want to and click "Save Changes" to update.</p>
                         <button class="copy-btn" onclick="copyparaToClipboard('#PersInfo')" id="PersInfobtn"><i class="fas fa-clipboard"></i>Copy</button>
-                    </div><br>
+                    </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Updating CC</h3>
                         <p id="updateCC">Here are the instructions to manage your pet's Wellness Plan payment information into your name online: <br>1. Select "Manage your account" at the top left of the main dashboard <br>2. Navigate to and expand the pet whose information you want to update <br>3. Locate OWP Payment Method, then "Use a different OWP Card" <br>4. You will be redirected to another system to collect card details (Click Continue to Secure Payment Site) <br>5. Enter card details & click "Pay with your credit card" ( You will not be charged) <br>6. You will then be redirected back to the "My account" page</p>
@@ -1034,8 +1039,7 @@
                             <br>
                 </div>
                 <div id="WebSupp" class="tabcontent">
-                    <h1>Web Support</h1>
-                    
+                    <h1>Web Support</h1>                
                     <div class="qrblock">
                         <h2>-Do Not Send To Client-</h2>
                         <h3>Troubleshooting Website</h3>
@@ -1063,6 +1067,12 @@
                     </div>
                     <br>
                     <div class="qrblock">
+                        <h3>Finding Client ID</h3>
+                        <p id="CIDSteps">To find the client ID let's try this; In the top right hand corner select the 3 lines on top of each other. Than we will select "MyBanfield" and "MyAccount". Once this page loads in the upper left you will see your name, email, and client ID. Can you please provide the Client ID you see to me?</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#CIDSteps')" id="CIDStepsbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
                         <h3>Send in Screenshot</h3>
                         <p id="Scrshot">To ensure we can correct this can you take a screenshot of where the missing information is and E-mail it to: BanfieldWebsupport@Banfield.com With your name, number, account number, pets name, and any additional details about this error</p>
                         <button class="copy-btn" onclick="copyToClipboard('#Scrshot')" id="Scrshotbtn"><i class="fas fa-clipboard"></i>Copy</button>
@@ -1076,6 +1086,7 @@
                         <p id="APPOTP"> To make a payment through the app simply click on the pets profile, Scroll down to the "Optimum Wellness plan" box and click "Payment Details". This will take you directly to a new browser and our payment section.</p>
                         <button class="copy-btn" onclick="copyToClipboard('#APPOTP')" id="APPOTPbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Schedule Appointment</h3>
                         <p id="APPSCH">You can use the scheduler in the Banfield app to schedule appointments for your pets by following these steps: <br>1. Select the calendar icon at the bottom of the app (2nd from the left) <br>2. Click the  "Make Appointment" button and choose the pet you'd like to schedule <br>3. Select the reason for your visit, and any applicable symptoms <br>4. Add any notes for the vet (optional) and click Next <br>5. Drop-off will be defaulted to Yes, but can be changed to No for all appointment types except Comprehensive Exams <br>6. Select the Date for your appointment, this can be done up to 2 months in advance <br>7. Choose the Hospital <br>8. Select the time for your appointment along with the desired Doctor <br>Review all appointment information, select Make your appointment</p>
@@ -1087,6 +1098,7 @@
                         <p id="APPCXLAPPT">Here are the instructions to cancel or reschedule an appointment via the Banfield App: <br>1. Select the calendar icon at the bottom of the app (2nd from the left) <br>2. Displayed are all upcoming appointments and for which pet, choose the appointment you'd like to alter <br>3. Select either "reschedule appointment" and "cancel appointment" depending on which you'd like to do</p>
                         <button class="copy-btn" onclick="copyToClipboard('#APPCXLAPPT')" id="APPCXLAPPTbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Vet Chat</h3>
                         <p id="APPVETCHAT">Hello! I would love to be able to help you with that however, within this chat I am not medically trained. This chat is primarily used for Wellness Plan questions. Due to the nature of your concern, I would recommend connecting with a vet on the VetChat feature. To access this feature, please select the Textbox Icon on the bottom of the Banfield app (2nd from the right) and select the "Chat with a vet" button</p>
@@ -1096,7 +1108,6 @@
                 </div>
                 <div id="AppUpD" class="tabcontent">
                     <h1>Updating Info - App</h1>
-                    
                     <div class="qrblock">
                         <h3>Update Pet Picture</h3>
                         <p id="APPPic">To update your pet's picture on the app, follow these instructions: <br>1. Under the "pawprint" tab, select the pet whose photo you would like to add/update <br>2. In the top right, there is a camera icon, please press that <br>3. You will then be prompted to add/change your pet's photo <br>4. You can take a photo with your phone's camera or choose one from your camera roll <br>Once you've selected the pet photo you'd like to choose, press done</p>
@@ -1116,8 +1127,7 @@
                     </div>
                 </div>
                 <div id="AppDoc" class="tabcontent">
-                    <h1>Documents - App</h1>
-                    
+                    <h1>Documents - App</h1>               
                     <div class="qrblock">
                         <h3>Payment History</h3>
                         <p id="APPPymHsty">To make a payment through the app simply click on the pets profile, Scroll down to the "Optimum Wellness plan" box and click "Payment Details". This will take you directly to a new browser and our payment section.</p>
@@ -1144,8 +1154,7 @@
                     <br>
                 </div>
                 <div id="AppSupp" class="tabcontent">
-                    <h1>Support - App</h1>
-                    
+                    <h1>Support - App</h1>        
                     <div class="qrblock">
                         <h3>Show/Hide Pets</h3>
                         <p id="AppPetHide">Here are the steps to show a pet that is hidden from the app: <br>1. Select the Person icon in the bottom right <br>2. Select "My pets" <br>Change the setting next to the pet that you are trying to show or hide.</p>
@@ -1154,7 +1163,6 @@
                 </div>
                 <div id="Text" class="tabcontent">
                     <h1>Text Chat</h1>
-                    
                     <div class="qrblock">
                         <h3>Text Intro</h3>
                         <p id="TextIntro">Thank you for reaching out. I can help you look into this. I was not able to locate your file. Could we have your first and last name, phone number, and pet's name?</p>
@@ -1192,8 +1200,7 @@
                     </div>
                 </div>
                 <div id="Escalation" class="tabcontent">
-                    <h1>Escalation</h1>
-                    
+                    <h1>Escalation</h1>                    
                     <div class="qrblock">
                         <h3>Force Quit</h3>
                         <p id="Forceclose">Due to the inability to move forward and resolve your concern at this time, this chat will be disconnecting, as we have provided the information that we have available to assist you today. When you are ready to proceed with an option provided, please chat or call back in at your soonest availability and we'll be happy to assist you</p>
@@ -1202,7 +1209,6 @@
                 </div>
                 <div id="Rescources" class="tabcontent">
                     <h1>Rescources</h1>
-                    <br>
                     <div class="qrblock">
                         <a href="#" class="yourlink">Start Your Day</a> <a href="#" class="ClockTime">Clock in/out</a>
                     </div>
@@ -1220,7 +1226,7 @@
                     </div>
                     <br>
                     <div class="qrblock">
-                        <a href="#" class="HsptList">UG/DG Form</a>
+                        <a href="#" class="UPDGForm">UG/DG Form</a>
                     </div>
                 </div>
                 <div id="ContactInfo" class="tabcontent">
@@ -1230,56 +1236,67 @@
                         <p id="WPTPhone">I would like to get you in touch with our Wellness Plan phone team. You can reach them by phone at 888-649-2716. They are available Monday-Friday 6am-5pm PST</p>
                         <button class="copy-btn" id="WPTPhonebtn" onclick="copyToClipboard('#WPTPhone')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Vet Chat</h3>
                         <p id="VetChatSteps">Due to the nature of your concern, I would recommend connecting with a vet on the 24/7 Vet chat feature. To access this feature please select the "Vet Chat" link located near the bottom of your MyBanfield home page. Please keep in mind they do not have access to any medical history available on the account.</p>
                         <button class="copy-btn" id="VetChatStepsbtn" onclick="copyToClipboard('#VetChatSteps')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Vet Chat - Non-OWP</h3>
                         <p id="NonOWPVet">I would love to be able to help you with that however, within this chat I am not medically trained. I would recommend contacting your local hospital to go over medical questions or schedule an appointment if needed.</p>
                         <button class="copy-btn" id="NonOWPVetbtn" onclick="copyToClipboard('#NonOWPVet')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>(CFS) Client Finanical Services - Collections</h3>
                         <p id="CFSPhone">I am showing the account for your pet is being handled by our Client Financial service team. You can reach out to them at 888-448-4070 to discuss the balance of your account. They are available Monday-Friday 6am-5pm PST. Are there any other questions I can help with today?</p>
                         <button class="copy-btn" id="CFSPhonebtn" onclick="copyToClipboard('#CFSPhone')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>(CST) Client Service Team - Billing</h3>
                         <p id="CSTPhone">Because of the nature of your concern we recommend you contact our Client Service team and speak with one of our associates. We apologize for any inconvenience this may cause. You can reach our Client Service team toll free at 866-894-7927. They are available Monday-Friday 6am-6pm PST </p>
                         <button class="copy-btn" id="CSTPhonebtn" onclick="copyToClipboard('#CSTPhone')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Web Support - Phones</h3>
                         <p id="WSPhone">Based on the issues you are experiencing with the website I would like to get you in touch with our Web Support team. You can reach them by phone at 877-656-7146. I would like to get you in touch with our Wellness Plan phone team. You can reach them by phone at 888-649-2716. They are available Monday-Saturday 6am-7pm & Sunday 6an-6pm PST</p>
                         <button class="copy-btn" id="WSPhonebtn" onclick="copyToClipboard('#WSPhone')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>(BCT) Banfield Cares Team</h3>
                         <p id="BCTInfo">We appreciate you taking the time to share your feedback. Because of the nature of your concern we recommend you contact our Banfield Cares Team and speak with one of our specialists who can assist you with your hospital related experience. You can reach them by email at BanfieldCares@banfield.com. This message will be going to your direct hospital leadership and field leadership. They will contact you within 3-5 business days via phone call so please include your most up-to-date contact information.</p>
                         <button class="copy-btn" id="BCTInfobtn" onclick="copyToClipboard('#BCTInfo')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Banfield Shop</h3>
                         <p id="BanShop">Thank you for reaching out today; I'm happy to get you to the right place for your prescriptions. Prescriptions cannot be managed through chat but you can order prescriptions through the Banfield Shop or by contacting your local Banfield for prescription management. Banfield Shop support can be reached at (888)917-7387. They are available Monday-Friday 7am-4pm PST</p>
                         <button class="copy-btn" id="BanShopbtn" onclick="copyToClipboard('#BanShop')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>WPT Spanish</h3>
                         <p id="WPTSpan">Lo siento, no hablo español. Llame al 888-649-2716 para hablar con un intérprete en español. Puede comunicarse con ellos de lunes a viernes de 6 a.m. a 5 p.m., hora estándar del Pacífico.</p>
                         <button class="copy-btn" id="WPTSpanbtn" onclick="copyToClipboard('#WPTSpan')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>CST Spanish</h3>
                         <p id="CSTSpan"> Lo siento, no hablo español. Llame al 866-894-7927 para hablar con un intérprete en español. Puede comunicarse con ellos de lunes a viernes de 6 a.m. a 5 p.m., hora estándar del Pacífico.</p>
                         <button class="copy-btn" id="CSTSpanbtn" onclick="copyToClipboard('#CSTSpan')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Wisdom Panel Contact Info</h3>
                         <p id="WisdomPan">For questions about the WISDOM PANEL™ Health, please contact Wisdom Health:<br>Email: info@wisdomhealth.com<br>Phone: (855) 619-1884<br>Monday – Friday, 7:00 a.m. – 4:00 p.m. PST</p>
                         <button class="copy-btn" id="WisdomPanbtn" onclick="copyparaToClipboard('#WisdomPan')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
                 </div>
           </div>
         </div>
