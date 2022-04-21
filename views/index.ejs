@@ -16,6 +16,7 @@
                     <li><button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">General</button></li>
                     <li><button class="tablinks" onclick="openCity(event, 'txt')" id="defaultOpen">Text</button></li>
                     <li><button class="tablinks" onclick="openCity(event, 'ppassed')" id="defaultOpen">Pet Passed</button></li>
+                    <li><button class="tablinks" onclick="openCity(event, 'ThirdParty')" id="defaultOpen">Third Party</button></li>
                     <li><button class="tablinks" onclick="openCity(event, 'UpDateInfo')" id="defaultOpen">Update Info</button></li>
                 </ul>
                 </li>
@@ -103,21 +104,21 @@
                     </div>
                     <br>
                     <div class="qrblock">
-                        <h3>Typing Too Long</h3>
+                        <h3>No Message Sent</h3>
                         <p id="TTLmessage">Hello? Are you still needing assistance? Please respond to ensure this conversation can stay open if additional assistance is needed.</p>
                         <button class="copy-btn" onclick="copyToClipboard('#TTLmessage')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Typing Too Long</h3>
+                        <p id="TTLmessage2">Hello! I can see you are still typing but no messages have been received on my end. Please respond in the next minute so we can continue assisting you with your pet's wellness plan before this chat ends due to no activity. If this is a technical issue or you feel you need more time to talk, please reach out to our Wellness Plan Team Monday through Friday 6AM to 5PM PST toll free at (888)649-2716</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#TTLmessage2')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
                         <h3>Unable to Locate</h3>
                         <p id="UTLStarter">Hello! I was not able to locate your account with the phone number provided, May I please have the  phone number associated with your Wellness Plan?</p>
                         <button class="copy-btn" onclick="copyToClipboard('#UTLStarter')"><i class="fas fa-clipboard"></i>Copy</button>
-                    </div>
-                    <br>
-                    <div class="qrblock">
-                        <h3>3rd Party</h3>
-                        <p id="TrdPrty">I apologize, as your name is not on the agreement I would be unable to access any of the account information to assist, Please have the account holder reach out to go over of their information within their account. Are there any other non-account related questions I can help with in the meantime?</p>
-                        <button class="copy-btn" id="tpbtn" onclick="copyToClipboard('#TrdPrty')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -227,13 +228,34 @@
                     </div>
                      <br>
                 </div>
+                <div id="ThirdParty" class="tabcontent">
+                    <h1>3rd Party</h1>
+                    <div class="qrblock">
+                        <h3>3rd Party</h3>
+                        <p id="TrdPrty">I apologize, as your name is not on the agreement I would be unable to access any of the account information to assist, Please have the account holder reach out to go over of their information within their account. Are there any other non-account related questions I can help with in the meantime?</p>
+                        <button class="copy-btn" id="tpbtn" onclick="copyToClipboard('#TrdPrty')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Cardholder unable to Cancel</h3>
+                        <p id="CHCxl">I apologize, Adding your information, billing or personal, onto an account would not make it yours as Wellness Plans are non-transferable. The Wellness Plan agreement requires all information to match the name on the agreement to help prevent this confusion, We can help the account holder correct this information when they reach out. Were there any other questions I can help with in the meantime?</p>
+                        <button class="copy-btn" id="chcxl" onclick="copyToClipboard('#CHCxl')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                </div>
                 <div id="wp-gen" class="tabcontent">
                     <h1>Wellness Plan</h1>
                     
                     <div class="qrblock">
-                        <h3>OWP Not Insurance</h3>
-                        <p id="notinsur">Unlike insurance, Optimum Wellness Plans are affordable packages of recommended preventive care that can save you money and deliver care to your pet. The services can be used anytime during your plan year and the cost of the package is split into twelve monthly installments.</p>
-                        <button class="copy-btn" onclick="copyToClipboard('#notinsur')"><i class="fas fa-clipboard"></i>Copy</button>
+                        <h3>Not Monthly Service</h3>
+                        <p id="notinsur">I apologize for any confusion, the wellness plans are not a monthly service, they are a yearly plan that has the option to make installments towards the cost of the full year if not paid in full at the start. This means that each installment is 1 out of 12 installments to pay for the whole plan and not for 30 days of service at a time. </p>
+                        <button class="copy-btn" id="notinsurbtn" onclick="copyToClipboard('#notinsur')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Authorized User - Drop-Offs/Pick-Ups</h3>
+                        <p id="AuthDOPU">You can adjust the Authorized Users for Drop Offs and Pick Ups with the front desk at the hospital directly. Please keep in mind the Authorized Users will not be able to access account information or make changes.</p>
+                        <button class="copy-btn" id="authdopubtn" onclick="copyToClipboard('#AuthDOPU')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -251,7 +273,7 @@
                     <div class="qrblock">
                         <h3>Enroll in OWP</h3>
                         <p id="Enrolling">Please follow these steps in order to enroll your pet for an Optimum Wellness Plan: <br>1. From the Banfield home page select Enroll in OWP and choose the option that says "Yes, I have" <br>2. Select the pet that you would like to enroll<br>3. Select the Hospital where you will be receiving care <br>4. Review and select the plan you wish to enroll in <br>5. Add any additional options that you would like to have on the plan or if you are unsure you can speak to the care team to have these options added at your first visit before the plan is finalized <br>6. Review the plan and apply any applicable promo codes then select next <br>7. Enter your contact information and click next <br>8. Review the "Things to know" popup and click next <br>9. Enter credit card information, then Register enrollment <br>10. Schedule an appointment to finalize the plan</p>
-                        <button class="copy-btn" onclick="copyparaToClipboard('#Enrolling')" id="Enrollingbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                        <button class="copy-btn" id="enrollingbtn" onclick="copyparaToClipboard('#Enrolling')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -401,7 +423,7 @@
                     <div class="qrblock">
                         <h3>How to Add-On</h3>
                         <p id="AddMedAO">Medication can be added onto the plan at the hospital where they can go over which medications would be best based on their medical needs and answer any questions regarding cost.</p>
-                        <button class="copy-btn" onclick="copyToClipboard('#AddMedAO')"><i class="fas fa-clipboard"></i>Copy</button>
+                        <button class="copy-btn" id="AddMedAObtn" onclick="copyToClipboard('#AddMedAO')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -443,7 +465,7 @@
                     <div class="qrblock" id="HideMedBlock" style="display: none;">
                         <h3>To the Client:</h3>
                         <p id="RMNC"></p>
-                        <button class="copy-btn" onclick="copyToClipboard('#RMNC')"><i class="fas fa-clipboard"></i>Copy</button>
+                        <button class="copy-btn" id="RMNCbtn" onclick="copyToClipboard('#RMNC')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                 </div>
@@ -500,6 +522,12 @@
                     </div> 
                     <br>
                     <div class="qrblock">
+                        <h3>Change 1 Installment or Banking Day</h3>
+                        <p id="ChangeBDQR">Are you looking to change 1 upcoming installment or the date of all future installments</p>                    
+                        <button class="copy-btn" onclick="copyparaToClipboard('#ChangeBDQR')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div> 
+                    <br>
+                    <div class="qrblock">
                         <h3>Make Payment Online</h3>
                         <p id="MakePymt">Here are the instructions to manage your pet's Wellness Plan payment information online: <br>1. Select "Manage your account" (On the dashboard, above pets photo) <br>2. Navigate to and expand the pet whose installment you want to pay. <br>3. Once expanded, locate the "Pay now" button. <br>You will then see your installments and can select one to pay</p>                    
                         <button class="copy-btn" id="manualPymt" onclick="copyparaToClipboard('#MakePymt')"><i class="fas fa-clipboard"></i>Copy</button> 
@@ -522,6 +550,11 @@
                     <p id="PDBnote"></p>
                     <button class="copy-btn" onclick="copyToClipboard('#PDBnote')" id="PDBbtn"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div>
+                    <div class="qrblock">
+                        <h3>Processed Payment</h3>
+                        <p id="ProcPymt">Thank you for waiting, I have processed the payment and the account is now current.</p>
+                            <button class="copy-btn" onclick="copyparaToClipboard('#ProcPymt')"><i class="fas fa-clipboard"></i>Copy</button>
+                        </div>  
                 </div>
                 <div id="UPCC" class="tabcontent">
                     <h1>Update Billing Information</h1>
@@ -556,7 +589,7 @@
                     
                     <div class="qrblock">
                         <h3>Payment History</h3>
-                        <p id="BillInvoice">Here are the instructions to view your payment history online: <br>1. Select "Manage your account" (On dashboard, Above pets photo) <br>2. Navigate to and expand the pet who's installment you want to pay. <br>3. Once expanded, Locate the "See your complete payment history" button <br>You will then see your installments paid and the dates.</p>
+                        <p id="BillInvoice">Here are the instructions to view your payment history online: <br>1. Select "Manage your account" (On dashboard, Above pets photo) <br>2. Navigate to and expand the pet whose installment you want to pay. <br>3. Once expanded, Locate the "See your complete payment history" button <br>You will then see your installments paid and the dates.</p>
                         <button class="copy-btn" onclick="copyparaToClipboard('#BillInvoice')" id="BillInvoicebtn"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div>
                     <br>
@@ -623,7 +656,18 @@
                 </div>
                 <div id="EscalatedBilling" class="tabcontent">
                     <h1>Escalated - Billing</h1>
-                    
+                    <div class="qrblock">
+                        <h3>Unable to Remove WPCC</h3>
+                        <p id="removecc">I apologize, the wellness plan requires auto-payment while there are remaining installments left on the plan. You can always avoid the auto-draft by making the payment manually online or at the hospital if needed with the steps below:<br> Here are the instructions to manage your pet's Wellness Plan payment information online: <br>1. Select "Manage your account" (On the dashboard, above pets photo) <br> 2. Navigate to and expand the pet whose installment you want to pay.<br> 3. Once expanded, locate the "Pay now" button.<br> You will then see your installments and can select one to pay.</p>
+                        <button class="copy-btn" id="removeccbtn" onclick="copyparaToClipboard('#removecc')"><iclass="fas fa-clipboard"></i>Copy</button>    
+                </div> 
+                <br>
+                <div class="qrblock">
+                    <h3>Unable to use Spouce's Card</h3>
+                    <p id="spoucecc">I understand that spouce's sometimes have joint or shared bank accounts, in these cases the wellness plan agreement requires the card reflecting your name as shown on the agreement is the one added onto the wellness plan to help prevent any billing errors. </p>
+                    <button class="copy-btn" id="spouceccbtn" onclick="copyparaToClipboard('#spoucecc')"><iclass="fas fa-clipboard"></i>Copy</button>    
+                     </div> 
+                     <br>                    
                     <div class="qrblock">
                         <h3>Why Noone Called</h3>
                         <p id="WNC">I understand being surprised by the past due balance,<br> we don't start reaching out until the plan and benefits are placed on Hold<br> for Non-Payment as we want to respect each persons own way of maintaining their finances.<br> Anytime you feel a payment will not be able to process, please reach out prior and we can help reschedule a payment out for you. <br>This way we can avoid this fee in the future.</p>
@@ -647,7 +691,7 @@
                     <div class="qrblock">
                         <h3>Cancel with BCT Feedback</h3>
                         <p id="CxlBlockOne">I'm so sorry to hear that, I can help with the cancellation and We appreciate you taking the time to share your feedback. Because of the nature of your concern we recommend you contact our Banfield Cares Team and one of our specialists can assist you with your hospital related experience. You can reach them at banfieldcares@banfield.com. Have you gone over the cancellation process before?</p>
-                    <button class="copy-btn" onclick="copyToClipboard('#CxlBlockOne')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    <button class="copy-btn" id="BCTCxlbtn" onclick="copyToClipboard('#CxlBlockOne')"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div>
                     <br>
                     <div class="qrblock">
@@ -921,11 +965,18 @@
                     <h3>Opt for Installments</h3>
                     <p id="SettoDNR" class="petcxl"></p>
                     <button class="copy-btn" id="OFInstallbtn" onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
-                    <h3>Pay Today -- QR Coming Soon</h3>
-                    <input type="text" id="PTAmt" placeholder="Last 4 of Card">
+                    <h3>Pay Today -- CHANGE CARD NUMBER BEFORE SENDING</h3>
+                    <div class="Filloutform" style="display: none;">
+                    Last 4 Digits of Card:<input type="text" id="PTAmt" placeholder="Last 4 of Card" style="margin-left: 20px;">
+                </div>
                     <p id="PayTodaycxl" class="petcxl"></p>
                     <button class="copy-btn"  onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
                     <br>
+                    <div class="qrblock">
+                        <h3>Processed Payment</h3>
+                        <p id="ProcPymtcxl">Thank you for waiting, I have processed the payment and closed the plan. Are there any other changes I can help with today?</p>
+                            <button class="copy-btn" onclick="copyparaToClipboard('#ProcPymtcxl')"><i class="fas fa-clipboard"></i>Copy</button>
+                        </div>  
                 </div>
                 </div>
             </div>
@@ -948,7 +999,7 @@
                     <div class="qrblock">
                         <h3>Enroll in OWP</h3>
                         <p id="Enrolling">Please follow these steps in order to enroll your pet for an Optimum Wellness Plan: <br>1. From the Banfield home page select Enroll in OWP and choose the option that says "Yes, I have" <br>2. Select the pet that you would like to enroll<br>3. Select the Hospital where you will be receiving care <br>4. Review and select the plan you wish to enroll in <br>5. Add any additional options that you would like to have on the plan or if you are unsure you can speak to the care team to have these options added at your first visit before the plan is finalized <br>6. Review the plan and apply any applicable promo codes then select next <br>7. Enter your contact information and click next <br>8. Review the "Things to know" popup and click next <br>9. Enter credit card information, then Register enrollment <br>10. Schedule an appointment to finalize the plan</p>
-                        <button class="copy-btn" onclick="copyparaToClipboard('#Enrolling')" id="Enrollingbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Enrolling')" id="enrollingbtn2"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -1008,13 +1059,13 @@
                     
                     <div class="qrblock">
                         <h3>Medical Summary/Invoices</h3>
-                        <p id="Invoicebill1">Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries</p>
+                        <p id="Invoicebill1">Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries. Any information not found online can be obtained from the hospital directly if needed </p>
                         <button class="copy-btn" onclick="copyparaToClipboard('#Invoicebill1')" id="Invoicebill1btn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
                         <h3>Vaccine Records</h3>
-                        <p id="Vax">I can help get us in the right direction. Here are the instructions to view hospital invoices and medical documents online: <br>1. From the main dashboard, select the pet you'd like to view records for <br>2. Select "SEE DETAILS" under the Vaccines section <br>3. You'll be taken to your pet's profile, with the Vaccines section expanded, listing dates and recommended vaccines <br>To get a shareable PDF copy of your pet’s complete vaccine history, scroll down to “PDFs FOR GROOMERS” and select which you'd like a document for. Then choose "DOWNLOAD PDF".</p>
+                        <p id="Vax">I can help get us in the right direction. Here are the instructions to view hospital invoices and medical documents online: <br>1. From the main dashboard, select the pet you'd like to view records for <br>2. Select "SEE DETAILS" under the Vaccines section <br>3. You'll be taken to your pet's profile, with the Vaccines section expanded, listing dates and recommended vaccines <br>To get a shareable PDF copy of your pet’s complete vaccine history, scroll down to “PDFs FOR GROOMERS” and select which you'd like a document for. Then choose "DOWNLOAD PDF". Any information not found online can be obtained from the hospital directly if needed. </p>
                         <button class="copy-btn" onclick="copyparaToClipboard('#Vax')" id="Vaxbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
@@ -1076,6 +1127,13 @@
                         <p id="Scrshot">To ensure we can correct this can you take a screenshot of where the missing information is and E-mail it to: BanfieldWebsupport@Banfield.com With your name, number, account number, pets name, and any additional details about this error</p>
                         <button class="copy-btn" onclick="copyToClipboard('#Scrshot')" id="Scrshotbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Steps to Dashboard</h3>
+                        <p id="Dashboard">Here are the steps to get back to the Dashboard. In the top right hand corner select the 3 lines on top of each other. Than we will select "MyBanfield" and "MyDashboard".</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#Dashboard')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
                 </div>
                 <div id="AppGen" class="tabcontent">
                     <h1>General - App</h1>
@@ -1205,30 +1263,42 @@
                         <p id="Forceclose">Due to the inability to move forward and resolve your concern at this time, this chat will be disconnecting, as we have provided the information that we have available to assist you today. When you are ready to proceed with an option provided, please chat or call back in at your soonest availability and we'll be happy to assist you</p>
                         <button class="copy-btn" onclick="copyToClipboard('#Forceclose')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Legal</h3>
+                        <p id="Legal">I acknowledge your rights to seek legal advise  and will have this noted. We request that your legal representative contact us at Banfield Pet Hospital PO BOX 87586 Vancouver, WA 98687. At this point, I am unable to assist and will be disconnecting the chat. Thank you for contacting Banfield Pet Hospital. </p>
+                        <button class="copy-btn" onclick="copyToClipboard('#Legal')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
                 </div>
                 <div id="Rescources" class="tabcontent">
                     <h1>Rescources</h1>
                     <div class="qrblock">
+                        <p>Link below to Clock In and Out</p>
                         <a href="#" class="ClockTime">Clock in/out</a>
                    </div>
                    <br>
                    <div class="qrblock">
+                    <p>Link below to Use Meep Stand Alone</p>
                     <a href="#" class="MEEPLink">MEEP</a>
                      </div>
                     <br>
                     <div class="qrblock">
+                        <p>Link below to Access Pricing Tool</p>
                         <a href="#" class="OWPPricingTool">OWP Pricing Tool</a>
                     </div>
                     <br>
                     <div class="qrblock">
+                        <p>Link below to Claw - Web Support</p>
                         <a href="#" class="CLAW">CLAW</a>
                     </div>
                     <br>
                     <div class="qrblock">
+                        <p>Link below to Hospital Phone Number List</p>
                         <a href="#" class="HsptList">Hospital List</a>
                     </div>
                     <br>
                     <div class="qrblock">
+                        <p>Link below to Upgrade/Downgrade Form</p>
                         <a href="#" class="UPDGForm">UG/DG Form</a>
                     </div>
                 </div>

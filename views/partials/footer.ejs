@@ -460,11 +460,6 @@ function openCity(evt, cityName) {
     NewOrdern.insertAdjacentHTML("beforeend" , '- edu how to place order on BanfieldShop online ');
   });
 
-  const Enrolling = document.querySelector('#Enrollingbtn');
-  Enrolling.addEventListener('click', () => {
-    const Enrollingn = document.querySelector('#NoteOutput');
-    Enrollingn.insertAdjacentHTML("beforeend" , '- edu how to enroll in OWP online ');
-  });
 
   const Schedulingapptbtn = document.querySelector('#Schedulingapptbtn');
   Schedulingapptbtn.addEventListener('click', () => {
@@ -686,6 +681,60 @@ function openCity(evt, cityName) {
   MPDbtn.addEventListener('click', () => {
     const MPDbtnn = document.querySelector('#NoteOutput');
     MPDbtnn.insertAdjacentHTML("beforeend" , '- edu how to update name at hspt with Valid ID ');
+  });
+
+  const enrollingbtn = document.querySelector('#enrollingbtn');
+  enrollingbtn.addEventListener('click', () => {
+    const enrollingbtnn = document.querySelector('#NoteOutput');
+    enrollingbtnn.insertAdjacentHTML("beforeend" , '- edu how to enroll online ');
+  });
+
+  const enrollingbtn2 = document.querySelector('#enrollingbtn2');
+  enrollingbtn2.addEventListener('click', () => {
+    const enrollingbtn2n = document.querySelector('#NoteOutput');
+    enrollingbtn2n.insertAdjacentHTML("beforeend" , '- edu how to enroll online ');
+  });
+  
+  const chcxl = document.querySelector('#chcxl');
+  chcxl.addEventListener('click', () => {
+    const chcxln = document.querySelector('#NoteOutput');
+    chcxln.insertAdjacentHTML("beforeend" , '- edu CH cannot close plan, only Acct Holder - adv to have acct holder reach out ');
+  });
+
+  const spouceccbtn = document.querySelector('#spouceccbtn');
+  spouceccbtn.addEventListener('click', () => {
+    const spouceccbtnn = document.querySelector('#NoteOutput');
+    spouceccbtnn.insertAdjacentHTML("beforeend" , '- edu on updating CC into their name ');
+  });
+
+  const authdopubtn = document.querySelector('#authdopubtn');
+  authdopubtn.addEventListener('click', () => {
+    const authdopubtnn = document.querySelector('#NoteOutput');
+    authdopubtnn.insertAdjacentHTML("beforeend" , '- refered to hspt to alter Auth Users for Dropoff/Pickup ');
+  });
+
+  const removeccbtn = document.querySelector('#removeccbtn');
+  removeccbtn.addEventListener('click', () => {
+    const removeccbtnn = document.querySelector('#NoteOutput');
+    removeccbtnn.insertAdjacentHTML("beforeend" , '- edu OWP require banking info for installments ');
+  });
+
+  const notinsurbtn = document.querySelector('#notinsurbtn');
+  notinsurbtn.addEventListener('click', () => {
+    const notinsurbtnn = document.querySelector('#NoteOutput');
+    notinsurbtnn.insertAdjacentHTML("beforeend" , '- edu OWP are yearly plans and not a monthly service ');
+  });
+
+  const BCTCxlbtn = document.querySelector('#BCTCxlbtn');
+  BCTCxlbtn.addEventListener('click', () => {
+    const BCTCxlbtnn = document.querySelector('#NoteOutput');
+    BCTCxlbtnn.insertAdjacentHTML("beforeend" , '- refered to BCT for feedback ');
+  });
+
+  const AddMedAObtn = document.querySelector('#AddMedAObtn');
+  AddMedAObtn.addEventListener('click', () => {
+    const AddMedAObtnn = document.querySelector('#NoteOutput');
+    AddMedAObtnn.insertAdjacentHTML("beforeend" , '- refered to hspt to add add-ons ');
   });
 
   const BillingInfobtn = document.querySelector('#BillingInfobtn');
@@ -921,12 +970,22 @@ for(var i = 0; i < filtername.length; i++) {
 }
 }
 
+let PayTodaycxl = "Example: Looking at  PETNAME's plan, I can see the plan is currently past due for $AMT for the missed installment on DATE";
+
+
+  document.getElementById("PayTodaycxl").innerText = PayTodaycxl;
+
+
+
+
+
+
+
 var PDB = document.getElementById('PDBnames').value;
 var PDBamt = document.getElementById('PDBamt').value;
 var PDBdate = document.getElementById('PDBdate').value;
 
   let PDBnote = "Example: Looking at  PETNAME's plan, I can see the plan is currently past due for $AMT for the missed installment on DATE";
-  console.log(PDB)
 
   document.getElementById("PDBnote").innerText = PDBnote;
 
@@ -1012,6 +1071,7 @@ function BGENExNotes(){
   console.log(PPC)
 
   document.getElementById("ppassed-chatp").innerText = PPCnote;
+
 
 
 
@@ -1768,8 +1828,12 @@ console.log(scribe)
 if (scribe.length == 6) {
   var Ending = "The $"+scribe[0].CxlCost+" for "+scribe[0].Name+", $"+scribe[1].CxlCost+" for "+scribe[1].Name+", $"+scribe[2].CxlCost+ " for "+scribe[2].Name+", The $"+scribe[3].CxlCost+" for "+scribe[3].Name+", The $"+scribe[4].CxlCost+" for "+scribe[4].Name+", and The $"+scribe[5].CxlCost+" for "+scribe[5].Name+", can either be paid today or over the remaining installments. Which option do you prefer?";
 
+  var PayTodaycxl = "Did you want to process the $"+scribe[0].CxlCost+" for "+scribe[0].Name+", $"+scribe[1].CxlCost+" for "+scribe[1].Name+", $"+scribe[2].CxlCost+ " for "+scribe[2].Name+", The $"+scribe[3].CxlCost+" for "+scribe[3].Name+", The $"+scribe[4].CxlCost+" for "+scribe[4].Name+", and The $"+scribe[5].CxlCost+" for "+scribe[5].Name+" on the card in your name ending in #### to close the plan today?"
+
 } else if (scribe.length == 5) {
   var Ending = "The $"+scribe[0].CxlCost+" for "+scribe[0].Name+", $"+scribe[1].CxlCost+" for "+scribe[1].Name+", $"+scribe[2].CxlCost+ " for "+scribe[2].Name+", The $"+scribe[3].CxlCost+" for "+scribe[3].Name+", and The $"+scribe[4].CxlCost+" for "+scribe[4].Name+" can either be paid today or over the remaining installments. Which option do you prefer?";
+
+  var PayTodaycxl = "Did you want to process the $"+scribe[0].CxlCost+" for "+scribe[0].Name+", $"+scribe[1].CxlCost+" for "+scribe[1].Name+", $"+scribe[2].CxlCost+ " for "+scribe[2].Name+", The $"+scribe[3].CxlCost+" for "+scribe[3].Name+", and The $"+scribe[4].CxlCost+" for "+scribe[4].Name+" on the card in your name ending in #### to close the plan today?"
 
 } else if (scribe.length == 4) {
   var Ending = "The $"+scribe[0].CxlCost+" for "+scribe[0].Name+", $"+scribe[1].CxlCost+" for "+scribe[1].Name+", $"+scribe[2].CxlCost+ " for "+scribe[2].Name+", and The $"+scribe[3].CxlCost+" for "+scribe[3].Name+" can either be paid today or over the remaining installments. Which option do you prefer?";
@@ -1777,11 +1841,17 @@ if (scribe.length == 6) {
 } else if (scribe.length == 3) {
   var Ending = "The $"+scribe[0].CxlCost+" for "+scribe[0].Name+", $"+scribe[1].CxlCost+" for "+scribe[1].Name+", and the $"+scribe[2].CxlCost+ " for "+scribe[2].Name+" can either be paid today or over the remaining installments. Which option do you prefer?";
 
+  var PayTodaycxl = "Did you want to process the $"+scribe[0].CxlCost+" for "+scribe[0].Name+", $"+scribe[1].CxlCost+" for "+scribe[1].Name+", and the $"+scribe[2].CxlCost+ " for "+scribe[2].Name+" on the card in your name ending in #### to close the plan today?"
+
 } else if (scribe.length == 2) {
   var Ending = "The $"+scribe[0].CxlCost+" for "+scribe[0].Name+" and $"+scribe[1].CxlCost+" for "+scribe[1].Name+" can either be paid today or over the remaining installments. Which option do you prefer?";
 
+  var PayTodaycxl = "Did you want to process the $"+scribe[0].CxlCost+" for "+scribe[0].Name+" and $"+scribe[1].CxlCost+" for "+scribe[1].Name+" on the card in your name ending in #### to close the plan today?"
+
 } else if (scribe.length == 1) {
   var Ending = "The $"+scribe[0].CxlCost+" for "+scribe[0].Name+" can either be paid today or over the remaining installments. Which option do you prefer?";
+
+  var PayTodaycxl = "Did you want to process the $"+scribe[0].CxlCost+" for "+scribe[0].Name+" on the card in your name ending in #### to close the plan today?"
 
 } else {
   var Ending = "";
@@ -1823,6 +1893,10 @@ if (MEEPcmwc.length == 6) {
   var P = "";
 }
 
+
+
+document.getElementById("PayTodaycxl").innerHTML = PayTodaycxl;
+
 document.getElementById("Ending").innerHTML = Ending;
 
 var SetDNR = "I have set the plan to automatically end and expire at the end of the plan year. Were there any other questions or changes I can help with in the meantime?" 
@@ -1830,10 +1904,6 @@ var SetDNR = "I have set the plan to automatically end and expire at the end of 
 document.getElementById("SettoDNR").innerHTML = SetDNR;
 
 
-var PayTodaycxl = "I understand, did you want to process the $AMT on the card ending in #### to close the plan today"
-
-
-document.getElementById("PayTodaycxl").innerHTML = PayTodaycxl;
 
   // MEEP cxl payment QR
 
@@ -1853,8 +1923,11 @@ MEEPone.addEventListener('click', () => {
   MEEPonen.insertAdjacentHTML("beforeend" , EndNote);
 });
  
-
 };
+
+
+
+
 
 function RemovingMedsSubmit() {
   let BalOwed = document.getElementById('BODDRMQR').value;
@@ -1868,6 +1941,11 @@ function RemovingMedsSubmit() {
 
     let RMNotes = "When we add medication to a wellness plan the total cost of the medication is applied over the remaining installments left in the plan year. To remove the medication we can pay for the medication that has already been provided but hasn't been paid yet with the monthly installments. For "+Name+", I'm showing there is a balance of $"+AmtOwed+" to remove the "+Med+" from the plan, this will reduce the remaining monthly installments to $"+NMR+" moving forward without the medication.";
     
+    const RMNCbtn = document.querySelector('#RMNCbtn');
+RMNCbtn.addEventListener('click', () => {
+  const RMNCbtnn = document.querySelector('#NoteOutput');
+  RMNCbtnn.insertAdjacentHTML("beforeend" , "- edu $"+AmtOwed+" to remove "+Med+" from "+Name+"'s plan - adv $"+NMR+" Monthly Installment Rate after removal ");
+});
   
     document.getElementById('RMNC').innerText= RMNotes;
   } else if (BalOwed == 'No') {
@@ -1879,9 +1957,18 @@ function RemovingMedsSubmit() {
     let RMNotes = "I'm showing I can remove the "+Med+" from "+Name+"'s plan today at no cost, this will make the remaining installments $"+NMR+" moving forward without the medication.";
 
     document.getElementById('RMNC').innerText= RMNotes;
+
+    const RMNCbtn = document.querySelector('#RMNCbtn');
+    RMNCbtn.addEventListener('click', () => {
+    const RMNCbtnn = document.querySelector('#NoteOutput');
+    RMNCbtnn.insertAdjacentHTML("beforeend" , "- edu no cost to remove "+Med+" from "+Name+"'s plan - adv $"+NMR+" for each installment moving forward ");
+});
+
   }
 
 }
+
+
 
 document.getElementById("RMsubmitbtn").addEventListener("click", unhideMedRemov);
 
