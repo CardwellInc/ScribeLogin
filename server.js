@@ -43,6 +43,10 @@ if (process.env.NODE_ENV !== 'production') {
   app.get('/login', checkNotAuthenticated, (req, res) => {
     res.render('login.ejs')
   })
+
+  app.get('/Meep', checkAuthenticated, (req, res) => {
+    res.render('Meep.ejs')
+  })
   
   app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
     successRedirect: '/',

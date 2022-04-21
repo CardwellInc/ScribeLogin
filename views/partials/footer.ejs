@@ -451,7 +451,7 @@ function openCity(evt, cityName) {
   const Petpassedqr = document.querySelector('#Petpassedqrbtn');
   Petpassedqr.addEventListener('click', () => {
     const Petpassedqrn = document.querySelector('#NoteOutput');
-    OldOrdern.insertAdjacentHTML("beforeend" , '- refered to eComm for online orders ');
+    Petpassedqrn.insertAdjacentHTML("beforeend" , '- edu on paying for care already provided after pet passes ');
   });
 
   const NewOrder = document.querySelector('#NewOrderbtn');
@@ -1917,6 +1917,11 @@ $('a.yourlink').click(function(e) {
 $('a.ClockTime').click(function(e) {
     e.preventDefault();
     window.open('https://marsbanfield-sso.prd.mykronos.com/quicktimestamp ');
+});
+
+$('a.MEEPLink').click(function(e) {
+    e.preventDefault();
+    window.open('/Meep ');
 });
 
 $('a.OWPPricingTool').click(function(e) {

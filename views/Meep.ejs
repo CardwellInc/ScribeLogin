@@ -1,0 +1,256 @@
+<%- include('partials/meepheader'); -%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEEP</title>
+</head>
+<nav style="width: 80%;">  
+    <p style="color: black;">How Many Cancels?</p>
+    <select name="petnum" id="petnum">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+</nav>
+<body>    
+        <h1> Wellness Plan Cancel </h1>
+        <hr>
+        <div id="One-Pet" class="tabcontent">
+            <h3>First Pet </h3>
+            <form class="MEEP" id="Resets">
+            <li>
+                Name: <input type="text" placeholder="First Pet's Name" id="MEEPpet1" style="height: 60%; width: 60%;">
+            </li>
+            <li>Banking Day: <select id = "BK">
+                <option value="5"> 5 </option>
+                <option value="12"> 12 </option>
+                <option value="19"> 19 </option>
+                <option value="26"> 26 </option>
+                </select>
+            RPF Charges: <select id = "RPF">
+                <option value="0"> 0 </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                </select></li>
+            <li>Services Used: <input id="Used" type="number" placeholder="Used Services" required></li>
+            <li>Full Plan Costs: <input id="Plan" type="number" placeholder="Full WP Cost" required></li>
+            <li>Installments Paid: <input id="Paid" type="number" placeholder="Installments Paid" required></li>
+            <li>End Date: <input id="EndDate" type="datetime" placeholder="End Date" required></li>
+            <input id="Close" type="number" placeholder="Cost to Close" hidden>
+        </form>
+        <div id="Two-Pet" class="tabcontent" style="display: none;">
+            <h3>Second Pet</h3>
+            <form class="MEEP2" id="Resets">
+                <li>
+                    Name: <input type="text" placeholder="First Pet's Name" id="MEEPpet2" style="height: 60%; width: 60%;">
+                </li>
+            <li>Banking Day: <select id = "BK2">
+                <option value="5"> 5 </option>
+                <option value="12"> 12 </option>
+                <option value="19"> 19 </option>
+                <option value="26"> 26 </option>
+                </select>
+            RPF Charges: <select id = "RPF2">
+                <option value="0"> 0 </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                </select></li>
+            <li>Services Used: <input id="Used2" type="number" placeholder="Used Services" required></li>
+            <li>Full Plan Costs: <input id="Plan2" type="number" placeholder="Full WP Cost" required></li>
+            <li>Installments Paid: <input id="Paid2" type="number" placeholder="Installments Paid" required></li>
+            <li>End Date: <input id="EndDate2" type="datetime" placeholder="End Date" required></li>
+            <input id="Close2" type="number" placeholder="Cost to Close" hidden>
+        </form>
+             
+        </div>
+        <div id="Three-Pet" class="tabcontent" style="display: none;">
+            <h3>Third Pet </h3>
+            <form class="MEEP3" id="Resets">
+                <li>
+                    Name: <input type="text" placeholder="First Pet's Name" id="MEEPpet3" style="height: 60%; width: 60%;">
+                </li>
+            <li>Banking Day: <select id = "BK3">
+                <option value="5"> 5 </option>
+                <option value="12"> 12 </option>
+                <option value="19"> 19 </option>
+                <option value="26"> 26 </option>
+                </select>
+            RPF Charges: <select id = "RPF3">
+                <option value="0"> 0 </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                </select></li>
+            <li>Services Used: <input id="Used3" type="number" placeholder="Used Services" required></li>
+            <li>Full Plan Costs: <input id="Plan3" type="number" placeholder="Full WP Cost" required></li>
+            <li>Installments Paid: <input id="Paid3" type="number" placeholder="Installments Paid" required></li>
+            <li>End Date: <input id="EndDate3" type="datetime" placeholder="End Date" required></li>
+            <input id="Close3" type="number" placeholder="Cost to Close" hidden>
+        </form>
+             
+        </div>
+        <div id="Four-Pet" class="tabcontent" style="display: none;">
+            <h3>Forth Pet</h3>
+            <form class="MEEP4" id="Resets">
+                <li>
+                    Name: <input type="text" placeholder="First Pet's Name" id="MEEPpet4" style="height: 60%; width: 60%;">
+                </li>
+            <li>Banking Day: <select id = "BK4">
+                <option value="5"> 5 </option>
+                <option value="12"> 12 </option>
+                <option value="19"> 19 </option>
+                <option value="26"> 26 </option>
+                </select>
+            RPF Charges: <select id = "RPF4">
+                <option value="0"> 0 </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                </select></li>
+            <li>Services Used: <input id="Used4" type="number" placeholder="Used Services" required></li>
+            <li>Full Plan Costs: <input id="Plan4" type="number" placeholder="Full WP Cost" required></li>
+            <li>Installments Paid: <input id="Paid4" type="number" placeholder="Installments Paid" required></li>
+            <li>End Date: <input id="EndDate4" type="datetime" placeholder="End Date" required></li>
+            <input id="Close4" type="number" placeholder="Cost to Close" hidden>
+        </form>
+             
+        </div>
+        <div id="Five-Pet" class="tabcontent" style="display: none;">
+            <h3>Fifth Pet</h3>
+            <form class="MEEP5" id="Resets">
+                <li>
+                    Name: <input type="text" placeholder="First Pet's Name" id="MEEPpet5" style="height: 60%; width: 60%;">
+                </li>
+            <li>Banking Day: <select id = "BK5">
+                <option value="5"> 5 </option>
+                <option value="12"> 12 </option>
+                <option value="19"> 19 </option>
+                <option value="26"> 26 </option>
+                </select>
+            RPF Charges: <select id = "RPF5">
+                <option value="0"> 0 </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                </select></li>
+            <li>Services Used: <input id="Used5" type="number" placeholder="Used Services" required></li>
+            <li>Full Plan Costs: <input id="Plan5" type="number" placeholder="Full WP Cost" required></li>
+            <li>Installments Paid: <input id="Paid5" type="number" placeholder="Installments Paid" required></li>
+            <li>End Date: <input id="EndDate5" type="datetime" placeholder="End Date" required></li>
+            <input id="Close" type="number5" placeholder="Cost to Close" hidden>
+        </form>
+             
+        </div>
+        <div id="Six-Pet" class="tabcontent" style="display: none;">
+            <h3>Sixth Pet</h3>
+            <form class="MEEP6" id="Resets">
+                <li>
+                    Name: <input type="text" placeholder="First Pet's Name" id="MEEPpet6" style="height: 60%; width: 60%;">
+                </li>
+            <li>Banking Day: <select id = "BK6">
+                <option value="5"> 5 </option>
+                <option value="12"> 12 </option>
+                <option value="19"> 19 </option>
+                <option value="26"> 26 </option>
+                </select>
+            RPF Charges: <select id = "RPF6">
+                <option value="0"> 0 </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                </select></li>
+            <li>Services Used: <input id="Used6" type="number" placeholder="Used Services" required></li>
+            <li>Full Plan Costs: <input id="Plan6" type="number" placeholder="Full WP Cost" required></li>
+            <li>Installments Paid: <input id="Paid6" type="number" placeholder="Installments Paid" required></li>
+            <li>End Date: <input id="EndDate6" type="datetime" placeholder="End Date" required></li>
+            <input id="Close6" type="number" placeholder="Cost to Close" hidden>
+        </form>
+        </div>
+        <button id="submit-button">Submit</button> 
+        <hr>    
+        <h2>To the Client:</h2>
+        <div id="CMWC">
+            <div id="result"></div>
+            <br>
+            <div id="Pet1"></div>
+        </div>
+
+        <br>
+        <div id="Ending"></div>
+        <br>
+    <div id="CMWC2">
+        <div id="EndNote"></div>
+    </div>
+        
+        <hr>
+        <button class="clear" id="Reset-button"">Reset</button> 
+    
+<a href="/">Back to Scribe</a>
+
+</body>
+
+<%- include('partials/meepfooter'); -%>
+</html>
