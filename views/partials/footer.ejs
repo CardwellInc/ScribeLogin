@@ -725,6 +725,12 @@ function openCity(evt, cityName) {
     authdopubtnn.insertAdjacentHTML("beforeend" , '- refered to hspt to alter Auth Users for Dropoff/Pickup ');
   });
 
+  const hsptupdatebtn = document.querySelector('#hsptupdatebtn');
+  hsptupdatebtn.addEventListener('click', () => {
+    const hsptupdatebtnn = document.querySelector('#NoteOutput');
+    hsptupdatebtnn.insertAdjacentHTML("beforeend" , '- adv to cb after hspt update has completed ');
+  });
+
   const removeccbtn = document.querySelector('#removeccbtn');
   removeccbtn.addEventListener('click', () => {
     const removeccbtnn = document.querySelector('#NoteOutput');

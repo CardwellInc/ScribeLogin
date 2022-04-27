@@ -17,7 +17,7 @@
                     <li><button class="tablinks" onclick="openCity(event, 'txt')" id="defaultOpen">Text</button></li>
                     <li><button class="tablinks" onclick="openCity(event, 'ppassed')" id="defaultOpen">Pet Passed</button></li>
                     <li><button class="tablinks" onclick="openCity(event, 'ThirdParty')" id="defaultOpen">Third Party</button></li>
-                    <li><button class="tablinks" onclick="openCity(event, 'UpDateInfo')" id="defaultOpen">Update Info</button></li>
+                    <li><button class="tablinks" onclick="openCity(event, 'InstantChat')" id="defaultOpen">Instant QR</button></li>
                 </ul>
                 </li>
                     <li>
@@ -157,7 +157,7 @@
                     <button class="copy-btn" onclick="copyToClipboard('#g-t4')"><i class="fas fa-clipboard"></i>Copy</button></div>
                     <br>
                 </div>
-                <div id="UpDateInfo" class="tabcontent">
+                <div id="InstantChat" class="tabcontent">
                     <h1>Update</h1>
                     
                     <div class="qrblock">
@@ -556,11 +556,18 @@
                     <p id="PDBnote"></p>
                     <button class="copy-btn" onclick="copyToClipboard('#PDBnote')" id="PDBbtn"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div>
+                    <br>
                     <div class="qrblock">
                         <h3>Processed Payment</h3>
                         <p id="ProcPymt">Thank you for waiting, I have processed the payment and the account is now current.</p>
                             <button class="copy-btn" onclick="copyparaToClipboard('#ProcPymt')"><i class="fas fa-clipboard"></i>Copy</button>
                         </div>  
+                    <br>
+                    <div class="qrblock">
+                    <h3>Updating CC while on Hold</h3>
+                    <p id="PDBPymt">>Here are the instructions to manage your pet's Wellness Plan payment information into your name online: <br>1. Select "Manage your account" at the top left of the main dashboard <br>2. Navigate to and expand the pet whose information you want to update <br>3. Locate OWP Payment Method, then "Use a different OWP Card" <br>4. You will be redirected to another system to collect card details (Click Continue to Secure Payment Site) <br>5. Enter card details and click "Pay with your credit card" ( You will not be charged) <br>6. You will then be redirected back to the "My account" page <br>Please keep in mind with the plan on Hold for an extended period of time it may require you call in to the billing department to make changes at this time.</p>
+                    <button class="copy-btn" id="test" onclick="copyparaToClipboard('#PDBPymt')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>  
                 </div>
                 <div id="UPCC" class="tabcontent">
                     <h1>Update Billing Information</h1>
@@ -601,7 +608,7 @@
                     <br>
                     <div class="qrblock">
                         <h3>Invoices</h3>
-                        <p id="Invoicebill">Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries</p>
+                        <p id="Invoicebill">Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries. Please keep in mind any documents or test results can be obtained from the hospital directly if not found online</p>
                         <button class="copy-btn" onclick="copyparaToClipboard('#Invoicebill')" id="Invoicebillbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
@@ -1018,6 +1025,12 @@
                         <h3>Reschedule/Cancel Appointment</h3>
                         <p id="Reschcxlappt">Here are the instructions to cancel or reschedule an appointment online: <br>1. Locate the "Upcoming appointment" bar on the top of your dashboard <br>2. Select the "See details" button to the left <br>3. Scroll down and you will see "reschedule appointment" and "cancel appointment"</p>
                         <button class="copy-btn" onclick="copyparaToClipboard('#Reschcxlappt')" id="Reschcxlapptbtn"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Hospital Updating</h3>
+                        <p id="Hsptupdate">I apologize, it looks like the hospital is still finishing up from their recent visit. We aren't able to make changes until the update has completed. Can you please reach back out in a few hours after the visit and we can continue with your request?</p>
+                        <button class="copy-btn" onclick="copyparaToClipboard('#Hsptupdate')" id="hsptupdatebtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                 </div>
                 <div id="WebUpD" class="tabcontent">
