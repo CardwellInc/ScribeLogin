@@ -274,6 +274,12 @@ function openCity(evt, cityName) {
     subjectcc.insertAdjacentHTML("beforeend" , '- edu on updating WP CC online');
   });
 
+  const sndnotetestbtn = document.querySelector('#sndnotetestbtn');
+  sndnotetestbtn.addEventListener('click', () => {
+    const sndnotetestbtn = document.querySelector('#NoteOutput');
+    sndnotetestbtn.insertAdjacentHTML("beforeend" , '- edu on updating WP CC online');
+  });
+
   const WPUCC = document.querySelector('#WPCCU');
   WPUCC.addEventListener('click', () => {
     const WPUCCn = document.querySelector('#NoteOutput');
