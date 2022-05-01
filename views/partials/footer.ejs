@@ -280,6 +280,12 @@ function openCity(evt, cityName) {
     medfoodrx.insertAdjacentHTML("beforeend" , '- adv to reach back out after hspt has completed acct update to make changes ');
   });
 
+  const ERCare = document.querySelector('#ERCarebtn');
+  ERCare.addEventListener('click', () => {
+    const ERCare = document.querySelector('#NoteOutput');
+    ERCare.insertAdjacentHTML("beforeend" , '- edu OWP does not include ER Care - refered to ER for Emergency Care ');
+  });
+
   const payinfo = document.querySelector('#payinfobtn');
   payinfo.addEventListener('click', () => {
     const payinfo = document.querySelector('#NoteOutput');
