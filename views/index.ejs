@@ -231,7 +231,7 @@
                 <div id="ThirdParty" class="tabcontent">
                     <h1>3rd Party</h1>
                     <div class="qrblock">
-                        <h3>3rd Party</h3>
+                        <h3>Unable to Access Information</h3>
                         <p id="TrdPrty">I apologize, as your name is not on the agreement I would be unable to access any of the account information to assist, Please have the account holder reach out to go over of their information within their account. Are there any other non-account related questions I can help with in the meantime?</p>
                         <button class="copy-btn" id="tpbtn" onclick="copyToClipboard('#TrdPrty')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
@@ -240,6 +240,12 @@
                         <h3>Cardholder unable to Cancel</h3>
                         <p id="CHCxl">I apologize, Adding your information, billing or personal, onto an account would not make it yours as Wellness Plans are non-transferable. The Wellness Plan agreement requires all information to match the name on the agreement to help prevent this confusion, We can help the account holder correct this information when they reach out. Were there any other questions I can help with in the meantime?</p>
                         <button class="copy-btn" id="chcxl" onclick="copyToClipboard('#CHCxl')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Any other Questions? - 3rd Party</h3>
+                        <p id="aoq3">Are there any other non-account related questions I can help with in the meantime while we await the account holder reaching out?</p>
+                        <button class="copy-btn" onclick="copyToClipboard('#aoq3')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                 </div>
@@ -529,8 +535,14 @@
                     <br>
                     <div class="qrblock">
                         <h3>Change 1 Installment or Banking Day</h3>
-                        <p id="ChangeBDQR">Are you looking to change 1 upcoming installment or the date of all future installments</p>                    
+                        <p id="ChangeBDQR">Are you looking to change 1 upcoming installment or the date of all future installments?</p>                    
                         <button class="copy-btn" onclick="copyparaToClipboard('#ChangeBDQR')"><i class="fas fa-clipboard"></i>Copy</button> 
+                    </div> 
+                    <br>
+                    <div class="qrblock">
+                        <h3>Change Banking Day</h3>
+                        <p id="BDchanges">We have 4 banking days to choose from- the 5th, 12th, 19th, and 26th. Which day would you prefer?</p>                    
+                        <button class="copy-btn" onclick="copyparaToClipboard('#BDchanges')"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div> 
                     <br>
                     <div class="qrblock">
@@ -567,6 +579,12 @@
                     <h3>Updating CC while on Hold</h3>
                     <p id="PDBPymt">Here are the instructions to manage your pet's Wellness Plan payment information into your name online: <br>1. Select "Manage your account" at the top left of the main dashboard <br>2. Navigate to and expand the pet whose information you want to update <br>3. Locate OWP Payment Method, then "Use a different OWP Card" <br>4. You will be redirected to another system to collect card details (Click Continue to Secure Payment Site) <br>5. Enter card details and click "Pay with your credit card" ( You will not be charged) <br>6. You will then be redirected back to the "My account" page <br>Please keep in mind with the plan on Hold for an extended period of time it may require you call in to the billing department to make changes at this time.</p>
                     <button class="copy-btn" id="test" onclick="copyparaToClipboard('#PDBPymt')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>  
+                    <br>
+                    <div class="qrblock">
+                    <h3>Partial Payment Info</h3>
+                    <p id="PPayinfo">Please keep in mind the plan will remain on Hold until the full past due balance is processed to stop the grace period provided before the plan defaults into collections for non-payment.</p>
+                    <button class="copy-btn" id="ppayinfobtn" onclick="copyparaToClipboard('#PPayinfo')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>  
                 </div>
                 <div id="UPCC" class="tabcontent">
@@ -691,6 +709,12 @@
                         <h3>Unable to Remove WP CC</h3>
                         <p id="RemoveCCArgue">As per agreement, The Optimum Wellness Plan must have an account on file for the auto-draft. If you do not want the payment to come out automatically, you may make the payments online, over the phone, or in person at your local hospital. The payment must be received 3 business days prior to your draft date to avoid the auto-draft.</p>
                         <button class="copy-btn" id="RemoveCCArguebtn" onclick="copyToClipboard('#RemoveCCArgue')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Why Installment Failed</h3>
+                        <p id="Installfail">I apologize, the bank doesn't give us a reason why they denied our request for funds. We only get an Approved or Denied response. I would recommend contacting your bank to inquire what within their process prevented our request for funds.</p>
+                        <button class="copy-btn" id="Installfailbtn" onclick="copyToClipboard('#Installfail')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -993,7 +1017,7 @@
                         <br>
                         <div class="qrblock">
                             <h3>Need A Moment?</h3>
-                            <p id="NeedMoment">I understand if you need a moment to think over the options. Did you want to reach back out after you have come to a decision on how to proceed?</p>
+                            <p id="NeedMoment">I understand if you need a moment to think over the options. Did you want to reach back out once you have come to a decision on how you want to proceed with your plan? </p>
                                 <button class="copy-btn" onclick="copyparaToClipboard('#NeedMoment')"><i class="fas fa-clipboard"></i>Copy</button>
                             </div>  
                 </div>

@@ -279,6 +279,18 @@ function openCity(evt, cityName) {
     const medfoodrx = document.querySelector('#NoteOutput');
     medfoodrx.insertAdjacentHTML("beforeend" , '- adv to reach back out after hspt has completed acct update to make changes ');
   });
+
+  const payinfo = document.querySelector('#payinfobtn');
+  payinfo.addEventListener('click', () => {
+    const payinfo = document.querySelector('#NoteOutput');
+    payinfo.insertAdjacentHTML("beforeend" , '- edu full PDB is required to bring plan Active or stop 120 day grace period provided ');
+  });
+
+  const Installfailbtn = document.querySelector('#Installfailbtn');
+  Installfailbtn.addEventListener('click', () => {
+    const Installfailbtn = document.querySelector('#NoteOutput');
+    Installfailbtn.insertAdjacentHTML("beforeend" , '- refered to their bank to inq what stopped autodraft installment ');
+  });
   
   const sndnotetestbtn = document.querySelector('#sndnotetestbtn');
   sndnotetestbtn.addEventListener('click', () => {
