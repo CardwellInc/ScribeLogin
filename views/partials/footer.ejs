@@ -764,7 +764,7 @@ function openCity(evt, cityName) {
   const removeccbtn = document.querySelector('#removeccbtn');
   removeccbtn.addEventListener('click', () => {
     const removeccbtnn = document.querySelector('#NoteOutput');
-    removeccbtnn.insertAdjacentHTML("beforeend" , '- edu OWP require banking info for installments ');
+    removeccbtnn.insertAdjacentHTML("beforeend" , '- edu OWP require banking info for installments - edu how to make manual pymt online ');
   });
 
   const notinsurbtn = document.querySelector('#notinsurbtn');
@@ -1018,10 +1018,15 @@ for(var i = 0; i < filtername.length; i++) {
 }
 }
 
-let PayTodaycxl = "Example: Looking at  PETNAME's plan, I can see the plan is currently past due for $AMT for the missed installment on DATE";
+let PayTodaycxl = "Example: Did you want to process the $AMT for PET to close today?";
 
 
   document.getElementById("PayTodaycxl").innerText = PayTodaycxl;
+
+  let PayTodayPDB = "Example: Did you want to process the $AMT on the card ending in ____?";
+
+
+  document.getElementById("PayTodayPDB").innerText = PayTodayPDB;
 
 
 
@@ -1053,6 +1058,12 @@ function PDBnotes(){
   
       let PDBnote = "Looking at "+PDB+"'s plan, I can see the plan is currently on Hold for the past due balance of $"+PDBamt+" for the unsuccessful installments on "+todaypdb+". Please keep in mind there is a 120 day grace period from the Hold Date to bring the balance current to prevent the plan from defaulting into collections for non-payment.";
       document.getElementById("PDBnote").innerText = PDBnote;
+
+      let PayTodayPDB = "Did you want to process the $"+PDBamt+" on the card in your name ending in 0000?";
+
+      document.getElementById("PayTodayPDB").innerHTML = PayTodayPDB;
+
+      
       console.log(todaypdb)
       console.log(dd)
 
@@ -1062,6 +1073,8 @@ function PDBnotes(){
         var PDBamt = document.getElementById('PDBamt').value;
           const PDBbtnn = document.querySelector('#NoteOutput');
           PDBbtnn.insertAdjacentHTML("beforeend" , '- adv '+PDB+' plan is on Hold for PDB $'+PDBamt+' for missed installment on '+todaypdb+' - edu 120 days from Hold to Collections ');
+
+          
       });
   } else {
     var PDB = document.getElementById('PDBnames').value;
@@ -1075,6 +1088,10 @@ function PDBnotes(){
       todaypdb = mm+'/'+dd+'/'+yyyy;}
   
       let PDBnote = "Looking at "+PDB+"'s plan, I can see the plan is currently past due for $"+PDBamt+" for the missed installment on "+todaypdb+"";
+
+      let PayTodayPDB = "Did you want to process the $"+PDBamt+" on the card in your name ending in 0000?";
+
+      document.getElementById("PayTodayPDB").innerHTML = PayTodayPDB;
       document.getElementById("PDBnote").innerText = PDBnote;
       console.log(todaypdb)
       console.log(dd)
