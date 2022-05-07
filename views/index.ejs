@@ -1026,6 +1026,12 @@
                             <button class="copy-btn" onclick="copyparaToClipboard('#ProcPymtcxl')"><i class="fas fa-clipboard"></i>Copy</button>
                         </div> 
                         <br>
+                    <div class="qrblock">
+                        <h3>Confirmation of Cancellation Code</h3>
+                        <p id="COCCqr">Here is a Confirmation of Cancellation Code: <%= cmwcode %> for your records. Are there any other changes I can help with today?</p>
+                            <button class="copy-btn" onclick="copyparaToClipboard('#COCCqr')"><i class="fas fa-clipboard"></i>Copy</button>
+                        </div> 
+                        <br>
                         <div class="qrblock">
                             <h3>Need A Moment?</h3>
                             <p id="NeedMoment">I understand if you need a moment to think over the options. Did you want to reach back out once you have come to a decision on how you want to proceed with your plan? </p>
@@ -1484,9 +1490,7 @@
                           <option value="TimeoutDNR">Time out/DNR</option>
                           <option value="DNR">DNR</option>
                           <option value="ADNR">Already DNR/No Change</option>
-                          <option value="CEC">Client Ended Chat</option>
-                          <option value="CECNCM">Client Ended Chat - No Changes Made</option>
-                          <option value="TTO">Text Time Out</option>
+                          <option value="CEC">Timed Out/AlreadyDNR/NoChange</option>
                       </select>
                       <button class="copy-btn2" id="AddDispo">Add</button>
                   </div>
