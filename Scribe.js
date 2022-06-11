@@ -312,7 +312,7 @@ function openCity(evt, cityName) {
   const costexpl = document.querySelector('#costex');
   costexpl.addEventListener('click', () => {
     const subjectcostexpl = document.querySelector('#NoteOutput');
-    subjectcostexpl.insertAdjacentHTML("beforeend" , '- refered to hspt for pricing ');
+    subjectcostexpl.insertAdjacentHTML("beforeend" , '- referred to hspt for pricing ');
   });
 
   const DAC = document.querySelector('#DACbtn');
@@ -420,7 +420,7 @@ function openCity(evt, cityName) {
   const Microchipinfo = document.querySelector('#Microchipinfobtn');
   Microchipinfo.addEventListener('click', () => {
     const Microchipinfon = document.querySelector('#NoteOutput');
-    Microchipinfon.insertAdjacentHTML("beforeend" , '- refered to HomeAgain to update Microchip info ');
+    Microchipinfon.insertAdjacentHTML("beforeend" , '- referred to HomeAgain to update Microchip info ');
   });
 
   const PersInfo = document.querySelector('#PersInfobtn');
@@ -438,7 +438,7 @@ function openCity(evt, cityName) {
   const OldOrder = document.querySelector('#OldOrderbtn');
   OldOrder.addEventListener('click', () => {
     const OldOrdern = document.querySelector('#NoteOutput');
-    OldOrdern.insertAdjacentHTML("beforeend" , '- refered to eComm for online orders ');
+    OldOrdern.insertAdjacentHTML("beforeend" , '- referred to eComm for online orders ');
   });
 
   const NewOrder = document.querySelector('#NewOrderbtn');
@@ -1601,7 +1601,7 @@ for(let i=0, len=MEEPcmwc.length; i<len; i++){
                 console.log(mm);
                 }
         
-          var P = "Looking at "+PName+"'s plan, as $"+ServUsed+" of services were used and the plan costs $"+WPBAL+", we can close for the lesser of the two amounts being the cost of the services used. We then subtract the $"+InstallPaid+" of installments paid, which leaves the cost to close today of $"+CxlCost+". This can either be paid today or we can let each monthly installment of $"+x+" lower the balance each month over time, I do recommend calling back before the installment on "+today+" to pay the remaining $"+z+". Please keep in mind if you do not reach out the plan will fulfil the year and end automatically on "+EndDate+" and You will also want to avoid using anymore services as closing the plan is based on usage; using more services will adjust the cost to cancel accordingly.";
+          var P = "Looking at "+PName+"'s plan, as $"+ServUsed+" of services were used and the plan costs $"+WPBAL+", we can close for the lesser of the two amounts being the cost of the services used. We then subtract the $"+InstallPaid+" of installments paid, which leaves the cost to close today of $"+CxlCost+". This can either be paid today or we can let each monthly installment of $"+x+" lower the balance each month over time, I do recommend calling back before the installment on "+today+" to pay the remaining $"+z+". Please keep in mind if you do not reach out the plan will fulfill the year and end automatically on "+EndDate+" and You will also want to avoid using anymore services as closing the plan is based on usage; using more services will adjust the cost to cancel accordingly.";
         
           var note = "-adv $"+CxlCost+" per Services for "+PName+" adv to cb before " +today+ " to pay the remaining $"+z+" to avoid overpymt ";
       }
