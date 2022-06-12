@@ -761,6 +761,12 @@ function openCity(evt, cityName) {
     hsptupdatebtnn.insertAdjacentHTML("beforeend" , '- adv to cb after hspt update has completed ');
   });
 
+  const UTRMQRbtn = document.querySelector('#UTRMQRbtn');
+  UTRMQRbtn.addEventListener('click', () => {
+    const UTRMQRn = document.querySelector('#NoteOutput');
+    UTRMQRn.insertAdjacentHTML("beforeend" , '- edu unable to remove medication as already provided ');
+  });
+
   const removeccbtn = document.querySelector('#removeccbtn');
   removeccbtn.addEventListener('click', () => {
     const removeccbtnn = document.querySelector('#NoteOutput');

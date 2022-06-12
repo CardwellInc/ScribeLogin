@@ -449,7 +449,7 @@
                     <div class="qrblock">
                         <h3>Unable to Remove Medication - Already Provided</h3>
                         <p id="UnableRemove">I apologize, I'm showing the medication has already been provided so we are unable to remove the monthly installments until the medication has been paid off at the end of the plan year.</p>
-                        <button class="copy-btn" onclick="copyToClipboard('#UnableRemove')"><i class="fas fa-clipboard"></i>Copy</button>
+                        <button class="copy-btn" id="UTRMQRbtn" onclick="copyToClipboard('#UnableRemove')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -1007,12 +1007,17 @@
                 <button class="copy-btn"  id="MEEPbtn1" onclick="copyparaToClipboard('#CMWC')"><i class="fas fa-clipboard"></i>Copy</button>
                     <br>
                     <div id="CMWC2">
+                        <div class="qrblock">
                         <h3>Sum Up</h3>
                     <p id="Ending" class="petcxl"></p>
                     <button class="copy-btn"  onclick="copyparaToClipboard('#Ending')"><i class="fas fa-clipboard"></i>Copy</button>
+                </div>
+                <div class="qrblock">
                     <h3>Opt for Installments</h3>
                     <p id="SettoDNR" class="petcxl"></p>
                     <button class="copy-btn" id="OFInstallbtn" onclick="copyparaToClipboard('#SettoDNR')"><i class="fas fa-clipboard"></i>Copy</button>
+                </div>
+                <div class="qrblock">
                     <h3>Pay Today -- CHANGE CARD NUMBER BEFORE SENDING</h3>
                     <div class="Filloutform" style="display: none;">
                     Last 4 Digits of Card:<input type="text" id="PTAmt" placeholder="Last 4 of Card" style="margin-left: 20px;">
@@ -1037,6 +1042,7 @@
                             <p id="NeedMoment">I understand if you need a moment to think over the options. Did you want to reach back out once you have come to a decision on how you want to proceed with your plan? </p>
                                 <button class="copy-btn" onclick="copyparaToClipboard('#NeedMoment')"><i class="fas fa-clipboard"></i>Copy</button>
                             </div>  
+                        </div>
                 </div>
                 </div>
             </div>
@@ -1126,7 +1132,7 @@
                     
                     <div class="qrblock">
                         <h3>Medical Summary/Invoices</h3>
-                        <p id="Invoicebill1">Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries. Any information not found online can be obtained from the hospital directly if needed </p>
+                        <p id="Invoicebill1">Here are the instructions to view hospital invoices and medical documents online: <br>1. Click on the "See Full Profile" Button (next to pets photo) <br>2. Scroll down until you see "Medical history" and extend the box <br>Here will show you all invoices and visit summaries. Please keep in mind 72 hours from visit for documents to be uploaded. Any information not found online can be obtained from the hospital directly if needed </p>
                         <button class="copy-btn" onclick="copyparaToClipboard('#Invoicebill1')" id="Invoicebill1btn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
@@ -1154,9 +1160,11 @@
                         <button class="copy-btn" id="EmailReqbtn" onclick="copyToClipboard('#EmailReq')"><i class="fas fa-clipboard"></i>Copy</button>
                         </div>
                         <br>
+                        <div class="qrblock">
                         <h3>Request at Hospital</h3>
                         <p id="UGDGbottompart2">Perfect! You can ask at the front desk when you check in for your next visit and they will be able to print a copy of this for you. Are there any other questions or changes I can help you with in the meantime?</p>
-                        <button class="copy-btn" id="UGDGhspt2" onclick="copyToClipboard('#UGDGbottompart2')"><i class="fas fa-clipboard"></i>Copy</button><br>
+                        <button class="copy-btn" id="UGDGhspt2" onclick="copyToClipboard('#UGDGbottompart2')"><i class="fas fa-clipboard"></i>Copy</button>
+                        </div>
                         <br>
                         <div class="qrblock">
                         <p>Link below to RD Request Form</p>
