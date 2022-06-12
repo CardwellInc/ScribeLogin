@@ -55,6 +55,7 @@
                         <ul class="cxl-show">
                             <li><button class="tablinks" onclick="openCity(event, 'CxlQR')">General</button></li>
                             <li><button class="tablinks" onclick="openCity(event, 'One-Pet')">MEEP</button></li>
+                            <li><button class="tablinks" onclick="openCity(event, 'Reamor')">Re-Amortized</button></li>
                         </ul>
                     </li>
                     <li>
@@ -158,7 +159,7 @@
                     <button class="copy-btn" onclick="copyToClipboard('#g-t3')"><i class="fas fa-clipboard"></i>Copy</button></div>
                     <br>
                     <div class="qrblock">
-                    <h3>Text Greeting: (Empathy = Pet already said)</h3>
+                    <h3>Text Greeting: (Empathy - Pet already said)</h3>
                     <p id="g-t4">Thank you for reaching out. I am so sorry to hear that, I can help you look into this. Could we have your first and last name, and phone number?</p>
                     <button class="copy-btn" onclick="copyToClipboard('#g-t4')"><i class="fas fa-clipboard"></i>Copy</button></div>
                     <br>
@@ -222,13 +223,13 @@
                     </div>
                     <br>
                     <div class="qrblock">
-                        <h3>Ending</h3>
+                        <h3>Chat Ending - Passed Away</h3>
                         <p id="EndingPassedNote"> It is my pleasure to assist you, Again, we are sorry for your loss, Please have a better day, Thank you for contacting Banfield Pet Hospital</p>
                       <button class="copy-btn" onclick="copyToClipboard('#EndingPassedNote')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                      <br>
                      <div class="qrblock">
-                        <h3>Text Ending</h3>
+                        <h3>Text Ending - Passed Away</h3>
                         <p id="TxtPassingPetNote"> It is my pleasure to assist you, Again, we are sorry for your loss, Please have a better day, Thank you for contacting Banfield Pet Hospital. If you still need assistance, just send us a new message and we'll connect you with the first available associate. (Please be aware that any response to this message will generate a new chat with an associate.)</p>
                       <button class="copy-btn" onclick="copyToClipboard('#TxtPassingPetNote')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
@@ -259,7 +260,7 @@
                     <h1>Wellness Plan - General</h1>
                     
                     <div class="qrblock">
-                        <h3>Not Monthly Service</h3>
+                        <h3>Not A Monthly Service</h3>
                         <p id="notinsur">I apologize for any confusion, the wellness plans are not a monthly service, they are a yearly plan that has the option to make installments towards the cost of the full year if not paid in full at the start. This means that each installment is 1 out of 12 installments to pay for the whole plan and not for 30 days of service at a time. </p>
                         <button class="copy-btn" id="notinsurbtn" onclick="copyToClipboard('#notinsur')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
@@ -268,6 +269,13 @@
                         <h3>Authorized User - Drop-Offs/Pick-Ups</h3>
                         <p id="AuthDOPU">You can adjust the Authorized Users for Drop Offs and Pick Ups with the front desk at the hospital directly. Please keep in mind the Authorized Users will not be able to access account information or make changes.</p>
                         <button class="copy-btn" id="authdopubtn" onclick="copyToClipboard('#AuthDOPU')"><i class="fas fa-clipboard"></i>Copy</button>
+                    </div>
+                    <br>
+                    <div class="qrblock">
+                        <h3>Authorized User - Speak with in Chat</h3>
+                        <p id="AuthUserChat">I can help add an Authorized User to speak with us if needed. Please keep in mind they will not be able to access information or authorize changes on the plan in your name. To add them as an Authorized User to discuss your account, What is their first and last name?</p>
+                        <p class="red">-NOTATE NAME PROVIDED-</p>
+                        <button class="copy-btn" id="AuthUserChatbtn" onclick="copyToClipboard('#AuthUserChat')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
                     <div class="qrblock">
@@ -289,7 +297,7 @@
                     </div>
                     <br>
                     <div class="qrblock">
-                        <h3>OWP's</h3>
+                        <h3>View and Compare Different OWP's</h3>
                         <p id="owps">To view and compare the wellness plans online please follow this link https://www.banfield.com/products/optimum-wellness-plan</p>
                             <button class="copy-btn" id="GenPlanlinkbtn" onclick="copyToClipboard('#owps')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
@@ -298,7 +306,7 @@
                     <h1>OWP - Adult Dog Plans</h1>
                     
                     <div class="qrblock">
-                        <h3>Banfield Link</h3>
+                        <h3>Banfield Link to Adult Dog Plans</h3>
                         <p id="DAClink">You can review and compare the different Dog Packages we offer with the link below: <br>https://www.banfield.com/products/optimum-wellness-plan/Dog-plans</p>
                         <button class="copy-btn" id="DAClinkbtn" onclick="copyparaToClipboard('#DAClink')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
@@ -325,7 +333,7 @@
                     <h1>OWP - Adult Cat Plans</h1>
                     
                     <div class="qrblock">
-                        <h3>Banfield Link</h3>
+                        <h3>Banfield Link to Adult Cat Plans</h3>
                         <p id="CAClink">You can review and compare the different Cat Packages we offer with the link below: <br> https://www.banfield.com/products/optimum-wellness-plan/Cat-plans </p>
                         <button class="copy-btn" id="CAClinkbtn" onclick="copyToClipboard('#CAClink')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
@@ -351,7 +359,7 @@
                 <div id="pupPlan" class="tabcontent">
                     <h1>OWP - Puppy Plans</h1>
                     <div class="qrblock">
-                        <h3>Banfield Link</h3>
+                        <h3>Banfield Link to Puppy Plans</h3>
                         <p id="PEClink">You can review and compare the different Puppy Packages we offer with the link below: <br>https://www.banfield.com/products/optimum-wellness-plan/Puppy-plans</p>
                         <button class="copy-btn" id="PEClinkbtn" onclick="copyToClipboard('#PEClink')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
@@ -372,7 +380,7 @@
                     <h1>OWP - Kitten Plans</h1>
                     
                     <div class="qrblock">
-                        <h3>Banfield Link</h3>
+                        <h3>Banfield Link to Kitten Plans</h3>
                         <p id="KEClink">You can review and compare the different Kitten Packages we offer with the link below: <br>https://www.banfield.com/products/optimum-wellness-plan/Kitten-plans</p>
                         <button class="copy-btn" id="KEClinkbtn" onclick="copyToClipboard('#KEClink')"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
@@ -1046,6 +1054,29 @@
                 </div>
                 </div>
             </div>
+                </div>
+                <div id="Reamor" class="tabcontent">
+                    <h1 class="red">-Currently Under Construction- </h1><h1>Re-Amortized Cancel</h1>
+
+                    <div class="qrblock">
+                        <div class="MEEP">
+                    <div class="Chaos">
+                        <div class="c1">Please Select Pet Name: </div>
+                        <div class="c2"><select id="MEEPpet1">
+                            <option></option>
+                        </select> </div>
+                        <div class="c3">Services Used: </div>
+                        <div class="c4"> <input type="text"></div>
+                        <div class="c5">Installments Paid: </div>
+                        <div class="c6"> <input type="text"> </div>
+                        <div class="c7">Remaining Balance for Services:</div>
+                        <div class="c8"> <input type="text"></div>
+                        <div class="c9">Remaining Installments for Wellness Plan</div>
+                        <div class="c10"> <input type="text"></div>
+                        <div class="c11"> <input type="button" value="Submit"></div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
                 <div id="WebGen" class="tabcontent">
                     <h1>Web Portal - General</h1>
