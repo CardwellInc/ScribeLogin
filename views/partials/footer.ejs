@@ -243,7 +243,7 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
   }
   
-  // Get the element with id="defaultOpen" and click on it
+  
   document.getElementById("defaultOpen").click();
 
   function copyToClipboard(element) {
@@ -950,7 +950,22 @@ var meep6 = document.getElementById("MEEPpet6");
 var remeddd = document.getElementById("RMNames");
 var billdd = document.getElementById("BillExplainDD");
 var pdbn = document.getElementById("PDBnames");
+var reamornames = document.getElementById("Chaosnames");
 
+for(var i = 0; i < filtername.length; i++) {
+  var opt = filtername[i];
+  var el = document.createElement("option");
+  el.textContent = opt;
+  el.value = opt;
+  ppselect.appendChild(el);
+}
+for(var i = 0; i < filtername.length; i++) {
+  var opt = filtername[i];
+  var el = document.createElement("option");
+  el.textContent = opt;
+  el.value = opt;
+  reamornames.appendChild(el);
+}
 for(var i = 0; i < filtername.length; i++) {
   var opt = filtername[i];
   var el = document.createElement("option");
