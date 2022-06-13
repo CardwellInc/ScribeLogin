@@ -455,29 +455,34 @@ console.log(filtername);
           let z=Math.abs([x*y]-CxlCost).toFixed(2); //remaining balance to pay when they call back after - services cxl
         
           let BK = document.getElementById("BK").value;
-              var today = new Date();{
-              var dd = today.getDate();
-              var mm = today.getMonth();
-              var yyyy = today.getFullYear();
-              
-              if(parseInt(BK) < dd)
-              {
-                  var mm= ((mm+2) + y);
-              } else {
-              
-                 var mm = ((mm+1) + y);
-              }
-                  
-                  if(mm>12) 
-                  {
-                      mm=mm-12;
-                  } 
-                  
-                  today = mm+'/'+BK+'/'+yyyy;
-                  console.log(today);
-                  console.log(y);
-                  console.log(mm);
-                  }
+            var today = new Date();{
+            var dd = today.getDate();
+            var mm = today.getMonth();
+            var yyyy = today.getFullYear();
+            var testmm = today.getMonth();
+            
+            if(parseInt(BK) < dd)
+            {
+                var mm= ((mm+2) + y);
+            } else {
+            
+               var mm = ((mm+1) + y);
+            }
+                
+                if(mm>12) 
+                {
+                    mm=mm-12;
+                }  
+
+                if (parseInt(testmm) > parseInt(mm)){
+                  var yyyy= (yyyy+1);
+                } 
+                
+                today = mm+'/'+BK+'/'+yyyy;
+                console.log(today);
+                console.log(y);
+                console.log(mm);
+                }
           
             var P = "Looking at "+PName+"'s plan, as $"+ServUsed+" of services were used and the plan costs $"+WPBAL+", we can close for the lesser of the two amounts being the cost of the services used. We then subtract the $"+InstallPaid+" of installments paid, which leaves the cost to close today of $"+CxlCost+". This can either be paid today or we can let each monthly installment of $"+x+" lower the balance each month over time, I do recommend calling back before the installment on "+today+" to pay the remaining $"+z+". Please keep in mind if you do not reach out the plan will fulfill the year and end automatically on "+EndDate+" and You will also want to avoid using anymore services as closing the plan is based on usage; using more services will adjust the cost to cancel accordingly.";
           

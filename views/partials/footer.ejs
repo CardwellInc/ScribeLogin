@@ -1845,6 +1845,7 @@ for(let i=0, len=MEEPcmwc.length; i<len; i++){
             var dd = today.getDate();
             var mm = today.getMonth();
             var yyyy = today.getFullYear();
+            var testmm = today.getMonth();
             
             if(parseInt(BK) < dd)
             {
@@ -1857,6 +1858,10 @@ for(let i=0, len=MEEPcmwc.length; i<len; i++){
                 if(mm>12) 
                 {
                     mm=mm-12;
+                }  
+
+                if (parseInt(testmm) > parseInt(mm)){
+                  var yyyy= (yyyy+1);
                 } 
                 
                 today = mm+'/'+BK+'/'+yyyy;
