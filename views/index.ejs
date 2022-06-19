@@ -757,12 +757,6 @@
                     </div>
                     <br>
                     <div class="qrblock">
-                        <h3>Balance Owed - Pet Passed</h3>
-                        <p id="CxlBlockThree"> I understand not expecting to have a balance and thinking about this after losing your pet can be difficult. The balance that remains is to finish paying the hospital for the care that was provided. We try to do everything we can to help clients keep the cost of care affordable by allowing services to be paid slowly through interest-free installments. At this time the balance of $AMT that remains is just to ensure the hospital is reimbursed for the $AMT of services they have already provided. Please keep in mind the cost to close is not for any unused services nor future services.</p>
-                    <button class="copy-btn" id="Petpassedqrbtn" onclick="copyToClipboard('#CxlBlockThree')"><i class="fas fa-clipboard"></i>Copy</button> 
-                    </div>
-                    <br>
-                    <div class="qrblock">
                         <h3>Cancel - No Refund</h3>
                         <p id="CxlBlockFour"> I am not able to retroactively cancel a plan and provide a refund for previous months payments that have become due under the wellness plan agreement. However, I can assure you the plan has been canceled effective immediately and no further payments will process, as there is currently no balance due to the hospital. Did you have any other questions today?</p>
                     <button class="copy-btn" onclick="copyToClipboard('#CxlBlockFour')"><i class="fas fa-clipboard"></i>Copy</button> 
@@ -776,8 +770,8 @@
                     <br>
                     <div class="qrblock">
                         <h3>Arguing Balance Owed</h3>
-                        <p id="Arged">I apologize. Through this chat, I can only close the plan for the balance listed by the Hospital. I can not make any changes to this balance as it all reflects from what the Hospital has provided me for the services used. Due to this, I can not change, reduce, or close the Wellness Plan without the payment. I can just set them to automatically cancel and not renew. I would recommend speaking with the Practice Manager at your location to go over your situation and your plan</p>
-                    <button class="copy-btn" onclick="copyToClipboard('#Arged')"><i class="fas fa-clipboard"></i>Copy</button> 
+                        <p id="Arged">I apologize. Through this chat, I can only close the plan for the balance listed by the Hospital. I can not make any changes to this balance as it all reflects from what the Hospital has provided me for the services used. Due to this, I can not change, reduce, or close the Wellness Plan without the payment. I can just set them to automatically cancel and not renew. I would recommend speaking with the Practice Manager at your location to go over your situation and your plan. I have set the plan to automatically end and expire at the end of the plan year. Were there any other questions or changes I can help with in the meantime?</p>
+                    <button class="copy-btn" id="argedbtn" onclick="copyToClipboard('#Arged')"><i class="fas fa-clipboard"></i>Copy</button> 
                     </div>
                 </div>
                 <div id="One-Pet" class="tabcontent">
@@ -1049,7 +1043,14 @@
                             <h3>Need A Moment?</h3>
                             <p id="NeedMoment">I understand if you need a moment to think over the options. Did you want to reach back out once you have come to a decision on how you want to proceed with your plan? </p>
                                 <button class="copy-btn" onclick="copyparaToClipboard('#NeedMoment')"><i class="fas fa-clipboard"></i>Copy</button>
-                            </div>  
+                            </div> 
+                            <br>
+                            <div class="qrblock">
+                                <h3>Balance Owed - Pet Passed</h3>
+                                <p id="CxlBlockThree"> I understand not expecting to have a balance and thinking about this after losing your pet can be difficult. The balance that remains is to finish paying the hospital for the care that was provided. We try to do everything we can to help clients keep the cost of care affordable by allowing services to be paid slowly through interest-free installments. At this time the balance of $AMT that remains is just to ensure the hospital is reimbursed for the $AMT of services they have already provided. Please keep in mind the cost to close is not for any unused services nor future services.</p>
+                            <button class="copy-btn" id="Petpassedqrbtn" onclick="copyToClipboard('#CxlBlockThree')"><i class="fas fa-clipboard"></i>Copy</button> 
+                            </div>
+                            <br> 
                         </div>
                 </div>
                 </div>
@@ -1148,7 +1149,7 @@
                     <br>
                     <div class="qrblock">
                     <h3>Manage Prescription - Exsisting Order</h3>
-                    <p id="OldOrder">Thank you for reaching out, I am happy to assist you with getting that information. Through this chat we do not actually handle or have the ability to view orders, This would be handled by our Banfield Shop team directly. You can reach them at 888-626-3992 to go over your order and its status.</p>
+                    <p id="OldOrder">Thank you for reaching out, I am happy to assist you with getting that information. Through this chat we do not actually handle or have the ability to view orders, This would be handled by our Banfield Shop team directly. You can reach them at 888-626-3992 to go over your order and its status. They are available Monday-Friday 7am-4pm PST</p>
                         <button class="copy-btn" onclick="copyToClipboard('#OldOrder')" id="OldOrderbtn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
@@ -1342,7 +1343,7 @@
                     <br>
                     <div class="qrblock">
                         <h3>Chat Time Out - 2 Minutes</h3>
-                        <p id="TxtTO2">Hello! We understand life can be busy and may pull you away. Are you still requiring assistance at this time? we'd love to help! Please respond in the next minute so we can continue assisting you with your pet's wellness plan.</p>
+                        <p id="TxtTO2">Hello! We understand life can be busy and may pull you away. Are you still requiring assistance at this time? We'd love to help! Please respond in the next minute so we can continue assisting you with your pet's wellness plan.</p>
                         <button class="copy-btn" onclick="copyToClipboard('#TxtTO2')" id="TxtTO2btn"><i class="fas fa-clipboard"></i>Copy</button>
                     </div>
                     <br>
