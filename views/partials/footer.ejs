@@ -478,6 +478,12 @@ function openCity(evt, cityName) {
     OFInstalln.insertAdjacentHTML("beforeend" , '- opted for installments ');
   });
 
+  const arged = document.querySelector('#argedbtn');
+  arged.addEventListener('click', () => {
+    const argedn = document.querySelector('#NoteOutput');
+    argedn.insertAdjacentHTML("beforeend" , '- referred to PM at hspt to discuss situation - ');
+  });
+
   const Petpassedqr = document.querySelector('#Petpassedqrbtn');
   Petpassedqr.addEventListener('click', () => {
     const Petpassedqrn = document.querySelector('#NoteOutput');
@@ -1990,6 +1996,8 @@ document.getElementById("Ending").innerHTML = Ending;
 var SetDNR = "I have set the plan to automatically end and expire at the end of the plan year. Were there any other questions or changes I can help with in the meantime?" 
 
 document.getElementById("SettoDNR").innerHTML = SetDNR;
+
+
 
 
 
